@@ -26,7 +26,7 @@ CREATE TABLE dim_vuelo
     id_vuelo INT NOT NULL,
     duracion_vuelo INT NOT NULL,
     capacidad DOUBLE NOT NULL,
-    tipo_vuelo ENUM('NACIONAL','INTENACIONAL') NOT NULL,
+    tipo_vuelo ENUM('NACIONAL','INTERNACIONAL') NOT NULL,
     tipo_avion VARCHAR(10) NOT NULL,
     ultima_actualizacion timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
     PRIMARY KEY(id_vuelo)
