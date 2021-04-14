@@ -5,6 +5,7 @@ USE dw_aero;
 
 CREATE TABLE dim_cliente
 (
+    cliente_key INT NOT NULL,
     id_cliente INT NOT NULL,
     edad INT NOT NULL,
     estado_civil ENUM('CASADO','SOLTERO','UNION DE HECHO','SEPARADO','VIUDO','DIVORCIADO') NOT NULL,
@@ -18,22 +19,24 @@ CREATE TABLE dim_cliente
     precio_billete DECIMAL (8,2) NOT NULL,
     clase_billete ENUM('TURISTA','BUSINESS','PREFERENTE') NOT NULL,
     ultima_actualizacion timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-    PRIMARY KEY(id_cliente)
+    PRIMARY KEY(cliente_key)
 );
 
 CREATE TABLE dim_vuelo
 (
+    vuelo_key INT NOT NULL,
     id_vuelo INT NOT NULL,
     duracion_vuelo INT NOT NULL,
     capacidad DOUBLE NOT NULL,
     tipo_vuelo ENUM('NACIONAL','INTERNACIONAL') NOT NULL,
     tipo_avion VARCHAR(10) NOT NULL,
     ultima_actualizacion timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-    PRIMARY KEY(id_vuelo)
+    PRIMARY KEY(vuelo_key)
 );
 
 CREATE TABLE dim_lugar
 (
+    lugar_key INT NOT NULL,
     id_lugar INT NOT NULL,
     ciudad VARCHAR(50) NOT NULL,
     admin_territorial VARCHAR(70),
@@ -44,12 +47,12 @@ CREATE TABLE dim_lugar
     temperatura DECIMAL(4,2) NOT NULL,
     precipitaciones DECIMAL(6,2) NOT NULL,
     ultima_actualizacion timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-    PRIMARY KEY(id_lugar)
+    PRIMARY KEY(lugar_key)
 );
 
 CREATE TABLE dim_fecha
 (
-    id_fecha INT NOT NULL,
+    fecha_key INT NOT NULL,
     dia INT NOT NULL,
     mes VARCHAR(15) NOT NULL,
     anho INT NOT NULL,
@@ -57,47 +60,47 @@ CREATE TABLE dim_fecha
     estacion ENUM('verano','otoño','invierno','primavera') NOT NULL,
     es_festivo BOOLEAN NOT NULL,
     ultima_actualizacion timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-    PRIMARY KEY(id_fecha)
+    PRIMARY KEY(fecha_key)
 );
 
 CREATE TABLE dim_agencia
 (
-    id_agencia INT NOT NULL,
+    agencia_key INT NOT NULL,
     nombre VARCHAR(50) NOT NULL,
     nacionalidad VARCHAR(30) NOT NULL,
     descuento_vip DOUBLE NOT NULL,
     especializacion ENUM('nacionales','internacionales','mixta') NOT NULL,
     ultima_actualizacion timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-    PRIMARY KEY(id_agencia)
+    PRIMARY KEY(agencia_key)
 );
 
 CREATE TABLE dim_hora
 (
-    id_hora INT NOT NULL,
+    hora_key INT NOT NULL,
     hora INT NOT NULL,
     minutos INT NOT NULL,
     segundos int NOT NULL,
     mediodia ENUM('AM','PM') NOT NULL,
     ultima_actualizacion timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-    PRIMARY KEY(id_hora)
+    PRIMARY KEY(hora_key)
 );
 
 
 CREATE TABLE fact_ventas
 (
-    id_vuelo INT NOT NULL,
-    id_lugar INT NOT NULL,
-    id_fecha INT NOT NULL,
-    id_hora INT NOT NULL,
-    id_agencia INT NOT NULL,
+    vuelo_key INT NOT NULL,
+    lugar_key INT NOT NULL,
+    fecha_key INT NOT NULL,
+    hora_key INT NOT NULL,
+    agencia_key INT NOT NULL,
     importe DECIMAL(10,2) NOT NULL,
     num_vuelos DOUBLE NOT NULL,
     num_clientes DOUBLE NOT NULL,
     ultima_actualizacion timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-    CONSTRAINT fkid_vuelo_venta  FOREIGN KEY (id_vuelo) REFERENCES dim_vuelo (id_vuelo) ON DELETE CASCADE,
-    CONSTRAINT fkid_lugar  FOREIGN KEY (id_lugar) REFERENCES dim_lugar (id_lugar) ON DELETE CASCADE,
-    CONSTRAINT fkid_fecha  FOREIGN KEY (id_fecha) REFERENCES dim_fecha (id_fecha) ON DELETE CASCADE,
-	CONSTRAINT fkid_agencia  FOREIGN KEY (id_agencia) REFERENCES dim_agencia (id_agencia) ON DELETE CASCADE,
-    CONSTRAINT fkid_hora  FOREIGN KEY (id_hora) REFERENCES dim_hora (id_hora) ON DELETE CASCADE
+    CONSTRAINT fkvuelo_key_venta  FOREIGN KEY (vuelo_key) REFERENCES dim_vuelo (vuelo_key) ON DELETE CASCADE,
+    CONSTRAINT fklugar_key  FOREIGN KEY (lugar_key) REFERENCES dim_lugar (lugar_key) ON DELETE CASCADE,
+    CONSTRAINT fkfecha_key  FOREIGN KEY (fecha_key) REFERENCES dim_fecha (fecha_key) ON DELETE CASCADE,
+	CONSTRAINT fkagencia_key  FOREIGN KEY (agencia_key) REFERENCES dim_agencia (agencia_key) ON DELETE CASCADE,
+    CONSTRAINT fkhora_key  FOREIGN KEY (hora_key) REFERENCES dim_hora (hora_key) ON DELETE CASCADE
 
 );
