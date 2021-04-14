@@ -30,6 +30,7 @@ CREATE TABLE dim_vuelo
     capacidad DOUBLE NOT NULL,
     tipo_vuelo ENUM('NACIONAL','INTERNACIONAL') NOT NULL,
     tipo_avion VARCHAR(10) NOT NULL,
+    aerolinea VARCHAR(12) NOT NULL,
     ultima_actualizacion timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
     PRIMARY KEY(vuelo_key)
 );
