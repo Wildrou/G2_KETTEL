@@ -145,7 +145,7 @@ CREATE TABLE RECORRIDO
     destino VARCHAR(30) NOT NULL,
     aero_origen VARCHAR(50) NOT NULL,
     origen VARCHAR(30) NOT NULL,
-    tipo ENUM('NACIONAL','INTENACIONAL') NOT NULL,
+    tipo ENUM('NACIONAL','INTERNACIONAL') NOT NULL,
     duracion_minutos INT NOT NULL,
     PRIMARY KEY (idrecorrido)
 );
