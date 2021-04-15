@@ -6,18 +6,18 @@ USE dw_aero;
 CREATE TABLE dim_cliente
 (
     cliente_key INT NOT NULL AUTO_INCREMENT ,
-    id_cliente INT NOT NULL,
-    edad INT NOT NULL,
-    estado_civil ENUM('CASADO','SOLTERO','UNION DE HECHO','SEPARADO','VIUDO','DIVORCIADO') NOT NULL,
-    ocupacion VARCHAR(50) NOT NULL,
-    hijos INT NOT NULL,
-    lugar_residencia VARCHAR(50) NOT NULL,
-    pais_residencia VARCHAR(30) NOT NULL,
-    pais_origen VARCHAR(30) NOT NULL,
-    estudios VARCHAR(50) NOT NULL,
-    genero ENUM('HOMBRE', 'MUJER','OTRO') NOT NULL,
-    precio_billete DECIMAL (8,2) NOT NULL,
-    clase_billete ENUM('TURISTA','BUSINESS','PREFERENTE') NOT NULL,
+    id_cliente INT,
+    edad INT,
+    estado_civil ENUM('CASADO','SOLTERO','UNION DE HECHO','SEPARADO','VIUDO','DIVORCIADO'),
+    ocupacion VARCHAR(50),
+    hijos INT,
+    lugar_residencia VARCHAR(50),
+    pais_residencia VARCHAR(30),
+    pais_origen VARCHAR(30),
+    estudios VARCHAR(50),
+    genero ENUM('HOMBRE', 'MUJER','OTRO'),
+    precio_billete DECIMAL (8,2),
+    clase_billete ENUM('TURISTA','BUSINESS','PREFERENTE'),
     ultima_actualizacion timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
     PRIMARY KEY(cliente_key)
 );
@@ -25,12 +25,12 @@ CREATE TABLE dim_cliente
 CREATE TABLE dim_vuelo
 (
     vuelo_key INT NOT NULL AUTO_INCREMENT,
-    id_vuelo VARCHAR(6) NOT NULL,
-    duracion_vuelo INT NOT NULL,
-    capacidad DOUBLE NOT NULL,
-    tipo_vuelo ENUM('NACIONAL','INTERNACIONAL') NOT NULL,
-    tipo_avion VARCHAR(10) NOT NULL,
-    aerolinea VARCHAR(12) NOT NULL,
+    id_vuelo VARCHAR(6),
+    duracion_vuelo INT,
+    capacidad DOUBLE,
+    tipo_vuelo ENUM('NACIONAL','INTERNACIONAL'),
+    tipo_avion VARCHAR(10),
+    aerolinea VARCHAR(12),
     ultima_actualizacion timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
     PRIMARY KEY(vuelo_key)
 );
@@ -38,15 +38,15 @@ CREATE TABLE dim_vuelo
 CREATE TABLE dim_lugar
 (
     lugar_key INT NOT NULL AUTO_INCREMENT,
-    id_lugar INT NOT NULL,
-    ciudad VARCHAR(50) NOT NULL,
+    id_lugar INT,
+    ciudad VARCHAR(50),
     admin_territorial VARCHAR(70),
-    pais VARCHAR(50) NOT NULL,
+    pais VARCHAR(50),
     poblacion INT,
-    ubicacion_geografica ENUM('costera', 'interior', 'montañosa', 'urbana', 'boscosa') NOT NULL,
-    interes_turistico ENUM('alto','moderado','bajo') NOT NULL,
-    temperatura DECIMAL(4,2) NOT NULL,
-    precipitaciones DECIMAL(6,2) NOT NULL,
+    ubicacion_geografica ENUM('costera', 'interior', 'montañosa', 'urbana', 'boscosa'),
+    interes_turistico ENUM('alto','moderado','bajo'),
+    temperatura DECIMAL(4,2),
+    precipitaciones DECIMAL(6,2),
     ultima_actualizacion timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
     PRIMARY KEY(lugar_key)
 );
@@ -54,12 +54,12 @@ CREATE TABLE dim_lugar
 CREATE TABLE dim_fecha
 (
     fecha_key INT NOT NULL,
-    dia INT NOT NULL,
-    mes VARCHAR(15) NOT NULL,
-    anho INT NOT NULL,
-    dia_semana VARCHAR(15) NOT NULL,
-    estacion ENUM('verano','otoño','invierno','primavera') NOT NULL,
-    es_festivo BOOLEAN NOT NULL,
+    dia INT,
+    mes VARCHAR(15),
+    anho INT,
+    dia_semana VARCHAR(15),
+    estacion ENUM('verano','otoño','invierno','primavera'),
+    es_festivo BOOLEAN,
     ultima_actualizacion timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
     PRIMARY KEY(fecha_key)
 );
@@ -67,10 +67,10 @@ CREATE TABLE dim_fecha
 CREATE TABLE dim_agencia
 (
     agencia_key INT NOT NULL AUTO_INCREMENT,
-    nombre VARCHAR(50) NOT NULL,
-    nacionalidad VARCHAR(30) NOT NULL,
-    descuento_vip DOUBLE NOT NULL,
-    especializacion ENUM('nacionales','internacionales','mixta') NOT NULL,
+    nombre VARCHAR(50),
+    nacionalidad VARCHAR(30),
+    descuento_vip DOUBLE,
+    especializacion ENUM('nacionales','internacionales','mixta'),
     ultima_actualizacion timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
     PRIMARY KEY(agencia_key)
 );
@@ -78,10 +78,10 @@ CREATE TABLE dim_agencia
 CREATE TABLE dim_hora
 (
     hora_key INT NOT NULL,
-    hora INT NOT NULL,
-    minutos INT NOT NULL,
-    segundos int NOT NULL,
-    mediodia ENUM('AM','PM') NOT NULL,
+    hora INT,
+    minutos INT,
+    segundos int,
+    mediodia ENUM('AM','PM'),
     ultima_actualizacion timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
     PRIMARY KEY(hora_key)
 );
