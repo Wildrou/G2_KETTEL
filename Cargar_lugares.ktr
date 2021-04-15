@@ -435,7 +435,7 @@
   <notepads>
   </notepads>
   <connection>
-    <name>dw_aero_conect</name>
+    <name>mariadb_dwaero_con</name>
     <server>localhost</server>
     <type>MARIADB</type>
     <access>Native</access>

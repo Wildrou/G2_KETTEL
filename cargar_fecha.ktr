@@ -552,6 +552,57 @@
       </attribute>
     </attributes>
   </connection>
+  <connection>
+    <name>mariadb_dwaero_con</name>
+    <server>localhost</server>
+    <type>MARIADB</type>
+    <access>Native</access>
+    <database>dw_aero</database>
+    <port>3306</port>
+    <username>root</username>
+    <password>Encrypted </password>
+    <servername/>
+    <data_tablespace/>
+    <index_tablespace/>
+    <attributes>
+      <attribute>
+        <code>FORCE_IDENTIFIERS_TO_LOWERCASE</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>FORCE_IDENTIFIERS_TO_UPPERCASE</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>IS_CLUSTERED</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>PORT_NUMBER</code>
+        <attribute>3306</attribute>
+      </attribute>
+      <attribute>
+        <code>PRESERVE_RESERVED_WORD_CASE</code>
+        <attribute>Y</attribute>
+      </attribute>
+      <attribute>
+        <code>QUOTE_ALL_FIELDS</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>SUPPORTS_BOOLEAN_DATA_TYPE</code>
+        <attribute>Y</attribute>
+      </attribute>
+      <attribute>
+        <code>SUPPORTS_TIMESTAMP_DATA_TYPE</code>
+        <attribute>Y</attribute>
+      </attribute>
+      <attribute>
+        <code>USE_POOLING</code>
+        <attribute>N</attribute>
+      </attribute>
+    </attributes>
+  </connection>
   <order>
     <hop>
       <from>Calculate Dimension Attributes</from>
@@ -1061,7 +1112,7 @@ var date_key = year4 + month_number + (day_in_month&lt;10?"0":"") + day_in_month
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <connection>dw_aero_con</connection>
+    <connection>mariadb_dwaero_con</connection>
     <schema/>
     <table>dim_fecha</table>
     <commit>10000</commit>
