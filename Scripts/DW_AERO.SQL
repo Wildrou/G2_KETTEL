@@ -25,7 +25,7 @@ CREATE TABLE dim_cliente
 CREATE TABLE dim_vuelo
 (
     vuelo_key INT NOT NULL AUTO_INCREMENT,
-    id_vuelo INT NOT NULL,
+    id_vuelo VARCHAR(6) NOT NULL,
     duracion_vuelo INT NOT NULL,
     capacidad DOUBLE NOT NULL,
     tipo_vuelo ENUM('NACIONAL','INTERNACIONAL') NOT NULL,
