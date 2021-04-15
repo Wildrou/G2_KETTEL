@@ -5,7 +5,7 @@ USE dw_aero;
 
 CREATE TABLE dim_cliente
 (
-    cliente_key INT NOT NULL,
+    cliente_key INT NOT NULL AUTO_INCREMENT ,
     id_cliente INT NOT NULL,
     edad INT NOT NULL,
     estado_civil ENUM('CASADO','SOLTERO','UNION DE HECHO','SEPARADO','VIUDO','DIVORCIADO') NOT NULL,
@@ -24,7 +24,7 @@ CREATE TABLE dim_cliente
 
 CREATE TABLE dim_vuelo
 (
-    vuelo_key INT NOT NULL,
+    vuelo_key INT NOT NULL AUTO_INCREMENT,
     id_vuelo INT NOT NULL,
     duracion_vuelo INT NOT NULL,
     capacidad DOUBLE NOT NULL,
@@ -37,7 +37,7 @@ CREATE TABLE dim_vuelo
 
 CREATE TABLE dim_lugar
 (
-    lugar_key INT NOT NULL,
+    lugar_key INT NOT NULL AUTO_INCREMENT,
     id_lugar INT NOT NULL,
     ciudad VARCHAR(50) NOT NULL,
     admin_territorial VARCHAR(70),
@@ -66,7 +66,7 @@ CREATE TABLE dim_fecha
 
 CREATE TABLE dim_agencia
 (
-    agencia_key INT NOT NULL,
+    agencia_key INT NOT NULL AUTO_INCREMENT,
     nombre VARCHAR(50) NOT NULL,
     nacionalidad VARCHAR(30) NOT NULL,
     descuento_vip DOUBLE NOT NULL,
