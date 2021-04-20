@@ -6,7 +6,7 @@ USE dw_aero;
 CREATE TABLE dim_cliente
 (
     cliente_key INT NOT NULL AUTO_INCREMENT ,
-    id_cliente INT,
+    id_cliente VARCHAR(9),
     edad INT,
     estado_civil ENUM('CASADO','SOLTERO','UNION DE HECHO','SEPARADO','VIUDO','DIVORCIADO'),
     ocupacion VARCHAR(50),
@@ -18,6 +18,9 @@ CREATE TABLE dim_cliente
     genero ENUM('HOMBRE', 'MUJER','OTRO'),
     precio_billete DECIMAL (8,2),
     clase_billete ENUM('TURISTA','BUSINESS','PREFERENTE'),
+    cliente_valid_from DATE,
+    cliente_valid_through DATE,
+    cliente_version_number SMALLINT,
     ultima_actualizacion timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
     PRIMARY KEY(cliente_key)
 );
