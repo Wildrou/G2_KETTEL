@@ -70,8 +70,9 @@ CREATE TABLE dim_fecha
 CREATE TABLE dim_agencia
 (
     agencia_key INT NOT NULL AUTO_INCREMENT,
-    nombre VARCHAR(50),
-    nacionalidad VARCHAR(30),
+    id_agencia INT,
+    nombre VARCHAR(500),
+    nacionalidad VARCHAR(500),
     descuento_vip DOUBLE,
     especializacion ENUM('nacionales','internacionales','mixta'),
     ultima_actualizacion timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
