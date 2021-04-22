@@ -75,6 +75,9 @@ CREATE TABLE dim_agencia
     nacionalidad VARCHAR(500),
     descuento_vip DOUBLE,
     especializacion ENUM('nacionales','internacionales','mixta'),
+    agencia_valid_from DATE,
+    agencia_valid_through DATE,
+    agencia_version_number SMALLINT,
     ultima_actualizacion timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
     PRIMARY KEY(agencia_key)
 );
