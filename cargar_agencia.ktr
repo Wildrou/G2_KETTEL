@@ -429,14 +429,14 @@
     <created_user>-</created_user>
     <created_date>2021/04/21 02:15:08.529</created_date>
     <modified_user>-</modified_user>
-    <modified_date>2021/04/24 16:07:53.794</modified_date>
+    <modified_date>2021/04/24 17:56:31.170</modified_date>
     <key_for_session_key>H4sIAAAAAAAAAAMAAAAAAAAAAAA=</key_for_session_key>
     <is_key_private>N</is_key_private>
   </info>
   <notepads>
   </notepads>
   <connection>
-    <name>conexion_dw_aero</name>
+    <name>dw_aero_con2</name>
     <server>localhost</server>
     <type>MARIADB</type>
     <access>Native</access>
@@ -489,6 +489,26 @@
   <order>
     <hop>
       <from>JSON input</from>
+      <to>Añadir max_dim_timestamp</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>max_dim</from>
+      <to>Añadir max_dim_timestamp</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Añadir max_dim_timestamp</from>
+      <to>Selecciona/Renombra valores</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Selecciona/Renombra valores</from>
+      <to>Filtra actualizadas</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Filtra actualizadas</from>
       <to>Dimension lookup/update</to>
       <enabled>Y</enabled>
     </hop>
@@ -506,21 +526,21 @@
     </partitioning>
     <schema>dw_aero</schema>
     <table>dim_agencia</table>
-    <connection>conexion_dw_aero</connection>
+    <connection>dw_aero_con2</connection>
     <commit>100</commit>
     <update>Y</update>
     <fields>
       <key>
-        <name>id_agencia</name>
+        <name>id</name>
         <lookup>id_agencia</lookup>
       </key>
       <date>
-        <name>ultima_actualizacion</name>
+        <name>ultima_actualizacion_json</name>
         <from>agencia_valid_from</from>
         <to>agencia_valid_through</to>
       </date>
       <field>
-        <name>nombre</name>
+        <name>agencia</name>
         <lookup>nombre</lookup>
         <update>Update</update>
       </field>
@@ -565,8 +585,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>368</xloc>
-      <yloc>144</yloc>
+      <xloc>848</xloc>
+      <yloc>80</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -593,7 +613,7 @@
     <defaultPathLeafToNull>Y</defaultPathLeafToNull>
     <rownum_field/>
     <file>
-      <name>C:\Users\Raul\Desktop\G2_KETTEL\Fuentes\AGENCIAS_FE_DW (1).json</name>
+      <name>C:\Users\victo\Desktop\G2_KETTEL\Fuentes\AGENCIAS_FE_DW.json</name>
       <filemask/>
       <exclude_filemask/>
       <file_required>N</file_required>
@@ -601,8 +621,21 @@
     </file>
     <fields>
       <field>
-        <name>nombre</name>
-        <path>$.*.agencia</path>
+        <name>id</name>
+        <path>$..legajo</path>
+        <type>Integer</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>agencia</name>
+        <path>$..agencia</path>
         <type>String</type>
         <format/>
         <currency/>
@@ -615,20 +648,7 @@
       </field>
       <field>
         <name>nacionalidad</name>
-        <path>$.*.nacionalidad</path>
-        <type>String</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-      </field>
-      <field>
-        <name>especializacion</name>
-        <path>$.*.especializacion</path>
+        <path>$..nacionalidad</path>
         <type>String</type>
         <format/>
         <currency/>
@@ -641,7 +661,7 @@
       </field>
       <field>
         <name>descuento_vip</name>
-        <path>$.*.descuento_vip</path>
+        <path>$..descuento_vip</path>
         <type>Number</type>
         <format/>
         <currency/>
@@ -653,9 +673,22 @@
         <repeat>N</repeat>
       </field>
       <field>
-        <name>id_agencia</name>
-        <path>$.*.legajo</path>
-        <type>Integer</type>
+        <name>especializacion</name>
+        <path>$..especializacion</path>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>ultima_actualizacion</name>
+        <path>$..ultima_actualizacion</path>
+        <type>Timestamp</type>
         <format/>
         <currency/>
         <decimal/>
@@ -687,8 +720,200 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>128</xloc>
-      <yloc>144</yloc>
+      <xloc>160</xloc>
+      <yloc>80</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>max_dim</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>dw_aero_con2</connection>
+    <sql>SELECT COALESCE(MAX(ultima_actualizacion),'2016-01-01 00:00:00') max_dim_agencia_ultima_actualizacion FROM dim_agencia</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cached_row_meta_active>N</cached_row_meta_active>
+    <row-meta>
+      <value-meta>
+        <type>String</type>
+        <storagetype>normal</storagetype>
+        <name>max_dim_agencia_ultima_actualizacion</name>
+        <length>19</length>
+        <precision>-1</precision>
+        <origin>max_dim</origin>
+        <comments>max_dim_agencia_ultima_actualizacion</comments>
+        <conversion_Mask/>
+        <decimal_symbol>,</decimal_symbol>
+        <grouping_symbol>.</grouping_symbol>
+        <currency_symbol/>
+        <trim_type>none</trim_type>
+        <case_insensitive>N</case_insensitive>
+        <collator_disabled>Y</collator_disabled>
+        <collator_strength>0</collator_strength>
+        <sort_descending>N</sort_descending>
+        <output_padding>N</output_padding>
+        <date_format_lenient>N</date_format_lenient>
+        <date_format_locale>es_ES</date_format_locale>
+        <date_format_timezone>Europe/Paris</date_format_timezone>
+        <lenient_string_to_number>N</lenient_string_to_number>
+      </value-meta>
+    </row-meta>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>320</xloc>
+      <yloc>224</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Añadir max_dim_timestamp</name>
+    <type>JoinRows</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <directory>%%java.io.tmpdir%%</directory>
+    <prefix>out</prefix>
+    <cache_size>500</cache_size>
+    <main/>
+    <compare>
+      <condition>
+        <negated>N</negated>
+        <leftvalue/>
+        <function>=</function>
+        <rightvalue/>
+      </condition>
+    </compare>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>320</xloc>
+      <yloc>80</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Selecciona/Renombra valores</name>
+    <type>SelectValues</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <fields>
+      <select_unspecified>N</select_unspecified>
+      <meta>
+        <name>max_dim_agencia_ultima_actualizacion</name>
+        <rename>max_dim_agencia_ultima_actualizacion</rename>
+        <type>Timestamp</type>
+        <length>-2</length>
+        <precision>-2</precision>
+        <conversion_mask>yyyy/MM/dd HH:mm:ss</conversion_mask>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>
+      <meta>
+        <name>ultima_actualizacion</name>
+        <rename>ultima_actualizacion</rename>
+        <type>Timestamp</type>
+        <length>-2</length>
+        <precision>-2</precision>
+        <conversion_mask>yyyy/MM/dd HH:mm:ss</conversion_mask>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>496</xloc>
+      <yloc>80</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Filtra actualizadas</name>
+    <type>FilterRows</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <send_true_to>Dimension lookup/update</send_true_to>
+    <send_false_to/>
+    <compare>
+      <condition>
+        <negated>N</negated>
+        <leftvalue>ultima_actualizacion</leftvalue>
+        <function>&gt;</function>
+        <rightvalue>max_dim_agencia_ultima_actualizacion</rightvalue>
+      </condition>
+    </compare>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>688</xloc>
+      <yloc>48</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
