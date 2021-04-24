@@ -106,7 +106,8 @@ CREATE TABLE fact_ventas
     num_clientes DOUBLE NOT NULL,
     ultima_actualizacion timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
     CONSTRAINT fkvuelo_key_venta  FOREIGN KEY (vuelo_key) REFERENCES dim_vuelo (vuelo_key) ON DELETE CASCADE,
-    CONSTRAINT fklugar_key  FOREIGN KEY (lugar_key) REFERENCES dim_lugar (lugar_key) ON DELETE CASCADE,
+    CONSTRAINT fklugar_origen_key  FOREIGN KEY (lugar_key) REFERENCES dim_lugar (lugar_key) ON DELETE CASCADE,
+    CONSTRAINT fklugar_destino_key  FOREIGN KEY (lugar_key) REFERENCES dim_lugar (lugar_key) ON DELETE CASCADE,
     CONSTRAINT fkfecha_key  FOREIGN KEY (fecha_key) REFERENCES dim_fecha (fecha_key) ON DELETE CASCADE,
 	CONSTRAINT fkagencia_key  FOREIGN KEY (agencia_key) REFERENCES dim_agencia (agencia_key) ON DELETE CASCADE,
     CONSTRAINT fkhora_key  FOREIGN KEY (hora_key) REFERENCES dim_hora (hora_key) ON DELETE CASCADE
