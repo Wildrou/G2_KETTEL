@@ -428,14 +428,14 @@
     <created_user>-</created_user>
     <created_date>2021/04/07 20:26:44.922</created_date>
     <modified_user>-</modified_user>
-    <modified_date>2021/04/24 18:08:23.393</modified_date>
+    <modified_date>2021/04/29 03:00:42.139</modified_date>
     <key_for_session_key>H4sIAAAAAAAAAAMAAAAAAAAAAAA=</key_for_session_key>
     <is_key_private>N</is_key_private>
   </info>
   <notepads>
   </notepads>
   <connection>
-    <name>dw_aero</name>
+    <name>dw_aero_cont</name>
     <server>localhost</server>
     <type>MARIADB</type>
     <access>Native</access>
@@ -487,26 +487,88 @@
   </connection>
   <order>
     <hop>
-      <from>CSV file input</from>
-      <to>filtrar montañosas</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
       <from>filtrar montañosas</from>
       <to>Set field value to a constant</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
+      <from>Filtra actualizadas</from>
+      <to>Dimension lookup/update</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
       <from>filtrar montañosas</from>
-      <to>Insert / update</to>
+      <to>Filtra actualizadas</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
       <from>Set field value to a constant</from>
-      <to>Insert / update</to>
+      <to>Filtra actualizadas</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Añadir max_dim_timestamp</from>
+      <to>Selecciona/Renombra valores</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>max_dim</from>
+      <to>Añadir max_dim_timestamp</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>CSV file input</from>
+      <to>Añadir max_dim_timestamp</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Selecciona/Renombra valores</from>
+      <to>Valor JavaScript modificado</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Valor JavaScript modificado</from>
+      <to>filtrar montañosas</to>
       <enabled>Y</enabled>
     </hop>
   </order>
+  <step>
+    <name>Añadir max_dim_timestamp</name>
+    <type>JoinRows</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <directory>%%java.io.tmpdir%%</directory>
+    <prefix>out</prefix>
+    <cache_size>500</cache_size>
+    <main/>
+    <compare>
+      <condition>
+        <negated>N</negated>
+        <leftvalue/>
+        <function>=</function>
+        <rightvalue/>
+      </condition>
+    </compare>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>240</xloc>
+      <yloc>160</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
   <step>
     <name>CSV file input</name>
     <type>CsvInput</type>
@@ -518,7 +580,7 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <filename>${KETTLE_REPOSITORY}\Fuentes\lugares_fe_utf8.csv</filename>
+    <filename>C:\Users\victo\Desktop\G2_KETTEL\Fuentes\lugares_fe_utf8.csv</filename>
     <filename_field/>
     <rownum_field/>
     <include_filename>N</include_filename>
@@ -688,6 +750,17 @@
         <trim_type>none</trim_type>
       </field>
       <field>
+        <name>ultima_actualizacion</name>
+        <type>String</type>
+        <format/>
+        <currency>€</currency>
+        <decimal>,</decimal>
+        <group>.</group>
+        <length>19</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
         <name>capital</name>
         <type>String</type>
         <format/>
@@ -708,14 +781,14 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>192</xloc>
-      <yloc>176</yloc>
+      <xloc>32</xloc>
+      <yloc>144</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
   <step>
-    <name>Insert / update</name>
-    <type>InsertUpdate</type>
+    <name>Dimension lookup/update</name>
+    <type>DimensionLookup</type>
     <description/>
     <distribute>Y</distribute>
     <custom_distribution/>
@@ -724,64 +797,78 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <connection>dw_aero</connection>
-    <commit>10</commit>
-    <update_bypassed>N</update_bypassed>
-    <lookup>
-      <schema>dw_aero</schema>
-      <table>dim_lugar</table>
+    <schema>dw_aero</schema>
+    <table>dim_lugar</table>
+    <connection>dw_aero_cont</connection>
+    <commit>100</commit>
+    <update>Y</update>
+    <fields>
       <key>
         <name>id</name>
-        <field>id_lugar</field>
-        <condition>=</condition>
-        <name2/>
+        <lookup>id_lugar</lookup>
       </key>
-      <value>
-        <name>id_lugar</name>
-        <rename>id</rename>
-        <update>Y</update>
-      </value>
-      <value>
-        <name>ciudad</name>
-        <rename>﻿city</rename>
-        <update>Y</update>
-      </value>
-      <value>
-        <name>admin_territorial</name>
-        <rename>admin_name</rename>
-        <update>Y</update>
-      </value>
-      <value>
-        <name>pais</name>
-        <rename>country</rename>
-        <update>Y</update>
-      </value>
-      <value>
-        <name>poblacion</name>
-        <rename>population</rename>
-        <update>Y</update>
-      </value>
-      <value>
+      <date>
+        <name>ultima_actualizacion</name>
+        <from>lugar_valid_from</from>
+        <to>lugar_valid_through</to>
+      </date>
+      <field>
+        <name>﻿city</name>
+        <lookup>ciudad</lookup>
+        <update>Insert</update>
+      </field>
+      <field>
+        <name>country</name>
+        <lookup>pais</lookup>
+        <update>Insert</update>
+      </field>
+      <field>
+        <name>admin_name</name>
+        <lookup>admin_territorial</lookup>
+        <update>Insert</update>
+      </field>
+      <field>
+        <name>poblacion_string</name>
+        <lookup>poblacion</lookup>
+        <update>Update</update>
+      </field>
+      <field>
+        <name>temperatura_string</name>
+        <lookup>temperatura</lookup>
+        <update>Update</update>
+      </field>
+      <field>
+        <name>precipitaciones_string</name>
+        <lookup>precipitaciones</lookup>
+        <update>Update</update>
+      </field>
+      <field>
         <name>ubicacion_geografica</name>
-        <rename>ubicacion_geografica</rename>
-        <update>Y</update>
-      </value>
-      <value>
+        <lookup>ubicacion_geografica</lookup>
+        <update>Update</update>
+      </field>
+      <field>
         <name>interes_turistico</name>
-        <rename>interes_turistico</rename>
-        <update>Y</update>
-      </value>
-      <value>
-        <name>temperatura</name>
-        <rename>temperatura_media</rename>
-        <update>Y</update>
-      </value>
-      <value>
-        <name>precipitaciones</name>
-        <rename>precipitaciones_anuales</rename>
-        <update>Y</update>
-      </value>
-    </lookup>
+        <lookup>interes_turistico</lookup>
+        <update>Update</update>
+      </field>
+      <return>
+        <name>lugar_key</name>
+        <rename/>
+        <creation_method>autoinc</creation_method>
+        <use_autoinc>Y</use_autoinc>
+        <version>lugar_version_number</version>
+      </return>
+    </fields>
+    <sequence/>
+    <min_year>1900</min_year>
+    <max_year>2199</max_year>
+    <cache_size>0</cache_size>
+    <preload_cache>N</preload_cache>
+    <use_start_date_alternative>N</use_start_date_alternative>
+    <start_date_alternative>none</start_date_alternative>
+    <start_date_field_name/>
+    <useBatch>N</useBatch>
     <attributes/>
     <cluster_schema/>
     <remotesteps>
@@ -791,8 +878,105 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>544</xloc>
-      <yloc>144</yloc>
+      <xloc>1248</xloc>
+      <yloc>160</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Filtra actualizadas</name>
+    <type>FilterRows</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <send_true_to>Dimension lookup/update</send_true_to>
+    <send_false_to/>
+    <compare>
+      <condition>
+        <negated>N</negated>
+        <leftvalue>ultima_actualizacion</leftvalue>
+        <function>&gt;</function>
+        <rightvalue>max_dim_lugar_ultima_actualizacion</rightvalue>
+      </condition>
+    </compare>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1040</xloc>
+      <yloc>160</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Selecciona/Renombra valores</name>
+    <type>SelectValues</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <fields>
+      <select_unspecified>N</select_unspecified>
+      <meta>
+        <name>max_dim_lugar_ultima_actualizacion</name>
+        <rename>max_dim_lugar_ultima_actualizacion</rename>
+        <type>Timestamp</type>
+        <length>-2</length>
+        <precision>-2</precision>
+        <conversion_mask>yyyy/MM/dd HH:mm:ss</conversion_mask>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>
+      <meta>
+        <name>ultima_actualizacion</name>
+        <rename>ultima_actualizacion</rename>
+        <type>Timestamp</type>
+        <length>-2</length>
+        <precision>-2</precision>
+        <conversion_mask>yyyy/MM/dd HH:mm:ss</conversion_mask>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>400</xloc>
+      <yloc>160</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -825,8 +1009,135 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>400</xloc>
-      <yloc>288</yloc>
+      <xloc>848</xloc>
+      <yloc>304</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Valor JavaScript modificado</name>
+    <type>ScriptValueMod</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <compatible>N</compatible>
+    <optimizationLevel>9</optimizationLevel>
+    <jsScripts>
+      <jsScript>
+        <jsScript_type>0</jsScript_type>
+        <jsScript_name>Script 1</jsScript_name>
+        <jsScript_script>var temperatura_string;
+var precipitaciones_string;
+var poblacion_string;
+
+ if(temperatura_media > 30)
+     temperatura_string="muy elevada";
+
+
+ else if (temperatura_media &lt;= 30  &amp;&amp; temperatura_media > 25 )
+     temperatura_string="elevada";
+
+ else if (temperatura_media &lt;= 25 &amp;&amp; temperatura_media > 20)
+     temperatura_string="moderada";
+
+ else if (temperatura_media &lt;= 20  &amp;&amp; temperatura_media > 10 )
+     temperatura_string="suave";
+
+ else if (temperatura_media &lt;= 10 &amp;&amp; temperatura_media > 0 )
+     temperatura_string="fria";
+
+ else 
+     temperatura_string="gelida";
+
+
+if(precipitaciones_anuales > 800)
+     precipitaciones_string="muy elevadas";
+
+else if (precipitaciones_anuales &lt;= 800 &amp;&amp; precipitaciones_anuales > 600 )
+     precipitaciones_string="elevadas";
+
+else if (precipitaciones_anuales &lt;= 600 &amp;&amp; precipitaciones_anuales > 400)
+     precipitaciones_string="moderadas";
+
+else if (precipitaciones_anuales &lt;= 400  &amp;&amp; precipitaciones_anuales > 100 )
+     precipitaciones_string="escasas";
+
+else 
+     precipitaciones_string="deserticas";
+
+
+if(population > 2000000)
+     poblacion_string="gran poblacion";
+
+else if (population &lt;= 2000000 &amp;&amp; population > 450000 )
+     poblacion_string="muy elevada";
+
+else if (population &lt;= 450000 &amp;&amp; population > 90000)
+     poblacion_string="elevada";
+
+else if (population &lt;= 90000  &amp;&amp; population > 5000 )
+     poblacion_string="moderada";
+
+else if (population &lt;= 5000  &amp;&amp; population > 500 )
+     poblacion_string="escasa";
+
+else if (population &lt;= 500  &amp;&amp; population > 1 )
+     poblacion_string="poco poblado";
+
+
+else 
+     poblacion_string="deshabitado";
+
+
+
+
+
+
+</jsScript_script>
+      </jsScript>
+    </jsScripts>
+    <fields>
+      <field>
+        <name>temperatura_string</name>
+        <rename>temperatura_string</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>
+      <field>
+        <name>precipitaciones_string</name>
+        <rename>precipitaciones_string</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>
+      <field>
+        <name>poblacion_string</name>
+        <rename>poblacion_string</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>592</xloc>
+      <yloc>160</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -841,7 +1152,7 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <send_true_to>Insert / update</send_true_to>
+    <send_true_to>Filtra actualizadas</send_true_to>
     <send_false_to>Set field value to a constant</send_false_to>
     <compare>
       <condition>
@@ -906,8 +1217,66 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>336</xloc>
-      <yloc>144</yloc>
+      <xloc>784</xloc>
+      <yloc>160</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>max_dim</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>dw_aero_cont</connection>
+    <sql>SELECT COALESCE(MAX(ultima_actualizacion),'2016-01-01 00:00:00') max_dim_lugar_ultima_actualizacion FROM dim_lugar</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cached_row_meta_active>N</cached_row_meta_active>
+    <row-meta>
+      <value-meta>
+        <type>String</type>
+        <storagetype>normal</storagetype>
+        <name>max_dim_lugar_ultima_actualizacion</name>
+        <length>19</length>
+        <precision>-1</precision>
+        <origin>max_dim</origin>
+        <comments>max_dim_lugar_ultima_actualizacion</comments>
+        <conversion_Mask/>
+        <decimal_symbol>,</decimal_symbol>
+        <grouping_symbol>.</grouping_symbol>
+        <currency_symbol/>
+        <trim_type>none</trim_type>
+        <case_insensitive>N</case_insensitive>
+        <collator_disabled>Y</collator_disabled>
+        <collator_strength>0</collator_strength>
+        <sort_descending>N</sort_descending>
+        <output_padding>N</output_padding>
+        <date_format_lenient>N</date_format_lenient>
+        <date_format_locale>es_ES</date_format_locale>
+        <date_format_timezone>Europe/Paris</date_format_timezone>
+        <lenient_string_to_number>N</lenient_string_to_number>
+      </value-meta>
+    </row-meta>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>240</xloc>
+      <yloc>304</yloc>
       <draw>Y</draw>
     </GUI>
   </step>

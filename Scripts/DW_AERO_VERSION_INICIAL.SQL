@@ -16,6 +16,8 @@ CREATE TABLE dim_cliente
     pais_origen VARCHAR(30),
     estudios VARCHAR(50),
     genero ENUM('HOMBRE', 'MUJER','OTRO'),
+    precio_billete DECIMAL (8,2),
+    clase_billete ENUM('TURISTA','BUSINESS','PREFERENTE'),
     cliente_valid_from DATE,
     cliente_valid_through DATE,
     cliente_version_number SMALLINT,
@@ -101,10 +103,8 @@ CREATE TABLE fact_ventas
     vuelo_key INT NOT NULL,
     lugar_salida_key INT NOT NULL,
     lugar_llegada_key INT NOT NULL,
-    fecha_salida_key INT NOT NULL,
-    hora_salida_key INT NOT NULL,
-    fecha_compra_key INT NOT NULL,
-    hora_compra_key INT NOT NULL,
+    fecha_key INT NOT NULL,
+    hora_key INT NOT NULL,
     agencia_key INT NOT NULL,
     importe DECIMAL(10,2) NOT NULL,
     num_vuelos DOUBLE NOT NULL,
@@ -114,10 +114,8 @@ CREATE TABLE fact_ventas
     CONSTRAINT fkvuelo_key_venta  FOREIGN KEY (vuelo_key) REFERENCES dim_vuelo (vuelo_key) ON DELETE CASCADE,
     CONSTRAINT fklugar_origen_key  FOREIGN KEY (lugar_salida_key) REFERENCES dim_lugar (lugar_key) ON DELETE CASCADE,
     CONSTRAINT fklugar_destino_key  FOREIGN KEY (lugar_llegada_key) REFERENCES dim_lugar (lugar_key) ON DELETE CASCADE,
-    CONSTRAINT fkfecha_salida_key  FOREIGN KEY (fecha_salida_key) REFERENCES dim_fecha (fecha_key) ON DELETE CASCADE,
-    CONSTRAINT fkhora_salida_key  FOREIGN KEY (hora_salida_key) REFERENCES dim_hora (hora_key) ON DELETE CASCADE,
-    CONSTRAINT fkfecha_compra_key  FOREIGN KEY (fecha_compra_key) REFERENCES dim_fecha (fecha_key) ON DELETE CASCADE,
-    CONSTRAINT fkhora_compra_key  FOREIGN KEY (hora_compra_key) REFERENCES dim_hora (hora_key) ON DELETE CASCADE,
-	CONSTRAINT fkagencia_key  FOREIGN KEY (agencia_key) REFERENCES dim_agencia (agencia_key) ON DELETE CASCADE
+    CONSTRAINT fkfecha_key  FOREIGN KEY (fecha_key) REFERENCES dim_fecha (fecha_key) ON DELETE CASCADE,
+	CONSTRAINT fkagencia_key  FOREIGN KEY (agencia_key) REFERENCES dim_agencia (agencia_key) ON DELETE CASCADE,
+    CONSTRAINT fkhora_key  FOREIGN KEY (hora_key) REFERENCES dim_hora (hora_key) ON DELETE CASCADE
 
 );
