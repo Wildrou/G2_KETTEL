@@ -108,7 +108,7 @@ CREATE TABLE fact_ventas
     agencia_key INT NOT NULL,
     importe DECIMAL(10,2),
     vuelo_cont INT,
-    num_billetes DOUBLE,
+    num_billetes INT,
     beneficio DECIMAL(10,2),
     ultima_actualizacion timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
     PRIMARY KEY(venta_key),
