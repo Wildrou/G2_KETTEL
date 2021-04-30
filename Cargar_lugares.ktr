@@ -428,14 +428,14 @@
     <created_user>-</created_user>
     <created_date>2021/04/07 20:26:44.922</created_date>
     <modified_user>-</modified_user>
-    <modified_date>2021/04/29 03:00:42.139</modified_date>
+    <modified_date>2021/04/30 19:20:15.516</modified_date>
     <key_for_session_key>H4sIAAAAAAAAAAMAAAAAAAAAAAA=</key_for_session_key>
     <is_key_private>N</is_key_private>
   </info>
   <notepads>
   </notepads>
   <connection>
-    <name>dw_aero_cont</name>
+    <name>dw_aero_con</name>
     <server>localhost</server>
     <type>MARIADB</type>
     <access>Native</access>
@@ -492,11 +492,6 @@
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Filtra actualizadas</from>
-      <to>Dimension lookup/update</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
       <from>filtrar montañosas</from>
       <to>Filtra actualizadas</to>
       <enabled>Y</enabled>
@@ -529,6 +524,11 @@
     <hop>
       <from>Valor JavaScript modificado</from>
       <to>filtrar montañosas</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Filtra actualizadas</from>
+      <to>inserta/actualiza dim_lugar</to>
       <enabled>Y</enabled>
     </hop>
   </order>
@@ -781,104 +781,7 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>32</xloc>
-      <yloc>144</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>Dimension lookup/update</name>
-    <type>DimensionLookup</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <schema>dw_aero</schema>
-    <table>dim_lugar</table>
-    <connection>dw_aero_cont</connection>
-    <commit>100</commit>
-    <update>Y</update>
-    <fields>
-      <key>
-        <name>id</name>
-        <lookup>id_lugar</lookup>
-      </key>
-      <date>
-        <name>ultima_actualizacion</name>
-        <from>lugar_valid_from</from>
-        <to>lugar_valid_through</to>
-      </date>
-      <field>
-        <name>﻿city</name>
-        <lookup>ciudad</lookup>
-        <update>Insert</update>
-      </field>
-      <field>
-        <name>country</name>
-        <lookup>pais</lookup>
-        <update>Insert</update>
-      </field>
-      <field>
-        <name>admin_name</name>
-        <lookup>admin_territorial</lookup>
-        <update>Insert</update>
-      </field>
-      <field>
-        <name>poblacion_string</name>
-        <lookup>poblacion</lookup>
-        <update>Update</update>
-      </field>
-      <field>
-        <name>temperatura_string</name>
-        <lookup>temperatura</lookup>
-        <update>Update</update>
-      </field>
-      <field>
-        <name>precipitaciones_string</name>
-        <lookup>precipitaciones</lookup>
-        <update>Update</update>
-      </field>
-      <field>
-        <name>ubicacion_geografica</name>
-        <lookup>ubicacion_geografica</lookup>
-        <update>Update</update>
-      </field>
-      <field>
-        <name>interes_turistico</name>
-        <lookup>interes_turistico</lookup>
-        <update>Update</update>
-      </field>
-      <return>
-        <name>lugar_key</name>
-        <rename/>
-        <creation_method>autoinc</creation_method>
-        <use_autoinc>Y</use_autoinc>
-        <version>lugar_version_number</version>
-      </return>
-    </fields>
-    <sequence/>
-    <min_year>1900</min_year>
-    <max_year>2199</max_year>
-    <cache_size>0</cache_size>
-    <preload_cache>N</preload_cache>
-    <use_start_date_alternative>N</use_start_date_alternative>
-    <start_date_alternative>none</start_date_alternative>
-    <start_date_field_name/>
-    <useBatch>N</useBatch>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>1248</xloc>
+      <xloc>64</xloc>
       <yloc>160</yloc>
       <draw>Y</draw>
     </GUI>
@@ -894,7 +797,7 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <send_true_to>Dimension lookup/update</send_true_to>
+    <send_true_to>inserta/actualiza dim_lugar</send_true_to>
     <send_false_to/>
     <compare>
       <condition>
@@ -914,7 +817,7 @@
     </remotesteps>
     <GUI>
       <xloc>1040</xloc>
-      <yloc>160</yloc>
+      <yloc>144</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -976,7 +879,7 @@
     </remotesteps>
     <GUI>
       <xloc>400</xloc>
-      <yloc>160</yloc>
+      <yloc>144</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1010,7 +913,7 @@
     </remotesteps>
     <GUI>
       <xloc>848</xloc>
-      <yloc>304</yloc>
+      <yloc>288</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1137,7 +1040,7 @@ else
     </remotesteps>
     <GUI>
       <xloc>592</xloc>
-      <yloc>160</yloc>
+      <yloc>144</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1223,6 +1126,85 @@ else
     </GUI>
   </step>
   <step>
+    <name>inserta/actualiza dim_lugar</name>
+    <type>CombinationLookup</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <schema>dw_aero</schema>
+    <table>dim_lugar</table>
+    <connection>dw_aero_con</connection>
+    <commit>100</commit>
+    <cache_size>9999</cache_size>
+    <replace>N</replace>
+    <preloadCache>N</preloadCache>
+    <crc>N</crc>
+    <crcfield>hashcode</crcfield>
+    <fields>
+      <key>
+        <name>id</name>
+        <lookup>id_lugar</lookup>
+      </key>
+      <key>
+        <name>﻿city</name>
+        <lookup>ciudad</lookup>
+      </key>
+      <key>
+        <name>admin_name</name>
+        <lookup>admin_territorial</lookup>
+      </key>
+      <key>
+        <name>country</name>
+        <lookup>pais</lookup>
+      </key>
+      <key>
+        <name>ubicacion_geografica</name>
+        <lookup>ubicacion_geografica</lookup>
+      </key>
+      <key>
+        <name>interes_turistico</name>
+        <lookup>interes_turistico</lookup>
+      </key>
+      <key>
+        <name>temperatura_string</name>
+        <lookup>temperatura</lookup>
+      </key>
+      <key>
+        <name>precipitaciones_string</name>
+        <lookup>precipitaciones</lookup>
+      </key>
+      <key>
+        <name>poblacion_string</name>
+        <lookup>poblacion</lookup>
+      </key>
+      <return>
+        <name>lugar_key</name>
+        <creation_method>autoinc</creation_method>
+        <use_autoinc>Y</use_autoinc>
+      </return>
+    </fields>
+    <sequence/>
+    <last_update_field/>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1248</xloc>
+      <yloc>144</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
     <name>max_dim</name>
     <type>TableInput</type>
     <description/>
@@ -1233,7 +1215,7 @@ else
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <connection>dw_aero_cont</connection>
+    <connection>dw_aero_con</connection>
     <sql>SELECT COALESCE(MAX(ultima_actualizacion),'2016-01-01 00:00:00') max_dim_lugar_ultima_actualizacion FROM dim_lugar</sql>
     <limit>0</limit>
     <lookup/>
@@ -1241,31 +1223,7 @@ else
     <variables_active>N</variables_active>
     <lazy_conversion_active>N</lazy_conversion_active>
     <cached_row_meta_active>N</cached_row_meta_active>
-    <row-meta>
-      <value-meta>
-        <type>String</type>
-        <storagetype>normal</storagetype>
-        <name>max_dim_lugar_ultima_actualizacion</name>
-        <length>19</length>
-        <precision>-1</precision>
-        <origin>max_dim</origin>
-        <comments>max_dim_lugar_ultima_actualizacion</comments>
-        <conversion_Mask/>
-        <decimal_symbol>,</decimal_symbol>
-        <grouping_symbol>.</grouping_symbol>
-        <currency_symbol/>
-        <trim_type>none</trim_type>
-        <case_insensitive>N</case_insensitive>
-        <collator_disabled>Y</collator_disabled>
-        <collator_strength>0</collator_strength>
-        <sort_descending>N</sort_descending>
-        <output_padding>N</output_padding>
-        <date_format_lenient>N</date_format_lenient>
-        <date_format_locale>es_ES</date_format_locale>
-        <date_format_timezone>Europe/Paris</date_format_timezone>
-        <lenient_string_to_number>N</lenient_string_to_number>
-      </value-meta>
-    </row-meta>
+    <row-meta/>
     <attributes/>
     <cluster_schema/>
     <remotesteps>

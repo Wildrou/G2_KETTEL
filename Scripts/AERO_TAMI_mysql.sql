@@ -28,6 +28,7 @@ CREATE TABLE TRANSPORTE
 (
     idtransporte VARCHAR(6) NOT NULL,
     compania VARCHAR(10) NOT NULL,
+     ultima_actualizacion timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
     PRIMARY KEY (idtransporte)
 );
 
@@ -37,6 +38,7 @@ CREATE TABLE TAXI
     numlicencia VARCHAR(6) NOT NULL,
     idtransporte_taxi VARCHAR(6) NOT NULL,
     PRIMARY KEY (numlicencia),
+     ultima_actualizacion timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
     CONSTRAINT tax_fk FOREIGN KEY (idtransporte_taxi) REFERENCES TRANSPORTE (idtransporte) ON DELETE CASCADE
 );
 
@@ -47,6 +49,7 @@ CREATE TABLE AUTOBUS
     lineabus VARCHAR(3) NOT NULL,
     idtransporte_autobus VARCHAR(6) NOT NULL,
     PRIMARY KEY (matricula),
+     ultima_actualizacion timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
     CONSTRAINT autob_fk FOREIGN KEY (idtransporte_autobus) REFERENCES TRANSPORTE (idtransporte) ON DELETE CASCADE
 );
 
@@ -67,6 +70,7 @@ CREATE TABLE EMPLEADO
     nss VARCHAR (13) UNIQUE NOT NULL,
     sueldo DOUBLE NOT NULL,
     turno VARCHAR (11) NOT NULL,
+     ultima_actualizacion timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
     PRIMARY KEY (dni_empleado),
     CONSTRAINT fkdni_empleado FOREIGN KEY (dni_empleado) REFERENCES PERSONA (dni) ON DELETE CASCADE
         
@@ -79,6 +83,7 @@ CREATE TABLE TRIPULANTE
 (   
     dni_tripulante VARCHAR(9) UNIQUE NOT NULL,
     horas_vuelo DOUBLE NOT NULL,
+     ultima_actualizacion timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
     PRIMARY KEY (dni_tripulante),
     CONSTRAINT fkdni_tripulante FOREIGN KEY (dni_tripulante) REFERENCES PERSONA(dni) ON DELETE CASCADE
 );
@@ -91,6 +96,7 @@ CREATE TABLE CABINAMANDO
     dni_cabinamando VARCHAR(9) UNIQUE NOT NULL,
     numlicencia VARCHAR (10) UNIQUE NOT NULL,
     puesto VARCHAR(8) NOT NULL,
+     ultima_actualizacion timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
     PRIMARY KEY (dni_cabinamando),
     CONSTRAINT fk_cabinamando FOREIGN KEY (dni_cabinamando) REFERENCES TRIPULANTE (dni_tripulante) ON DELETE CASCADE
 );
@@ -99,6 +105,7 @@ CREATE TABLE CABINAPASAJERO
 (
     dni_cabinapasajero VARCHAR(9) UNIQUE NOT NULL,
     clase VARCHAR(15) NOT NULL,
+     ultima_actualizacion timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
     PRIMARY KEY (dni_cabinapasajero),
     CONSTRAINT fk_cabinapasajero FOREIGN KEY (dni_cabinapasajero) REFERENCES TRIPULANTE (dni_tripulante) ON DELETE CASCADE
     
@@ -108,6 +115,7 @@ CREATE TABLE AZAFATA
 (
     dni_azafata VARCHAR(9) UNIQUE NOT NULL,
 	impventa DOUBLE NOT NULL,
+     ultima_actualizacion timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
     PRIMARY KEY (dni_azafata),
     CONSTRAINT fk_azafata FOREIGN KEY (dni_azafata) REFERENCES CABINAPASAJERO (dni_cabinapasajero) ON DELETE CASCADE
 
@@ -117,6 +125,7 @@ CREATE TABLE SOBRECARGO
 (
 	dni_sobrecargo VARCHAR(9) UNIQUE NOT NULL,
     horas_sobrecargo DOUBLE NOT NULL,
+     ultima_actualizacion timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
     PRIMARY KEY (dni_sobrecargo),
     CONSTRAINT fk_sobrecargo FOREIGN KEY (dni_sobrecargo) REFERENCES CABINAPASAJERO (dni_cabinapasajero) ON DELETE CASCADE
 );
@@ -125,6 +134,7 @@ CREATE TABLE PISTA
 (
     numpista DOUBLE UNIQUE NOT NULL,
 	longitud DOUBLE NOT NULL,
+     ultima_actualizacion timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
     PRIMARY KEY (numpista)
   
 );
@@ -135,6 +145,7 @@ CREATE TABLE AVION
     modelo VARCHAR(10) NOT NULL,
     cargamax DECIMAL (5,2) NOT NULL,
     numplazas DOUBLE NOT NULL,
+     ultima_actualizacion timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
     PRIMARY KEY (idavion)
 );
 
@@ -147,6 +158,7 @@ CREATE TABLE RECORRIDO
     origen VARCHAR(30) NOT NULL,
     tipo ENUM('NACIONAL','INTERNACIONAL') NOT NULL,
     duracion_minutos INT NOT NULL,
+     ultima_actualizacion timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
     PRIMARY KEY (idrecorrido)
 );
 
@@ -156,6 +168,7 @@ CREATE TABLE PUERTAEMBARQUE
 (
     codpuerta VARCHAR(4) UNIQUE NOT NULL,
     terminal VARCHAR(2)  NOT NULL,
+     ultima_actualizacion timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
     PRIMARY KEY (codpuerta)
 );
 
@@ -163,6 +176,7 @@ CREATE TABLE AEROLINEA
 (
 	idaerolinea VARCHAR(8) UNIQUE NOT NULL,
 	nombre VARCHAR(12) NOT NULL,
+     ultima_actualizacion timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
 	PRIMARY KEY (idaerolinea)
 );
 
@@ -246,6 +260,7 @@ CREATE TABLE TELEFONO
 (
     dni_cliente VARCHAR(9) UNIQUE NOT NULL,
     telefono DOUBLE UNIQUE NOT NULL,
+     ultima_actualizacion timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
     CONSTRAINT fkdni_cliente FOREIGN KEY (dni_cliente) REFERENCES CLIENTE(dni_cliente),
     CONSTRAINT pk_telefono PRIMARY KEY(dni_cliente,telefono)
 );

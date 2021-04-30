@@ -27,8 +27,8 @@ CREATE TABLE dim_vuelo
 (
     vuelo_key INT NOT NULL AUTO_INCREMENT,
     id_vuelo VARCHAR(6),
-    duracion_vuelo INT,
-    capacidad DOUBLE,
+    duracion_vuelo VARCHAR(30),
+    capacidad VARCHAR(30),
     tipo_vuelo ENUM('NACIONAL','INTERNACIONAL'),
     tipo_avion VARCHAR(10),
     aerolinea VARCHAR(12),
@@ -48,9 +48,6 @@ CREATE TABLE dim_lugar
     interes_turistico ENUM('alto','moderado','bajo'),
     temperatura ENUM('muy elevada', 'elevada', 'moderada', 'suave', 'fria','gelida'),
     precipitaciones ENUM('muy elevadas', 'elevadas', 'moderadas', 'escasas', 'deserticas'),
-    lugar_valid_from DATE,
-    lugar_valid_through DATE,
-    lugar_version_number SMALLINT,
     ultima_actualizacion timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
     PRIMARY KEY(lugar_key)
 );
@@ -97,8 +94,9 @@ CREATE TABLE dim_hora
 
 CREATE TABLE fact_ventas
 (
-    venta_key INT NOT NULL AUTO_INCREMENT,
+    venta_key VARCHAR(15) NOT NULL,
     vuelo_key INT NOT NULL,
+    cliente_key INT NOT NULL,
     lugar_salida_key INT NOT NULL,
     lugar_llegada_key INT NOT NULL,
     fecha_salida_key INT NOT NULL,
@@ -108,11 +106,12 @@ CREATE TABLE fact_ventas
     agencia_key INT NOT NULL,
     importe DECIMAL(10,2),
     vuelo_cont INT,
-    num_billetes DOUBLE,
+    precio_agencia DECIMAL(10,2),
     beneficio DECIMAL(10,2),
     ultima_actualizacion timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
     PRIMARY KEY(venta_key),
     CONSTRAINT fkvuelo_key_venta  FOREIGN KEY (vuelo_key) REFERENCES dim_vuelo (vuelo_key) ON DELETE CASCADE,
+    CONSTRAINT fkcliente_key_venta  FOREIGN KEY (cliente_key) REFERENCES dim_cliente (cliente_key) ON DELETE CASCADE,
     CONSTRAINT fklugar_origen_key  FOREIGN KEY (lugar_salida_key) REFERENCES dim_lugar (lugar_key) ON DELETE CASCADE,
     CONSTRAINT fklugar_destino_key  FOREIGN KEY (lugar_llegada_key) REFERENCES dim_lugar (lugar_key) ON DELETE CASCADE,
     CONSTRAINT fkfecha_salida_key  FOREIGN KEY (fecha_salida_key) REFERENCES dim_fecha (fecha_key) ON DELETE CASCADE,

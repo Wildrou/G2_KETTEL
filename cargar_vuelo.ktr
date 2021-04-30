@@ -428,14 +428,14 @@
     <created_user>-</created_user>
     <created_date>2021/04/10 15:07:31.550</created_date>
     <modified_user>-</modified_user>
-    <modified_date>2021/04/22 09:21:24.275</modified_date>
+    <modified_date>2021/04/30 21:21:55.372</modified_date>
     <key_for_session_key>H4sIAAAAAAAAAAMAAAAAAAAAAAA=</key_for_session_key>
     <is_key_private>N</is_key_private>
   </info>
   <notepads>
   </notepads>
   <connection>
-    <name>aero</name>
+    <name>aero_oltp</name>
     <server>localhost</server>
     <type>MARIADB</type>
     <access>Native</access>
@@ -536,13 +536,512 @@
       </attribute>
     </attributes>
   </connection>
+  <connection>
+    <name>dw_aero_con</name>
+    <server>localhost</server>
+    <type>MARIADB</type>
+    <access>Native</access>
+    <database>dw_aero</database>
+    <port>3306</port>
+    <username>root</username>
+    <password>Encrypted </password>
+    <servername/>
+    <data_tablespace/>
+    <index_tablespace/>
+    <attributes>
+      <attribute>
+        <code>FORCE_IDENTIFIERS_TO_LOWERCASE</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>FORCE_IDENTIFIERS_TO_UPPERCASE</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>IS_CLUSTERED</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>PORT_NUMBER</code>
+        <attribute>3306</attribute>
+      </attribute>
+      <attribute>
+        <code>PRESERVE_RESERVED_WORD_CASE</code>
+        <attribute>Y</attribute>
+      </attribute>
+      <attribute>
+        <code>QUOTE_ALL_FIELDS</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>SUPPORTS_BOOLEAN_DATA_TYPE</code>
+        <attribute>Y</attribute>
+      </attribute>
+      <attribute>
+        <code>SUPPORTS_TIMESTAMP_DATA_TYPE</code>
+        <attribute>Y</attribute>
+      </attribute>
+      <attribute>
+        <code>USE_POOLING</code>
+        <attribute>N</attribute>
+      </attribute>
+    </attributes>
+  </connection>
   <order>
     <hop>
+      <from>formatea timestamp</from>
+      <to>discretizar variables</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>max_dim_vuelo_ultima_actualizacion</from>
+      <to>añade max dim timestamp</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>discretizar variables</from>
+      <to>Filtra actualizadas</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
       <from>vuelo</from>
-      <to>Insert / update</to>
+      <to>añade max dim timestamp</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>añade max dim timestamp</from>
+      <to>formatea timestamp</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Filtra actualizadas</from>
+      <to>inserta/actualiza dim_vuelo</to>
       <enabled>Y</enabled>
     </hop>
   </order>
+  <step>
+    <name>Filtra actualizadas</name>
+    <type>FilterRows</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <send_true_to>inserta/actualiza dim_vuelo</send_true_to>
+    <send_false_to/>
+    <compare>
+      <condition>
+        <negated>N</negated>
+        <leftvalue>ultima_actualizacion</leftvalue>
+        <function>&gt;</function>
+        <rightvalue>max_dim_vuelo_ultima_actualizacion</rightvalue>
+      </condition>
+    </compare>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>768</xloc>
+      <yloc>176</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>añade max dim timestamp</name>
+    <type>JoinRows</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <directory>%%java.io.tmpdir%%</directory>
+    <prefix>out</prefix>
+    <cache_size>500</cache_size>
+    <main/>
+    <compare>
+      <condition>
+        <negated>N</negated>
+        <leftvalue/>
+        <function>=</function>
+        <rightvalue/>
+      </condition>
+    </compare>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>288</xloc>
+      <yloc>192</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>discretizar variables</name>
+    <type>ScriptValueMod</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <compatible>N</compatible>
+    <optimizationLevel>9</optimizationLevel>
+    <jsScripts>
+      <jsScript>
+        <jsScript_type>0</jsScript_type>
+        <jsScript_name>Script 1</jsScript_name>
+        <jsScript_script>var ultima_actualizacion= java.sql.Timestamp.valueOf(ultima_actualizacion_vuelo);
+
+if(ultima_actualizacion_avion > ultima_actualizacion)
+   ultima_actualizacion = ultima_actualizacion_avion;
+
+
+if(ultima_actualizacion_aerolinea > ultima_actualizacion)
+   ultima_actualizacion = ultima_actualizacion_aerolinea;
+
+
+if(ultima_actualizacion_recorrido > ultima_actualizacion)
+   ultima_actualizacion = ultima_actualizacion_recorrido;
+
+var duracion_string;
+var capacidad_string;
+
+
+ if( duracion_minutos> 600)
+     duracion_string="+10 horas";
+
+
+ else if ( duracion_minutos &lt;= 600  &amp;&amp; duracion_minutos > 300 )
+     duracion_string="5-10 horas";
+
+ else if ( duracion_minutos &lt;= 300 &amp;&amp; duracion_minutos > 120)
+     duracion_string="2-5 horas";
+
+ else if ( duracion_minutos &lt;= 120  &amp;&amp; duracion_minutos >= 60)
+     duracion_string="1-2 horas";
+
+ else 
+     duracion_string="menos de 1 hora";
+
+
+
+ if( numplazas> 250)
+     capacidad_string="+250";
+
+
+ else if ( numplazas &lt;= 250  &amp;&amp; numplazas > 150 )
+     capacidad_string="150-250";
+
+ else if ( numplazas &lt;= 150 &amp;&amp; numplazas > 90)
+     capacidad_string="90-150";
+
+ else if ( numplazas &lt;= 90  &amp;&amp; numplazas > 60)
+     capacidad_string="60-90";
+
+
+ else if ( numplazas &lt;= 60 &amp;&amp; numplazas >= 20)
+     capacidad_string="60-90";
+
+ else 
+     capacidad_string="menos de 20";</jsScript_script>
+      </jsScript>
+    </jsScripts>
+    <fields>
+      <field>
+        <name>ultima_actualizacion</name>
+        <rename>ultima_actualizacion</rename>
+        <type>Timestamp</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>
+      <field>
+        <name>duracion_string</name>
+        <rename>duracion_string</rename>
+        <type>String</type>
+        <length>30</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>
+      <field>
+        <name>capacidad_string</name>
+        <rename>capacidad_string</rename>
+        <type>String</type>
+        <length>30</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>592</xloc>
+      <yloc>192</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>formatea timestamp</name>
+    <type>SelectValues</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <fields>
+      <select_unspecified>N</select_unspecified>
+      <meta>
+        <name>ultima_actualizacion_vuelo</name>
+        <rename>ultima_actualizacion_vuelo</rename>
+        <type>Timestamp</type>
+        <length>-2</length>
+        <precision>-2</precision>
+        <conversion_mask>yyyy-MM-dd HH:mm:ss.SSS</conversion_mask>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>
+      <meta>
+        <name>ultima_actualizacion_aerolinea</name>
+        <rename>ultima_actualizacion_aerolinea</rename>
+        <type>Timestamp</type>
+        <length>-2</length>
+        <precision>-2</precision>
+        <conversion_mask>yyyy-MM-dd HH:mm:ss.SSS</conversion_mask>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>
+      <meta>
+        <name>ultima_actualizacion_recorrido</name>
+        <rename>ultima_actualizacion_recorrido</rename>
+        <type>Timestamp</type>
+        <length>-2</length>
+        <precision>-2</precision>
+        <conversion_mask>yyyy-MM-dd HH:mm:ss.SSS</conversion_mask>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>
+      <meta>
+        <name>ultima_actualizacion_avion</name>
+        <rename>ultima_actualizacion_avion</rename>
+        <type>Timestamp</type>
+        <length>-2</length>
+        <precision>-2</precision>
+        <conversion_mask>yyyy-MM-dd HH:mm:ss.SSS</conversion_mask>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>
+      <meta>
+        <name>max_dim_vuelo_ultima_actualizacion</name>
+        <rename>max_dim_vuelo_ultima_actualizacion</rename>
+        <type>Timestamp</type>
+        <length>-2</length>
+        <precision>-2</precision>
+        <conversion_mask>yyyy-MM-dd HH:mm:ss.SSS</conversion_mask>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>448</xloc>
+      <yloc>192</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>inserta/actualiza dim_vuelo</name>
+    <type>CombinationLookup</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <schema>dw_aero</schema>
+    <table>dim_vuelo</table>
+    <connection>dw_aero_con</connection>
+    <commit>100</commit>
+    <cache_size>9999</cache_size>
+    <replace>N</replace>
+    <preloadCache>N</preloadCache>
+    <crc>N</crc>
+    <crcfield>hashcode</crcfield>
+    <fields>
+      <key>
+        <name>idvuelo</name>
+        <lookup>id_vuelo</lookup>
+      </key>
+      <key>
+        <name>duracion_string</name>
+        <lookup>duracion_vuelo</lookup>
+      </key>
+      <key>
+        <name>tipo</name>
+        <lookup>tipo_vuelo</lookup>
+      </key>
+      <key>
+        <name>capacidad_string</name>
+        <lookup>capacidad</lookup>
+      </key>
+      <key>
+        <name>modelo</name>
+        <lookup>tipo_avion</lookup>
+      </key>
+      <key>
+        <name>nombre</name>
+        <lookup>aerolinea</lookup>
+      </key>
+      <return>
+        <name>vuelo_key</name>
+        <creation_method>autoinc</creation_method>
+        <use_autoinc>Y</use_autoinc>
+      </return>
+    </fields>
+    <sequence/>
+    <last_update_field/>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>944</xloc>
+      <yloc>176</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>max_dim_vuelo_ultima_actualizacion</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>dw_aero</connection>
+    <sql>SELECT COALESCE(MAX(ultima_actualizacion),'2016-01-01 00:00:00') max_dim_vuelo_ultima_actualizacion FROM dim_vuelo</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cached_row_meta_active>N</cached_row_meta_active>
+    <row-meta>
+      <value-meta>
+        <type>String</type>
+        <storagetype>normal</storagetype>
+        <name>max_dim_vuelo_ultima_actualizacion</name>
+        <length>19</length>
+        <precision>-1</precision>
+        <origin>max_dim_vuelo_ultima_actualizacion</origin>
+        <comments>max_dim_vuelo_ultima_actualizacion</comments>
+        <conversion_Mask/>
+        <decimal_symbol>,</decimal_symbol>
+        <grouping_symbol>.</grouping_symbol>
+        <currency_symbol/>
+        <trim_type>none</trim_type>
+        <case_insensitive>N</case_insensitive>
+        <collator_disabled>Y</collator_disabled>
+        <collator_strength>0</collator_strength>
+        <sort_descending>N</sort_descending>
+        <output_padding>N</output_padding>
+        <date_format_lenient>N</date_format_lenient>
+        <date_format_locale>es_ES</date_format_locale>
+        <date_format_timezone>Europe/Paris</date_format_timezone>
+        <lenient_string_to_number>N</lenient_string_to_number>
+      </value-meta>
+    </row-meta>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>288</xloc>
+      <yloc>304</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
   <step>
     <name>vuelo</name>
     <type>TableInput</type>
@@ -554,11 +1053,15 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <connection>aero</connection>
-    <sql>SELECT v.idvuelo,r.duracion_minutos,r.tipo, a.numplazas, a.modelo, al.nombre 
+    <connection>aero_oltp</connection>
+    <sql>SELECT v.idvuelo,r.duracion_minutos,r.tipo, a.numplazas, a.modelo, al.nombre, v.ultima_actualizacion as ultima_actualizacion_vuelo, 
+a.ultima_actualizacion as ultima_actualizacion_avion,
+al.ultima_actualizacion as ultima_actualizacion_aerolinea,
+r.ultima_actualizacion as ultima_actualizacion_recorrido
 FROM vuelo as v JOIN recorrido as r ON v.idrecorrido = r.idrecorrido 
 JOIN avion as a ON v.idavion = a.idavion 
-JOIN aerolinea AS al ON v.idaerolinea = al.idaerolinea</sql>
+JOIN aerolinea AS al ON v.idaerolinea = al.idaerolinea
+</sql>
     <limit>0</limit>
     <lookup/>
     <execute_each_row>N</execute_each_row>
@@ -585,7 +1088,7 @@ JOIN aerolinea AS al ON v.idaerolinea = al.idaerolinea</sql>
         <sort_descending>N</sort_descending>
         <output_padding>N</output_padding>
         <date_format_lenient>N</date_format_lenient>
-        <date_format_locale>en_US</date_format_locale>
+        <date_format_locale>es_ES</date_format_locale>
         <date_format_timezone>Europe/Paris</date_format_timezone>
         <lenient_string_to_number>N</lenient_string_to_number>
       </value-meta>
@@ -608,7 +1111,7 @@ JOIN aerolinea AS al ON v.idaerolinea = al.idaerolinea</sql>
         <sort_descending>N</sort_descending>
         <output_padding>N</output_padding>
         <date_format_lenient>N</date_format_lenient>
-        <date_format_locale>en_US</date_format_locale>
+        <date_format_locale>es_ES</date_format_locale>
         <date_format_timezone>Europe/Paris</date_format_timezone>
         <lenient_string_to_number>N</lenient_string_to_number>
       </value-meta>
@@ -631,7 +1134,7 @@ JOIN aerolinea AS al ON v.idaerolinea = al.idaerolinea</sql>
         <sort_descending>N</sort_descending>
         <output_padding>N</output_padding>
         <date_format_lenient>N</date_format_lenient>
-        <date_format_locale>en_US</date_format_locale>
+        <date_format_locale>es_ES</date_format_locale>
         <date_format_timezone>Europe/Paris</date_format_timezone>
         <lenient_string_to_number>N</lenient_string_to_number>
       </value-meta>
@@ -654,7 +1157,7 @@ JOIN aerolinea AS al ON v.idaerolinea = al.idaerolinea</sql>
         <sort_descending>N</sort_descending>
         <output_padding>N</output_padding>
         <date_format_lenient>N</date_format_lenient>
-        <date_format_locale>en_US</date_format_locale>
+        <date_format_locale>es_ES</date_format_locale>
         <date_format_timezone>Europe/Paris</date_format_timezone>
         <lenient_string_to_number>N</lenient_string_to_number>
       </value-meta>
@@ -677,7 +1180,7 @@ JOIN aerolinea AS al ON v.idaerolinea = al.idaerolinea</sql>
         <sort_descending>N</sort_descending>
         <output_padding>N</output_padding>
         <date_format_lenient>N</date_format_lenient>
-        <date_format_locale>en_US</date_format_locale>
+        <date_format_locale>es_ES</date_format_locale>
         <date_format_timezone>Europe/Paris</date_format_timezone>
         <lenient_string_to_number>N</lenient_string_to_number>
       </value-meta>
@@ -700,7 +1203,99 @@ JOIN aerolinea AS al ON v.idaerolinea = al.idaerolinea</sql>
         <sort_descending>N</sort_descending>
         <output_padding>N</output_padding>
         <date_format_lenient>N</date_format_lenient>
-        <date_format_locale>en_US</date_format_locale>
+        <date_format_locale>es_ES</date_format_locale>
+        <date_format_timezone>Europe/Paris</date_format_timezone>
+        <lenient_string_to_number>N</lenient_string_to_number>
+      </value-meta>
+      <value-meta>
+        <type>Timestamp</type>
+        <storagetype>normal</storagetype>
+        <name>ultima_actualizacion_vuelo</name>
+        <length>0</length>
+        <precision>-1</precision>
+        <origin>vuelo</origin>
+        <comments>ultima_actualizacion_vuelo</comments>
+        <conversion_Mask/>
+        <decimal_symbol>,</decimal_symbol>
+        <grouping_symbol>.</grouping_symbol>
+        <currency_symbol/>
+        <trim_type>none</trim_type>
+        <case_insensitive>N</case_insensitive>
+        <collator_disabled>Y</collator_disabled>
+        <collator_strength>0</collator_strength>
+        <sort_descending>N</sort_descending>
+        <output_padding>N</output_padding>
+        <date_format_lenient>N</date_format_lenient>
+        <date_format_locale>es_ES</date_format_locale>
+        <date_format_timezone>Europe/Paris</date_format_timezone>
+        <lenient_string_to_number>N</lenient_string_to_number>
+      </value-meta>
+      <value-meta>
+        <type>Timestamp</type>
+        <storagetype>normal</storagetype>
+        <name>ultima_actualizacion_avion</name>
+        <length>0</length>
+        <precision>-1</precision>
+        <origin>vuelo</origin>
+        <comments>ultima_actualizacion_avion</comments>
+        <conversion_Mask/>
+        <decimal_symbol>,</decimal_symbol>
+        <grouping_symbol>.</grouping_symbol>
+        <currency_symbol/>
+        <trim_type>none</trim_type>
+        <case_insensitive>N</case_insensitive>
+        <collator_disabled>Y</collator_disabled>
+        <collator_strength>0</collator_strength>
+        <sort_descending>N</sort_descending>
+        <output_padding>N</output_padding>
+        <date_format_lenient>N</date_format_lenient>
+        <date_format_locale>es_ES</date_format_locale>
+        <date_format_timezone>Europe/Paris</date_format_timezone>
+        <lenient_string_to_number>N</lenient_string_to_number>
+      </value-meta>
+      <value-meta>
+        <type>Timestamp</type>
+        <storagetype>normal</storagetype>
+        <name>ultima_actualizacion_aerolinea</name>
+        <length>0</length>
+        <precision>-1</precision>
+        <origin>vuelo</origin>
+        <comments>ultima_actualizacion_aerolinea</comments>
+        <conversion_Mask/>
+        <decimal_symbol>,</decimal_symbol>
+        <grouping_symbol>.</grouping_symbol>
+        <currency_symbol/>
+        <trim_type>none</trim_type>
+        <case_insensitive>N</case_insensitive>
+        <collator_disabled>Y</collator_disabled>
+        <collator_strength>0</collator_strength>
+        <sort_descending>N</sort_descending>
+        <output_padding>N</output_padding>
+        <date_format_lenient>N</date_format_lenient>
+        <date_format_locale>es_ES</date_format_locale>
+        <date_format_timezone>Europe/Paris</date_format_timezone>
+        <lenient_string_to_number>N</lenient_string_to_number>
+      </value-meta>
+      <value-meta>
+        <type>Timestamp</type>
+        <storagetype>normal</storagetype>
+        <name>ultima_actualizacion_recorrido</name>
+        <length>0</length>
+        <precision>-1</precision>
+        <origin>vuelo</origin>
+        <comments>ultima_actualizacion_recorrido</comments>
+        <conversion_Mask/>
+        <decimal_symbol>,</decimal_symbol>
+        <grouping_symbol>.</grouping_symbol>
+        <currency_symbol/>
+        <trim_type>none</trim_type>
+        <case_insensitive>N</case_insensitive>
+        <collator_disabled>Y</collator_disabled>
+        <collator_strength>0</collator_strength>
+        <sort_descending>N</sort_descending>
+        <output_padding>N</output_padding>
+        <date_format_lenient>N</date_format_lenient>
+        <date_format_locale>es_ES</date_format_locale>
         <date_format_timezone>Europe/Paris</date_format_timezone>
         <lenient_string_to_number>N</lenient_string_to_number>
       </value-meta>
@@ -714,75 +1309,7 @@ JOIN aerolinea AS al ON v.idaerolinea = al.idaerolinea</sql>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>272</xloc>
-      <yloc>192</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>Insert / update</name>
-    <type>InsertUpdate</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <connection>dw_aero</connection>
-    <commit>100</commit>
-    <update_bypassed>N</update_bypassed>
-    <lookup>
-      <schema>dw_aero</schema>
-      <table>dim_vuelo</table>
-      <key>
-        <name>idvuelo</name>
-        <field>id_vuelo</field>
-        <condition>=</condition>
-        <name2/>
-      </key>
-      <value>
-        <name>id_vuelo</name>
-        <rename>idvuelo</rename>
-        <update>Y</update>
-      </value>
-      <value>
-        <name>duracion_vuelo</name>
-        <rename>duracion_minutos</rename>
-        <update>Y</update>
-      </value>
-      <value>
-        <name>capacidad</name>
-        <rename>numplazas</rename>
-        <update>Y</update>
-      </value>
-      <value>
-        <name>tipo_vuelo</name>
-        <rename>tipo</rename>
-        <update>Y</update>
-      </value>
-      <value>
-        <name>tipo_avion</name>
-        <rename>modelo</rename>
-        <update>Y</update>
-      </value>
-      <value>
-        <name>aerolinea</name>
-        <rename>nombre</rename>
-        <update>Y</update>
-      </value>
-    </lookup>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>544</xloc>
+      <xloc>144</xloc>
       <yloc>192</yloc>
       <draw>Y</draw>
     </GUI>
