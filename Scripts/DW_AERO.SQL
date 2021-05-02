@@ -108,6 +108,7 @@ CREATE TABLE fact_ventas
     vuelo_cont INT,
     precio_agencia DECIMAL(10,2),
     beneficio DECIMAL(10,2),
+    antelacion_compra INT,
     ultima_actualizacion timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
     PRIMARY KEY(venta_key),
     CONSTRAINT fkvuelo_key_venta  FOREIGN KEY (vuelo_key) REFERENCES dim_vuelo (vuelo_key) ON DELETE CASCADE,
@@ -121,3 +122,8 @@ CREATE TABLE fact_ventas
 	CONSTRAINT fkagencia_key  FOREIGN KEY (agencia_key) REFERENCES dim_agencia (agencia_key) ON DELETE CASCADE
 
 );
+
+
+INSERT INTO `dim_lugar` (`lugar_key`, `id_lugar`, `ciudad`, `admin_territorial`, `pais`, `poblacion`, `ubicacion_geografica`, `interes_turistico`, `temperatura`, `precipitaciones`, `ultima_actualizacion`) VALUES ('-1', '-1', 'N/A', 'N/A', 'N/A', NULL, NULL, NULL, NULL, NULL, '1990-01-01 00:00:00');
+INSERT INTO `dim_agencia` (`agencia_key`, `id_agencia`, `nombre`, `nacionalidad`, `descuento_vip`, `especializacion`, `agencia_valid_from`, `agencia_valid_through`, `agencia_version_number`, `ultima_actualizacion`) VALUES ('-1', '-1', 'N/A', 'N/A', NULL, NULL, '1900-01-01', '2199-12-31', '1', '1990-01-01 00:00:00');
+

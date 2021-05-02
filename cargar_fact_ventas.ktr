@@ -434,7 +434,7 @@
     <created_user>-</created_user>
     <created_date>2021/04/28 22:32:00.321</created_date>
     <modified_user>-</modified_user>
-    <modified_date>2021/04/30 22:50:59.753</modified_date>
+    <modified_date>2021/05/03 00:26:19.324</modified_date>
     <key_for_session_key>H4sIAAAAAAAAAAMAAAAAAAAAAAA=</key_for_session_key>
     <is_key_private>N</is_key_private>
   </info>
@@ -593,66 +593,10 @@
       </attribute>
     </attributes>
   </connection>
-  <connection>
-    <name>dw_aero_conx</name>
-    <server>localhost</server>
-    <type>MARIADB</type>
-    <access>Native</access>
-    <database>dw_aero</database>
-    <port>3306</port>
-    <username>root</username>
-    <password>Encrypted </password>
-    <servername/>
-    <data_tablespace/>
-    <index_tablespace/>
-    <attributes>
-      <attribute>
-        <code>FORCE_IDENTIFIERS_TO_LOWERCASE</code>
-        <attribute>N</attribute>
-      </attribute>
-      <attribute>
-        <code>FORCE_IDENTIFIERS_TO_UPPERCASE</code>
-        <attribute>N</attribute>
-      </attribute>
-      <attribute>
-        <code>IS_CLUSTERED</code>
-        <attribute>N</attribute>
-      </attribute>
-      <attribute>
-        <code>PORT_NUMBER</code>
-        <attribute>3306</attribute>
-      </attribute>
-      <attribute>
-        <code>PRESERVE_RESERVED_WORD_CASE</code>
-        <attribute>Y</attribute>
-      </attribute>
-      <attribute>
-        <code>QUOTE_ALL_FIELDS</code>
-        <attribute>N</attribute>
-      </attribute>
-      <attribute>
-        <code>SUPPORTS_BOOLEAN_DATA_TYPE</code>
-        <attribute>Y</attribute>
-      </attribute>
-      <attribute>
-        <code>SUPPORTS_TIMESTAMP_DATA_TYPE</code>
-        <attribute>Y</attribute>
-      </attribute>
-      <attribute>
-        <code>USE_POOLING</code>
-        <attribute>N</attribute>
-      </attribute>
-    </attributes>
-  </connection>
   <order>
     <hop>
       <from>max_venta_last_update</from>
       <to>cargar nuevas ventas</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>cargar nuevas ventas</from>
-      <to>join billete vuelo</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
@@ -701,11 +645,6 @@
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>join aero_destino ciudad</from>
-      <to>ordenar lugar_venta</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
       <from>JSON input</from>
       <to>ordenar agencia</to>
       <enabled>Y</enabled>
@@ -718,11 +657,6 @@
     <hop>
       <from>ordenar lugar_venta</from>
       <to>join lugar venta agencia</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>join aero_origen ciudad</from>
-      <to>cambia nombre id_origen</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
@@ -748,11 +682,6 @@
     <hop>
       <from>ordenar ciudad 2</from>
       <to>join aero_destino ciudad</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>join lugar venta agencia</from>
-      <to>Get date and time keys</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
@@ -822,7 +751,92 @@
     </hop>
     <hop>
       <from>buscar vuelo key</from>
-      <to>Insertar / Actualizar</to>
+      <to>cargar hecho ventas</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>join lugar venta agencia</from>
+      <to>filtra agencia null</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>join aero_origen ciudad</from>
+      <to>filtrar origen null</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>filtrar origen null</from>
+      <to>cambia nombre id_origen</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>join aero_destino ciudad</from>
+      <to>filtrar destino null</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>filtrar destino null</from>
+      <to>ordenar lugar_venta</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>filtrar destino null</from>
+      <to>destino N/A</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>destino N/A</from>
+      <to>ordenar lugar_venta</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>filtrar origen null</from>
+      <to>origen N/A</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>origen N/A</from>
+      <to>cambia nombre id_origen</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>filtra agencia null</from>
+      <to>Get date and time keys</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>filtra agencia null</from>
+      <to>agencia N/A</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>agencia N/A</from>
+      <to>Get date and time keys</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>cargar id billetes vuelos pendientes</from>
+      <to>cargar ventas a actualizar</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>cargar ventas a actualizar</from>
+      <to>fujo ventas</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>cargar nuevas ventas</from>
+      <to>fujo ventas</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>fujo ventas</from>
+      <to>ordenar</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>ordenar</from>
+      <to>join billete vuelo</to>
       <enabled>Y</enabled>
     </hop>
   </order>
@@ -856,8 +870,78 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1040</xloc>
-      <yloc>384</yloc>
+      <xloc>1216</xloc>
+      <yloc>592</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>filtrar origen null</name>
+    <type>FilterRows</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <send_true_to>cambia nombre id_origen</send_true_to>
+    <send_false_to>origen N/A</send_false_to>
+    <compare>
+      <condition>
+        <negated>N</negated>
+        <leftvalue>id</leftvalue>
+        <function>IS NOT NULL</function>
+        <rightvalue/>
+      </condition>
+    </compare>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1232</xloc>
+      <yloc>32</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>filtrar destino null</name>
+    <type>FilterRows</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <send_true_to>ordenar lugar_venta</send_true_to>
+    <send_false_to>destino N/A</send_false_to>
+    <compare>
+      <condition>
+        <negated>N</negated>
+        <leftvalue>id</leftvalue>
+        <function>IS NOT NULL</function>
+        <rightvalue/>
+      </condition>
+    </compare>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1792</xloc>
+      <yloc>144</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -879,6 +963,7 @@
       </field>
       <field>
         <name>fecha_compra</name>
+        <rename/>
       </field>
       <field>
         <name>fecha_salida</name>
@@ -886,6 +971,7 @@
       </field>
       <field>
         <name>fecha_salida</name>
+        <rename/>
       </field>
       <field>
         <name>fecha_compra</name>
@@ -974,13 +1060,13 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1344</xloc>
-      <yloc>304</yloc>
+      <xloc>1792</xloc>
+      <yloc>560</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
   <step>
-    <name>Insertar / Actualizar</name>
+    <name>cargar hecho ventas</name>
     <type>InsertUpdate</type>
     <description/>
     <distribute>Y</distribute>
@@ -990,7 +1076,7 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <connection>dw_aero_conx</connection>
+    <connection>dw_aero_con</connection>
     <commit>100</commit>
     <update_bypassed>N</update_bypassed>
     <lookup>
@@ -1072,6 +1158,11 @@
         <rename>vuelo_cont</rename>
         <update>Y</update>
       </value>
+      <value>
+        <name>antelacion_compra</name>
+        <rename>antelacion_compra_dias</rename>
+        <update>Y</update>
+      </value>
     </lookup>
     <attributes/>
     <cluster_schema/>
@@ -1082,8 +1173,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>80</xloc>
-      <yloc>448</yloc>
+      <xloc>64</xloc>
+      <yloc>688</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1165,8 +1256,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>992</xloc>
-      <yloc>288</yloc>
+      <xloc>1296</xloc>
+      <yloc>320</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1207,8 +1298,48 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>480</xloc>
+      <xloc>640</xloc>
       <yloc>32</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>agencia N/A</name>
+    <type>SetValueConstant</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <usevar>N</usevar>
+    <fields>
+      <field>
+        <name>id_agencia</name>
+        <value>-1</value>
+        <mask/>
+        <set_empty_string>N</set_empty_string>
+      </field>
+      <field>
+        <name>agencia</name>
+        <value>N/A</value>
+        <mask/>
+        <set_empty_string>N</set_empty_string>
+      </field>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1632</xloc>
+      <yloc>480</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1264,8 +1395,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>592</xloc>
-      <yloc>288</yloc>
+      <xloc>672</xloc>
+      <yloc>560</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1301,8 +1432,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1328</xloc>
-      <yloc>384</yloc>
+      <xloc>1552</xloc>
+      <yloc>592</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1349,8 +1480,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>96</xloc>
-      <yloc>272</yloc>
+      <xloc>208</xloc>
+      <yloc>560</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1397,8 +1528,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>304</xloc>
-      <yloc>288</yloc>
+      <xloc>400</xloc>
+      <yloc>560</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1446,7 +1577,7 @@
     </remotesteps>
     <GUI>
       <xloc>64</xloc>
-      <yloc>368</yloc>
+      <yloc>560</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1467,9 +1598,16 @@
       <jsScript>
         <jsScript_type>0</jsScript_type>
         <jsScript_name>Script 1</jsScript_name>
-        <jsScript_script>var precio_agencia= descuento * precio
+        <jsScript_script>var precio_agencia= precio - (descuento * precio)
 var beneficio = 0.85 * precio_agencia
-</jsScript_script>
+
+var antelacion_compra_milisecs = fecha_salida_datetime.getTime() - fecha_compra_datetime.getTime()
+
+var antelacion_compra_segs = antelacion_compra_milisecs / 1000
+
+var antelacion_compra_horas = antelacion_compra_segs / 3600
+
+var antelacion_compra_dias = antelacion_compra_horas / 24</jsScript_script>
       </jsScript>
     </jsScripts>
     <fields>
@@ -1489,6 +1627,14 @@ var beneficio = 0.85 * precio_agencia
         <precision>-1</precision>
         <replace>N</replace>
       </field>
+      <field>
+        <name>antelacion_compra_dias</name>
+        <rename>antelacion_compra_dias</rename>
+        <type>Integer</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>
     </fields>
     <attributes/>
     <cluster_schema/>
@@ -1499,8 +1645,8 @@ var beneficio = 0.85 * precio_agencia
       </output>
     </remotesteps>
     <GUI>
-      <xloc>736</xloc>
-      <yloc>384</yloc>
+      <xloc>880</xloc>
+      <yloc>592</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1547,7 +1693,7 @@ var beneficio = 0.85 * precio_agencia
       </output>
     </remotesteps>
     <GUI>
-      <xloc>992</xloc>
+      <xloc>1408</xloc>
       <yloc>32</yloc>
       <draw>Y</draw>
     </GUI>
@@ -1651,8 +1797,8 @@ var beneficio = 0.85 * precio_agencia
       </output>
     </remotesteps>
     <GUI>
-      <xloc>112</xloc>
-      <yloc>160</yloc>
+      <xloc>288</xloc>
+      <yloc>176</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1755,8 +1901,8 @@ var beneficio = 0.85 * precio_agencia
       </output>
     </remotesteps>
     <GUI>
-      <xloc>368</xloc>
-      <yloc>144</yloc>
+      <xloc>528</xloc>
+      <yloc>176</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1906,8 +2052,8 @@ var beneficio = 0.85 * precio_agencia
       </output>
     </remotesteps>
     <GUI>
-      <xloc>544</xloc>
-      <yloc>160</yloc>
+      <xloc>560</xloc>
+      <yloc>272</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -2057,8 +2203,8 @@ var beneficio = 0.85 * precio_agencia
       </output>
     </remotesteps>
     <GUI>
-      <xloc>912</xloc>
-      <yloc>176</yloc>
+      <xloc>1136</xloc>
+      <yloc>224</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -2066,7 +2212,7 @@ var beneficio = 0.85 * precio_agencia
     <name>cargar nuevas ventas</name>
     <type>TableInput</type>
     <description/>
-    <distribute>Y</distribute>
+    <distribute>N</distribute>
     <custom_distribution/>
     <copies>1</copies>
     <partitioning>
@@ -2368,8 +2514,8 @@ var beneficio = 0.85 * precio_agencia
       </output>
     </remotesteps>
     <GUI>
-      <xloc>208</xloc>
-      <yloc>32</yloc>
+      <xloc>224</xloc>
+      <yloc>16</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -2425,8 +2571,42 @@ var beneficio = 0.85 * precio_agencia
       </output>
     </remotesteps>
     <GUI>
-      <xloc>432</xloc>
-      <yloc>288</yloc>
+      <xloc>544</xloc>
+      <yloc>560</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>destino N/A</name>
+    <type>SetValueConstant</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <usevar>N</usevar>
+    <fields>
+      <field>
+        <name>id</name>
+        <value>-1</value>
+        <mask/>
+        <set_empty_string>N</set_empty_string>
+      </field>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1648</xloc>
+      <yloc>192</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -2477,8 +2657,8 @@ var beneficio = 0.85 * precio_agencia
       </output>
     </remotesteps>
     <GUI>
-      <xloc>656</xloc>
-      <yloc>160</yloc>
+      <xloc>672</xloc>
+      <yloc>208</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -2529,8 +2709,43 @@ var beneficio = 0.85 * precio_agencia
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1072</xloc>
-      <yloc>176</yloc>
+      <xloc>1296</xloc>
+      <yloc>192</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>filtra agencia null</name>
+    <type>FilterRows</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <send_true_to>Get date and time keys</send_true_to>
+    <send_false_to>agencia N/A</send_false_to>
+    <compare>
+      <condition>
+        <negated>N</negated>
+        <leftvalue>id_agencia</leftvalue>
+        <function>IS NOT NULL</function>
+        <rightvalue/>
+      </condition>
+    </compare>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1792</xloc>
+      <yloc>448</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -2615,6 +2830,74 @@ var beneficio = 0.85 * precio_agencia
         <currency_symbol/>
         <storage_type/>
       </meta>
+      <meta>
+        <name>fecha_compra_key</name>
+        <rename>fecha_compra_key</rename>
+        <type>Integer</type>
+        <length>-2</length>
+        <precision>-2</precision>
+        <conversion_mask>#</conversion_mask>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>
+      <meta>
+        <name>fecha_salida_key</name>
+        <rename>fecha_salida_key</rename>
+        <type>Integer</type>
+        <length>-2</length>
+        <precision>-2</precision>
+        <conversion_mask>#</conversion_mask>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>
+      <meta>
+        <name>hora_compra_key</name>
+        <rename>hora_compra_key</rename>
+        <type>Integer</type>
+        <length>-2</length>
+        <precision>-2</precision>
+        <conversion_mask>#</conversion_mask>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>
+      <meta>
+        <name>hora_salida_key</name>
+        <rename>hora_salida_key</rename>
+        <type>Integer</type>
+        <length>-2</length>
+        <precision>-2</precision>
+        <conversion_mask>#</conversion_mask>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>
     </fields>
     <attributes/>
     <cluster_schema/>
@@ -2625,8 +2908,8 @@ var beneficio = 0.85 * precio_agencia
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1168</xloc>
-      <yloc>384</yloc>
+      <xloc>1344</xloc>
+      <yloc>592</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -2659,7 +2942,7 @@ var beneficio = 0.85 * precio_agencia
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1328</xloc>
+      <xloc>1792</xloc>
       <yloc>32</yloc>
       <draw>Y</draw>
     </GUI>
@@ -2693,7 +2976,7 @@ var beneficio = 0.85 * precio_agencia
       </output>
     </remotesteps>
     <GUI>
-      <xloc>864</xloc>
+      <xloc>1104</xloc>
       <yloc>32</yloc>
       <draw>Y</draw>
     </GUI>
@@ -2710,7 +2993,7 @@ var beneficio = 0.85 * precio_agencia
       <schema_name/>
     </partitioning>
     <join_type>INNER</join_type>
-    <step1>cargar nuevas ventas</step1>
+    <step1>ordenar</step1>
     <step2>cargar id_recorrido y fecha_salida</step2>
     <keys_1>
       <key>idvuelo</key>
@@ -2727,7 +3010,7 @@ var beneficio = 0.85 * precio_agencia
       </output>
     </remotesteps>
     <GUI>
-      <xloc>352</xloc>
+      <xloc>512</xloc>
       <yloc>32</yloc>
       <draw>Y</draw>
     </GUI>
@@ -2761,8 +3044,8 @@ var beneficio = 0.85 * precio_agencia
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1344</xloc>
-      <yloc>224</yloc>
+      <xloc>1792</xloc>
+      <yloc>352</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -2795,7 +3078,7 @@ var beneficio = 0.85 * precio_agencia
       </output>
     </remotesteps>
     <GUI>
-      <xloc>608</xloc>
+      <xloc>784</xloc>
       <yloc>32</yloc>
       <draw>Y</draw>
     </GUI>
@@ -2819,7 +3102,31 @@ var beneficio = 0.85 * precio_agencia
     <variables_active>N</variables_active>
     <lazy_conversion_active>N</lazy_conversion_active>
     <cached_row_meta_active>N</cached_row_meta_active>
-    <row-meta/>
+    <row-meta>
+      <value-meta>
+        <type>String</type>
+        <storagetype>normal</storagetype>
+        <name>max_fact_ultima_actualizacion</name>
+        <length>19</length>
+        <precision>-1</precision>
+        <origin>max_venta_last_update</origin>
+        <comments>max_fact_ultima_actualizacion</comments>
+        <conversion_Mask/>
+        <decimal_symbol>,</decimal_symbol>
+        <grouping_symbol>.</grouping_symbol>
+        <currency_symbol/>
+        <trim_type>none</trim_type>
+        <case_insensitive>N</case_insensitive>
+        <collator_disabled>Y</collator_disabled>
+        <collator_strength>0</collator_strength>
+        <sort_descending>N</sort_descending>
+        <output_padding>N</output_padding>
+        <date_format_lenient>N</date_format_lenient>
+        <date_format_locale>es_ES</date_format_locale>
+        <date_format_timezone>Europe/Paris</date_format_timezone>
+        <lenient_string_to_number>N</lenient_string_to_number>
+      </value-meta>
+    </row-meta>
     <attributes/>
     <cluster_schema/>
     <remotesteps>
@@ -2829,8 +3136,8 @@ var beneficio = 0.85 * precio_agencia
       </output>
     </remotesteps>
     <GUI>
-      <xloc>48</xloc>
-      <yloc>32</yloc>
+      <xloc>64</xloc>
+      <yloc>16</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -2871,7 +3178,7 @@ var beneficio = 0.85 * precio_agencia
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1136</xloc>
+      <xloc>1568</xloc>
       <yloc>32</yloc>
       <draw>Y</draw>
     </GUI>
@@ -2913,7 +3220,7 @@ var beneficio = 0.85 * precio_agencia
       </output>
     </remotesteps>
     <GUI>
-      <xloc>720</xloc>
+      <xloc>928</xloc>
       <yloc>32</yloc>
       <draw>Y</draw>
     </GUI>
@@ -2955,8 +3262,8 @@ var beneficio = 0.85 * precio_agencia
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1168</xloc>
-      <yloc>256</yloc>
+      <xloc>1520</xloc>
+      <yloc>336</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -2997,8 +3304,8 @@ var beneficio = 0.85 * precio_agencia
       </output>
     </remotesteps>
     <GUI>
-      <xloc>784</xloc>
-      <yloc>160</yloc>
+      <xloc>816</xloc>
+      <yloc>144</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -3039,8 +3346,8 @@ var beneficio = 0.85 * precio_agencia
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1200</xloc>
-      <yloc>128</yloc>
+      <xloc>1424</xloc>
+      <yloc>160</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -3081,8 +3388,42 @@ var beneficio = 0.85 * precio_agencia
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1344</xloc>
-      <yloc>128</yloc>
+      <xloc>1792</xloc>
+      <yloc>256</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>origen N/A</name>
+    <type>SetValueConstant</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <usevar>N</usevar>
+    <fields>
+      <field>
+        <name>id</name>
+        <value>-1</value>
+        <mask/>
+        <set_empty_string>N</set_empty_string>
+      </field>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1312</xloc>
+      <yloc>112</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -3112,8 +3453,8 @@ var beneficio = 0.85 * precio_agencia
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1504</xloc>
-      <yloc>384</yloc>
+      <xloc>1696</xloc>
+      <yloc>672</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -3151,8 +3492,8 @@ var beneficio = 0.85 * precio_agencia
       </output>
     </remotesteps>
     <GUI>
-      <xloc>896</xloc>
-      <yloc>352</yloc>
+      <xloc>1024</xloc>
+      <yloc>544</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -3190,8 +3531,448 @@ var beneficio = 0.85 * precio_agencia
       </output>
     </remotesteps>
     <GUI>
-      <xloc>896</xloc>
-      <yloc>448</yloc>
+      <xloc>1040</xloc>
+      <yloc>640</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>cargar id billetes vuelos pendientes</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>dw_aero_con</connection>
+    <sql>SELECT venta_key as id_billete_pendiente FROM fact_ventas WHERE vuelo_cont = 0</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cached_row_meta_active>N</cached_row_meta_active>
+    <row-meta>
+      <value-meta>
+        <type>String</type>
+        <storagetype>normal</storagetype>
+        <name>id_billete_pendiente</name>
+        <length>15</length>
+        <precision>-1</precision>
+        <origin>cargar id billetes vuelos pendientes</origin>
+        <comments>id_billete_pendiente</comments>
+        <conversion_Mask/>
+        <decimal_symbol>,</decimal_symbol>
+        <grouping_symbol>.</grouping_symbol>
+        <currency_symbol/>
+        <trim_type>none</trim_type>
+        <case_insensitive>N</case_insensitive>
+        <collator_disabled>Y</collator_disabled>
+        <collator_strength>0</collator_strength>
+        <sort_descending>N</sort_descending>
+        <output_padding>N</output_padding>
+        <date_format_lenient>N</date_format_lenient>
+        <date_format_locale>es_ES</date_format_locale>
+        <date_format_timezone>Europe/Paris</date_format_timezone>
+        <lenient_string_to_number>N</lenient_string_to_number>
+      </value-meta>
+    </row-meta>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>112</xloc>
+      <yloc>256</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>cargar ventas a actualizar</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>aero_con</connection>
+    <sql>SELECT b.idbillete,b.idvuelo,b.motivo,b.descuento,b.fecha_compra,b.precio,b.formato,b.lugar_compra,b.clase,b.plaza,b.dni_cliente,b.ultima_actualizacion FROM billete as b
+INNER JOIN vuelo as v
+ON b.idvuelo = v.idvuelo AND B.idbillete = ?  AND v.fecha_salida &lt; NOW()</sql>
+    <limit>0</limit>
+    <lookup>cargar id billetes vuelos pendientes</lookup>
+    <execute_each_row>Y</execute_each_row>
+    <variables_active>Y</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cached_row_meta_active>N</cached_row_meta_active>
+    <row-meta>
+      <value-meta>
+        <type>String</type>
+        <storagetype>normal</storagetype>
+        <name>idbillete</name>
+        <length>15</length>
+        <precision>-1</precision>
+        <origin>Entrada Tabla</origin>
+        <comments>idbillete</comments>
+        <conversion_Mask/>
+        <decimal_symbol>,</decimal_symbol>
+        <grouping_symbol>.</grouping_symbol>
+        <currency_symbol/>
+        <trim_type>none</trim_type>
+        <case_insensitive>N</case_insensitive>
+        <collator_disabled>Y</collator_disabled>
+        <collator_strength>0</collator_strength>
+        <sort_descending>N</sort_descending>
+        <output_padding>N</output_padding>
+        <date_format_lenient>N</date_format_lenient>
+        <date_format_locale>es_ES</date_format_locale>
+        <date_format_timezone>Europe/Paris</date_format_timezone>
+        <lenient_string_to_number>N</lenient_string_to_number>
+      </value-meta>
+      <value-meta>
+        <type>String</type>
+        <storagetype>normal</storagetype>
+        <name>idvuelo</name>
+        <length>6</length>
+        <precision>-1</precision>
+        <origin>Entrada Tabla</origin>
+        <comments>idvuelo</comments>
+        <conversion_Mask/>
+        <decimal_symbol>,</decimal_symbol>
+        <grouping_symbol>.</grouping_symbol>
+        <currency_symbol/>
+        <trim_type>none</trim_type>
+        <case_insensitive>N</case_insensitive>
+        <collator_disabled>Y</collator_disabled>
+        <collator_strength>0</collator_strength>
+        <sort_descending>N</sort_descending>
+        <output_padding>N</output_padding>
+        <date_format_lenient>N</date_format_lenient>
+        <date_format_locale>es_ES</date_format_locale>
+        <date_format_timezone>Europe/Paris</date_format_timezone>
+        <lenient_string_to_number>N</lenient_string_to_number>
+      </value-meta>
+      <value-meta>
+        <type>String</type>
+        <storagetype>normal</storagetype>
+        <name>motivo</name>
+        <length>8</length>
+        <precision>-1</precision>
+        <origin>Entrada Tabla</origin>
+        <comments>motivo</comments>
+        <conversion_Mask/>
+        <decimal_symbol>,</decimal_symbol>
+        <grouping_symbol>.</grouping_symbol>
+        <currency_symbol/>
+        <trim_type>none</trim_type>
+        <case_insensitive>N</case_insensitive>
+        <collator_disabled>Y</collator_disabled>
+        <collator_strength>0</collator_strength>
+        <sort_descending>N</sort_descending>
+        <output_padding>N</output_padding>
+        <date_format_lenient>N</date_format_lenient>
+        <date_format_locale>es_ES</date_format_locale>
+        <date_format_timezone>Europe/Paris</date_format_timezone>
+        <lenient_string_to_number>N</lenient_string_to_number>
+      </value-meta>
+      <value-meta>
+        <type>Number</type>
+        <storagetype>normal</storagetype>
+        <name>descuento</name>
+        <length>4</length>
+        <precision>2</precision>
+        <origin>Entrada Tabla</origin>
+        <comments>descuento</comments>
+        <conversion_Mask>####0.0#########;-####0.0#########</conversion_Mask>
+        <decimal_symbol>,</decimal_symbol>
+        <grouping_symbol>.</grouping_symbol>
+        <currency_symbol/>
+        <trim_type>none</trim_type>
+        <case_insensitive>N</case_insensitive>
+        <collator_disabled>Y</collator_disabled>
+        <collator_strength>0</collator_strength>
+        <sort_descending>N</sort_descending>
+        <output_padding>N</output_padding>
+        <date_format_lenient>N</date_format_lenient>
+        <date_format_locale>es_ES</date_format_locale>
+        <date_format_timezone>Europe/Paris</date_format_timezone>
+        <lenient_string_to_number>N</lenient_string_to_number>
+      </value-meta>
+      <value-meta>
+        <type>Timestamp</type>
+        <storagetype>normal</storagetype>
+        <name>fecha_compra</name>
+        <length>0</length>
+        <precision>-1</precision>
+        <origin>Entrada Tabla</origin>
+        <comments>fecha_compra</comments>
+        <conversion_Mask/>
+        <decimal_symbol>,</decimal_symbol>
+        <grouping_symbol>.</grouping_symbol>
+        <currency_symbol/>
+        <trim_type>none</trim_type>
+        <case_insensitive>N</case_insensitive>
+        <collator_disabled>Y</collator_disabled>
+        <collator_strength>0</collator_strength>
+        <sort_descending>N</sort_descending>
+        <output_padding>N</output_padding>
+        <date_format_lenient>N</date_format_lenient>
+        <date_format_locale>es_ES</date_format_locale>
+        <date_format_timezone>Europe/Paris</date_format_timezone>
+        <lenient_string_to_number>N</lenient_string_to_number>
+      </value-meta>
+      <value-meta>
+        <type>Number</type>
+        <storagetype>normal</storagetype>
+        <name>precio</name>
+        <length>8</length>
+        <precision>2</precision>
+        <origin>Entrada Tabla</origin>
+        <comments>precio</comments>
+        <conversion_Mask>####0.0#########;-####0.0#########</conversion_Mask>
+        <decimal_symbol>,</decimal_symbol>
+        <grouping_symbol>.</grouping_symbol>
+        <currency_symbol/>
+        <trim_type>none</trim_type>
+        <case_insensitive>N</case_insensitive>
+        <collator_disabled>Y</collator_disabled>
+        <collator_strength>0</collator_strength>
+        <sort_descending>N</sort_descending>
+        <output_padding>N</output_padding>
+        <date_format_lenient>N</date_format_lenient>
+        <date_format_locale>es_ES</date_format_locale>
+        <date_format_timezone>Europe/Paris</date_format_timezone>
+        <lenient_string_to_number>N</lenient_string_to_number>
+      </value-meta>
+      <value-meta>
+        <type>String</type>
+        <storagetype>normal</storagetype>
+        <name>formato</name>
+        <length>7</length>
+        <precision>-1</precision>
+        <origin>Entrada Tabla</origin>
+        <comments>formato</comments>
+        <conversion_Mask/>
+        <decimal_symbol>,</decimal_symbol>
+        <grouping_symbol>.</grouping_symbol>
+        <currency_symbol/>
+        <trim_type>none</trim_type>
+        <case_insensitive>N</case_insensitive>
+        <collator_disabled>Y</collator_disabled>
+        <collator_strength>0</collator_strength>
+        <sort_descending>N</sort_descending>
+        <output_padding>N</output_padding>
+        <date_format_lenient>N</date_format_lenient>
+        <date_format_locale>es_ES</date_format_locale>
+        <date_format_timezone>Europe/Paris</date_format_timezone>
+        <lenient_string_to_number>N</lenient_string_to_number>
+      </value-meta>
+      <value-meta>
+        <type>String</type>
+        <storagetype>normal</storagetype>
+        <name>lugar_compra</name>
+        <length>70</length>
+        <precision>-1</precision>
+        <origin>Entrada Tabla</origin>
+        <comments>lugar_compra</comments>
+        <conversion_Mask/>
+        <decimal_symbol>,</decimal_symbol>
+        <grouping_symbol>.</grouping_symbol>
+        <currency_symbol/>
+        <trim_type>none</trim_type>
+        <case_insensitive>N</case_insensitive>
+        <collator_disabled>Y</collator_disabled>
+        <collator_strength>0</collator_strength>
+        <sort_descending>N</sort_descending>
+        <output_padding>N</output_padding>
+        <date_format_lenient>N</date_format_lenient>
+        <date_format_locale>es_ES</date_format_locale>
+        <date_format_timezone>Europe/Paris</date_format_timezone>
+        <lenient_string_to_number>N</lenient_string_to_number>
+      </value-meta>
+      <value-meta>
+        <type>String</type>
+        <storagetype>normal</storagetype>
+        <name>clase</name>
+        <length>10</length>
+        <precision>-1</precision>
+        <origin>Entrada Tabla</origin>
+        <comments>clase</comments>
+        <conversion_Mask/>
+        <decimal_symbol>,</decimal_symbol>
+        <grouping_symbol>.</grouping_symbol>
+        <currency_symbol/>
+        <trim_type>none</trim_type>
+        <case_insensitive>N</case_insensitive>
+        <collator_disabled>Y</collator_disabled>
+        <collator_strength>0</collator_strength>
+        <sort_descending>N</sort_descending>
+        <output_padding>N</output_padding>
+        <date_format_lenient>N</date_format_lenient>
+        <date_format_locale>es_ES</date_format_locale>
+        <date_format_timezone>Europe/Paris</date_format_timezone>
+        <lenient_string_to_number>N</lenient_string_to_number>
+      </value-meta>
+      <value-meta>
+        <type>String</type>
+        <storagetype>normal</storagetype>
+        <name>plaza</name>
+        <length>3</length>
+        <precision>-1</precision>
+        <origin>Entrada Tabla</origin>
+        <comments>plaza</comments>
+        <conversion_Mask/>
+        <decimal_symbol>,</decimal_symbol>
+        <grouping_symbol>.</grouping_symbol>
+        <currency_symbol/>
+        <trim_type>none</trim_type>
+        <case_insensitive>N</case_insensitive>
+        <collator_disabled>Y</collator_disabled>
+        <collator_strength>0</collator_strength>
+        <sort_descending>N</sort_descending>
+        <output_padding>N</output_padding>
+        <date_format_lenient>N</date_format_lenient>
+        <date_format_locale>es_ES</date_format_locale>
+        <date_format_timezone>Europe/Paris</date_format_timezone>
+        <lenient_string_to_number>N</lenient_string_to_number>
+      </value-meta>
+      <value-meta>
+        <type>String</type>
+        <storagetype>normal</storagetype>
+        <name>dni_cliente</name>
+        <length>9</length>
+        <precision>-1</precision>
+        <origin>Entrada Tabla</origin>
+        <comments>dni_cliente</comments>
+        <conversion_Mask/>
+        <decimal_symbol>,</decimal_symbol>
+        <grouping_symbol>.</grouping_symbol>
+        <currency_symbol/>
+        <trim_type>none</trim_type>
+        <case_insensitive>N</case_insensitive>
+        <collator_disabled>Y</collator_disabled>
+        <collator_strength>0</collator_strength>
+        <sort_descending>N</sort_descending>
+        <output_padding>N</output_padding>
+        <date_format_lenient>N</date_format_lenient>
+        <date_format_locale>es_ES</date_format_locale>
+        <date_format_timezone>Europe/Paris</date_format_timezone>
+        <lenient_string_to_number>N</lenient_string_to_number>
+      </value-meta>
+      <value-meta>
+        <type>Timestamp</type>
+        <storagetype>normal</storagetype>
+        <name>ultima_actualizacion</name>
+        <length>0</length>
+        <precision>-1</precision>
+        <origin>Entrada Tabla</origin>
+        <comments>ultima_actualizacion</comments>
+        <conversion_Mask/>
+        <decimal_symbol>,</decimal_symbol>
+        <grouping_symbol>.</grouping_symbol>
+        <currency_symbol/>
+        <trim_type>none</trim_type>
+        <case_insensitive>N</case_insensitive>
+        <collator_disabled>Y</collator_disabled>
+        <collator_strength>0</collator_strength>
+        <sort_descending>N</sort_descending>
+        <output_padding>N</output_padding>
+        <date_format_lenient>N</date_format_lenient>
+        <date_format_locale>es_ES</date_format_locale>
+        <date_format_timezone>Europe/Paris</date_format_timezone>
+        <lenient_string_to_number>N</lenient_string_to_number>
+      </value-meta>
+    </row-meta>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>176</xloc>
+      <yloc>128</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>fujo ventas</name>
+    <type>Append</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <head_name>cargar nuevas ventas</head_name>
+    <tail_name>cargar ventas a actualizar</tail_name>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>336</xloc>
+      <yloc>32</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>ordenar</name>
+    <type>SortRows</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <directory>%%java.io.tmpdir%%</directory>
+    <prefix>out</prefix>
+    <sort_size>1000000</sort_size>
+    <free_memory/>
+    <compress>N</compress>
+    <compress_variable/>
+    <unique_rows>N</unique_rows>
+    <fields>
+      <field>
+        <name>idvuelo</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <collator_enabled>N</collator_enabled>
+        <collator_strength>0</collator_strength>
+        <presorted>N</presorted>
+      </field>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>416</xloc>
+      <yloc>32</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
