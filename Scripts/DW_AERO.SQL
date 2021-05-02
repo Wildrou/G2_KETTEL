@@ -55,6 +55,7 @@ CREATE TABLE dim_lugar
 CREATE TABLE dim_fecha
 (
     fecha_key INT NOT NULL,
+    dia_completo VARCHAR(50),
     dia INT,
     mes VARCHAR(15),
     anho INT,
