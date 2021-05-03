@@ -7,7 +7,7 @@
   <created_user>-</created_user>
   <created_date>2021/04/27 19:31:00.942</created_date>
   <modified_user>-</modified_user>
-  <modified_date>2021/05/03 11:40:57.890</modified_date>
+  <modified_date>2021/05/03 12:28:20.224</modified_date>
   <parameters>
     </parameters>
   <slaveservers>
@@ -554,11 +554,11 @@
       <attributes/>
       <server>smtp.gmail.com</server>
       <port>465</port>
-      <destination>michaelsordoseijo@gmail.com</destination>
+      <destination>tamipruebas@gmail.com</destination>
       <destinationCc/>
       <destinationBCc/>
-      <replyto/>
-      <replytoname/>
+      <replyto>tamipruebas@gmail.com</replyto>
+      <replytoname>dw_aero</replytoname>
       <subject>Éxito Job</subject>
       <include_date>Y</include_date>
       <contact_person/>
@@ -567,10 +567,10 @@
       <include_files>N</include_files>
       <zip_files>N</zip_files>
       <zip_name/>
-      <use_auth>N</use_auth>
-      <use_secure_auth>N</use_secure_auth>
-      <auth_user/>
-      <auth_password>Encrypted </auth_password>
+      <use_auth>Y</use_auth>
+      <use_secure_auth>Y</use_secure_auth>
+      <auth_user>tamipruebas@gmail.com</auth_user>
+      <auth_password>Encrypted 2be98afc86aa7f2e4811de85ff184a1db</auth_password>
       <only_comment>N</only_comment>
       <use_HTML>N</use_HTML>
       <use_Priority>N</use_Priority>
@@ -595,13 +595,13 @@
       <description/>
       <type>MAIL</type>
       <attributes/>
-      <server/>
-      <port/>
-      <destination>michaelsordoseijo@gmail.com</destination>
+      <server>smtp.gmail.com</server>
+      <port>465</port>
+      <destination>tamipruebas@gmail.com</destination>
       <destinationCc/>
       <destinationBCc/>
-      <replyto/>
-      <replytoname/>
+      <replyto>tamipruebas@gmail.com</replyto>
+      <replytoname>dw_aero</replytoname>
       <subject>Error Job</subject>
       <include_date>N</include_date>
       <contact_person/>
@@ -610,10 +610,10 @@
       <include_files>N</include_files>
       <zip_files>N</zip_files>
       <zip_name/>
-      <use_auth>N</use_auth>
-      <use_secure_auth>N</use_secure_auth>
-      <auth_user/>
-      <auth_password>Encrypted </auth_password>
+      <use_auth>Y</use_auth>
+      <use_secure_auth>Y</use_secure_auth>
+      <auth_user>tamipruebas@gmail.com</auth_user>
+      <auth_password>Encrypted 2be98afc86aa7f2e4811de85ff184a1db</auth_password>
       <only_comment>N</only_comment>
       <use_HTML>N</use_HTML>
       <use_Priority>N</use_Priority>
