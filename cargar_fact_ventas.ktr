@@ -434,7 +434,7 @@
     <created_user>-</created_user>
     <created_date>2021/04/28 22:32:00.321</created_date>
     <modified_user>-</modified_user>
-    <modified_date>2021/05/03 12:02:55.347</modified_date>
+    <modified_date>2021/05/03 16:07:11.004</modified_date>
     <key_for_session_key>H4sIAAAAAAAAAAMAAAAAAAAAAAA=</key_for_session_key>
     <is_key_private>N</is_key_private>
   </info>
@@ -446,57 +446,6 @@
     <type>MARIADB</type>
     <access>Native</access>
     <database>aero</database>
-    <port>3306</port>
-    <username>root</username>
-    <password>Encrypted </password>
-    <servername/>
-    <data_tablespace/>
-    <index_tablespace/>
-    <attributes>
-      <attribute>
-        <code>FORCE_IDENTIFIERS_TO_LOWERCASE</code>
-        <attribute>N</attribute>
-      </attribute>
-      <attribute>
-        <code>FORCE_IDENTIFIERS_TO_UPPERCASE</code>
-        <attribute>N</attribute>
-      </attribute>
-      <attribute>
-        <code>IS_CLUSTERED</code>
-        <attribute>N</attribute>
-      </attribute>
-      <attribute>
-        <code>PORT_NUMBER</code>
-        <attribute>3306</attribute>
-      </attribute>
-      <attribute>
-        <code>PRESERVE_RESERVED_WORD_CASE</code>
-        <attribute>Y</attribute>
-      </attribute>
-      <attribute>
-        <code>QUOTE_ALL_FIELDS</code>
-        <attribute>N</attribute>
-      </attribute>
-      <attribute>
-        <code>SUPPORTS_BOOLEAN_DATA_TYPE</code>
-        <attribute>Y</attribute>
-      </attribute>
-      <attribute>
-        <code>SUPPORTS_TIMESTAMP_DATA_TYPE</code>
-        <attribute>Y</attribute>
-      </attribute>
-      <attribute>
-        <code>USE_POOLING</code>
-        <attribute>N</attribute>
-      </attribute>
-    </attributes>
-  </connection>
-  <connection>
-    <name>dw_aero</name>
-    <server>localhost</server>
-    <type>MARIADB</type>
-    <access>Native</access>
-    <database>dw_aero</database>
     <port>3306</port>
     <username>root</username>
     <password>Encrypted </password>
@@ -1263,7 +1212,7 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <connection>dw_aero</connection>
+    <connection>dw_aero_con</connection>
     <cache>N</cache>
     <cache_load_all>N</cache_load_all>
     <cache_size>0</cache_size>
@@ -1311,7 +1260,7 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <connection>dw_aero</connection>
+    <connection>dw_aero_con</connection>
     <cache>N</cache>
     <cache_load_all>N</cache_load_all>
     <cache_size>0</cache_size>
@@ -1359,7 +1308,7 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <connection>dw_aero</connection>
+    <connection>dw_aero_con</connection>
     <cache>N</cache>
     <cache_load_all>N</cache_load_all>
     <cache_size>0</cache_size>
@@ -3490,7 +3439,7 @@ ON b.idvuelo = v.idvuelo AND B.idbillete = ?  AND v.fecha_salida &lt; NOW()</sql
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <connection>dw_aero</connection>
+    <connection>dw_aero_con</connection>
     <sql>SELECT COALESCE(MAX(ultima_actualizacion),'2015-01-01 00:00:00') max_fact_ultima_actualizacion FROM fact_ventas</sql>
     <limit>0</limit>
     <lookup/>
