@@ -139,4 +139,13 @@ FROM dim_cliente as c JOIN fact_ventas as h on h.cliente_key = c.cliente_key
 JOIN dim_lugar as l on h.lugar_llegada_key = l.lugar_key
 JOIN dim_lugar as s on h.lugar_salida_key = s.lugar_key
 JOIN dim_vuelo as v on h.vuelo_key = v.vuelo_key
-JOIN dim_fecha as f on h.fecha_salida_key = f.fecha_key
+JOIN dim_fecha as f on h.fecha_salida_key = f.fecha_key;
+
+CREATE OR REPLACE VIEW VUELOS AS
+    SELECT f.vuelo_key, a.nombre , dim_fecha.es_festivo , dim_vuelo.duracion_vuelo, dim_vuelo.tipo_vuelo ,
+    	   dim_vuelo.capacidad , dim_vuelo.tipo_avion , dim_vuelo.aerolinea , f.beneficio, 
+    	   f.antelacion_compra , dim_fecha.fecha    
+    FROM fact_ventas f, dim_agencia a, dim_fecha , dim_vuelo
+    WHERE f.vuelo_key=dim_vuelo.vuelo_key AND 
+    	  f.agencia_key=a.agencia_key AND
+	  f.fecha_salida_key AND f.fecha_compra_key = dim_fecha.fecha_key;
