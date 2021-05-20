@@ -129,3 +129,14 @@ CREATE TABLE fact_ventas
 INSERT INTO `dim_lugar` (`lugar_key`, `id_lugar`, `ciudad`, `admin_territorial`, `pais`, `poblacion`, `ubicacion_geografica`, `interes_turistico`, `temperatura`, `precipitaciones`, `ultima_actualizacion`) VALUES ('-1', '-1', 'N/A', 'N/A', 'N/A', NULL, NULL, NULL, NULL, NULL, '1990-01-01 00:00:00');
 INSERT INTO `dim_agencia` (`agencia_key`, `id_agencia`, `nombre`, `nacionalidad`, `descuento_vip`, `especializacion`, `agencia_valid_from`, `agencia_valid_through`, `agencia_version_number`, `ultima_actualizacion`) VALUES ('-1', '-1', 'N/A', 'N/A', NULL, NULL, '1900-01-01', '2199-12-31', '1', '1990-01-01 00:00:00');
 
+
+/*VISTAS*/
+
+CREATE OR REPLACE VIEW cliente_view (cliente_key,genero,edad,estado_civil,hijos,beneficio,pais_residencia,pais_llegada,pais_salida,tipo_vuelo,fecha)
+AS
+SELECT c.cliente_key, c.genero,c.edad,c.estado_civil,c.hijos,h.beneficio,c.pais_residencia,l.pais as pais_llegada,s.pais as pais_salida,v.tipo_vuelo,f.fecha
+FROM dim_cliente as c JOIN fact_ventas as h on h.cliente_key = c.cliente_key
+JOIN dim_lugar as l on h.lugar_llegada_key = l.lugar_key
+JOIN dim_lugar as s on h.lugar_salida_key = s.lugar_key
+JOIN dim_vuelo as v on h.vuelo_key = v.vuelo_key
+JOIN dim_fecha as f on h.fecha_salida_key = f.fecha_key
