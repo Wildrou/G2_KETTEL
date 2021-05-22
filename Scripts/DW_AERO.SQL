@@ -7,10 +7,10 @@ CREATE TABLE dim_cliente
 (
     cliente_key INT NOT NULL AUTO_INCREMENT ,
     id_cliente VARCHAR(9),
-    edad INT,
+    edad ENUM('+80','60-80','50-60','35-50','25-35','18-25','menor'),
     estado_civil ENUM('CASADO','SOLTERO','UNION DE HECHO','SEPARADO','VIUDO','DIVORCIADO'),
     ocupacion VARCHAR(50),
-    hijos INT,
+    hijos ENUM('+10','6-9','4-5','2-3','hijo unico','sin hijos') ,
     lugar_residencia VARCHAR(50),
     pais_residencia VARCHAR(30),
     pais_origen VARCHAR(30),
