@@ -132,9 +132,9 @@ INSERT INTO `dim_agencia` (`agencia_key`, `id_agencia`, `nombre`, `nacionalidad`
 
 /*VISTAS*/
 
-CREATE OR REPLACE VIEW cliente_view (cliente_key,genero,edad,estado_civil,hijos,beneficio,pais_residencia,pais_llegada,pais_salida,tipo_vuelo,fecha)
+CREATE OR REPLACE VIEW cliente_view (cliente_key,genero,edad,estado_civil,hijos,beneficio,pais_residencia,ciudad_legada,pais_llegada,pais_salida,tipo_vuelo,fecha)
 AS
-SELECT c.cliente_key, c.genero,c.edad,c.estado_civil,c.hijos,h.beneficio,c.pais_residencia,l.pais as pais_llegada,s.pais as pais_salida,v.tipo_vuelo,f.fecha
+SELECT c.cliente_key, c.genero,c.edad,c.estado_civil,c.hijos,h.beneficio,c.pais_residencia,l.ciudad as ciudad_llegada,l.pais as pais_llegada,s.pais as pais_salida,v.tipo_vuelo,f.fecha
 FROM dim_cliente as c JOIN fact_ventas as h on h.cliente_key = c.cliente_key
 JOIN dim_lugar as l on h.lugar_llegada_key = l.lugar_key
 JOIN dim_lugar as s on h.lugar_salida_key = s.lugar_key
