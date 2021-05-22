@@ -63,7 +63,7 @@ CREATE TABLE dim_fecha
     estacion ENUM('verano','otoño','invierno','primavera'),
     es_festivo BOOLEAN,
     ultima_actualizacion timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-    fecha date
+    fecha date,
     PRIMARY KEY(fecha_key)
 );
 
