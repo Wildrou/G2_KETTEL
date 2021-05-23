@@ -5,8 +5,8 @@
                 "css": "",
                 "dashboard_title": "Cliente",
                 "description": null,
-                "json_metadata": "{\"timed_refresh_immune_slices\": [], \"expanded_slices\": {}, \"refresh_frequency\": 0, \"default_filters\": \"{}\", \"color_scheme\": null, \"filter_scopes\": {\"151\": {\"genero\": {\"scope\": [\"ROOT_ID\"], \"immune\": []}, \"edad\": {\"scope\": [\"ROOT_ID\"], \"immune\": []}, \"estado_civil\": {\"scope\": [\"ROOT_ID\"], \"immune\": []}, \"hijos\": {\"scope\": [\"ROOT_ID\"], \"immune\": []}}}, \"remote_id\": 12}",
-                "position_json": "{\"CHART-FEcK4g51Z6\":{\"children\":[],\"id\":\"CHART-FEcK4g51Z6\",\"meta\":{\"chartId\":166,\"height\":47,\"sliceName\":\"Ciudades m\\u00e1s visitadas en EEUU\",\"uuid\":\"9e52badd-fd3a-41f9-8d61-17430bbd82f6\",\"width\":12},\"parents\":[\"ROOT_ID\",\"GRID_ID\",\"ROW-5wzczghwe\"],\"type\":\"CHART\"},\"CHART-F_fgFBb8Er\":{\"children\":[],\"id\":\"CHART-F_fgFBb8Er\",\"meta\":{\"chartId\":154,\"height\":50,\"sliceName\":\"Tipos de vuelo\",\"uuid\":\"3a399ee3-3b37-4a29-b0d3-866c4377e6df\",\"width\":4},\"parents\":[\"ROOT_ID\",\"GRID_ID\",\"ROW-9J1FMEtmT\"],\"type\":\"CHART\"},\"CHART-QOITrCSrSc\":{\"children\":[],\"id\":\"CHART-QOITrCSrSc\",\"meta\":{\"chartId\":155,\"height\":50,\"sliceName\":\"Paises de salida de los clientes\",\"uuid\":\"2371224a-9d8d-4ba6-b27a-515d60e6342f\",\"width\":8},\"parents\":[\"ROOT_ID\",\"GRID_ID\",\"ROW-9J1FMEtmT\"],\"type\":\"CHART\"},\"CHART-Vm053pk_2f\":{\"children\":[],\"id\":\"CHART-Vm053pk_2f\",\"meta\":{\"chartId\":148,\"height\":50,\"sliceName\":\"Genero de los clientes\",\"uuid\":\"53fb8b56-6fbe-4727-9138-d5ae0726c74b\",\"width\":4},\"parents\":[\"ROOT_ID\",\"GRID_ID\",\"ROW-VEcXLC9kV\"],\"type\":\"CHART\"},\"CHART-Z63Uycp4eB\":{\"children\":[],\"id\":\"CHART-Z63Uycp4eB\",\"meta\":{\"chartId\":153,\"height\":74,\"sliceName\":\"Paises visitados\",\"uuid\":\"91ade985-bc9f-4462-b058-163d2cc2cecb\",\"width\":12},\"parents\":[\"ROOT_ID\",\"GRID_ID\",\"ROW-cQX_jddQH\"],\"type\":\"CHART\"},\"CHART-n4YwPHZuW7\":{\"children\":[],\"id\":\"CHART-n4YwPHZuW7\",\"meta\":{\"chartId\":146,\"height\":50,\"sliceName\":\"Estado civil de los clientes\",\"uuid\":\"40900c90-fae2-4269-9bb4-845ed7120ba9\",\"width\":4},\"parents\":[\"ROOT_ID\",\"GRID_ID\",\"ROW-PyZYUTVKf\"],\"type\":\"CHART\"},\"CHART-uhPiLE5o15\":{\"children\":[],\"id\":\"CHART-uhPiLE5o15\",\"meta\":{\"chartId\":152,\"height\":50,\"sliceName\":\"Benificio por pa\\u00eds de los clientes\",\"uuid\":\"2934732c-abe1-4983-9f68-d0d8faf80e77\",\"width\":8},\"parents\":[\"ROOT_ID\",\"GRID_ID\",\"ROW-VEcXLC9kV\"],\"type\":\"CHART\"},\"CHART-xVVRkZdhnb\":{\"children\":[],\"id\":\"CHART-xVVRkZdhnb\",\"meta\":{\"chartId\":147,\"height\":50,\"sliceName\":\"N\\u00ba de clientes totales\",\"uuid\":\"54c76876-76d6-4320-88b9-69d3c5d8fe86\",\"width\":4},\"parents\":[\"ROOT_ID\",\"GRID_ID\",\"ROW-PyZYUTVKf\"],\"type\":\"CHART\"},\"CHART-zUNFiebnxb\":{\"children\":[],\"id\":\"CHART-zUNFiebnxb\",\"meta\":{\"chartId\":151,\"height\":51,\"sliceName\":\"Filtro cliente\",\"uuid\":\"9745e5d9-daf3-4387-88ed-811b7f00e1ee\",\"width\":4},\"parents\":[\"ROOT_ID\",\"GRID_ID\",\"ROW-PyZYUTVKf\"],\"type\":\"CHART\"},\"DASHBOARD_VERSION_KEY\":\"v2\",\"GRID_ID\":{\"children\":[\"ROW-PyZYUTVKf\",\"ROW-VEcXLC9kV\",\"ROW-cQX_jddQH\",\"ROW-9J1FMEtmT\",\"ROW-5wzczghwe\"],\"id\":\"GRID_ID\",\"parents\":[\"ROOT_ID\"],\"type\":\"GRID\"},\"HEADER_ID\":{\"id\":\"HEADER_ID\",\"meta\":{\"text\":\"Cliente\"},\"type\":\"HEADER\"},\"ROOT_ID\":{\"children\":[\"GRID_ID\"],\"id\":\"ROOT_ID\",\"type\":\"ROOT\"},\"ROW-5wzczghwe\":{\"children\":[\"CHART-FEcK4g51Z6\"],\"id\":\"ROW-5wzczghwe\",\"meta\":{\"0\":\"ROOT_ID\",\"background\":\"BACKGROUND_TRANSPARENT\"},\"parents\":[\"ROOT_ID\",\"GRID_ID\"],\"type\":\"ROW\"},\"ROW-9J1FMEtmT\":{\"children\":[\"CHART-F_fgFBb8Er\",\"CHART-QOITrCSrSc\"],\"id\":\"ROW-9J1FMEtmT\",\"meta\":{\"0\":\"ROOT_ID\",\"background\":\"BACKGROUND_TRANSPARENT\"},\"parents\":[\"ROOT_ID\",\"GRID_ID\"],\"type\":\"ROW\"},\"ROW-PyZYUTVKf\":{\"children\":[\"CHART-zUNFiebnxb\",\"CHART-n4YwPHZuW7\",\"CHART-xVVRkZdhnb\"],\"id\":\"ROW-PyZYUTVKf\",\"meta\":{\"0\":\"ROOT_ID\",\"background\":\"BACKGROUND_TRANSPARENT\"},\"parents\":[\"ROOT_ID\",\"GRID_ID\"],\"type\":\"ROW\"},\"ROW-VEcXLC9kV\":{\"children\":[\"CHART-Vm053pk_2f\",\"CHART-uhPiLE5o15\"],\"id\":\"ROW-VEcXLC9kV\",\"meta\":{\"0\":\"ROOT_ID\",\"background\":\"BACKGROUND_TRANSPARENT\"},\"parents\":[\"ROOT_ID\",\"GRID_ID\"],\"type\":\"ROW\"},\"ROW-cQX_jddQH\":{\"children\":[\"CHART-Z63Uycp4eB\"],\"id\":\"ROW-cQX_jddQH\",\"meta\":{\"0\":\"ROOT_ID\",\"background\":\"BACKGROUND_TRANSPARENT\"},\"parents\":[\"ROOT_ID\",\"GRID_ID\"],\"type\":\"ROW\"}}",
+                "json_metadata": "{\"timed_refresh_immune_slices\": [], \"expanded_slices\": {}, \"refresh_frequency\": 0, \"default_filters\": \"{\\\"149\\\": {\\\"estado_civil\\\": null}}\", \"color_scheme\": null, \"filter_scopes\": {\"149\": {\"genero\": {\"scope\": [\"ROOT_ID\"], \"immune\": []}, \"edad\": {\"scope\": [\"ROOT_ID\"], \"immune\": []}, \"estado_civil\": {\"scope\": [\"ROOT_ID\"], \"immune\": []}, \"hijos\": {\"scope\": [\"ROOT_ID\"], \"immune\": []}}}, \"remote_id\": 12, \"import_time\": 1621775617}",
+                "position_json": "{\"CHART-FEcK4g51Z6\":{\"children\":[],\"id\":\"CHART-FEcK4g51Z6\",\"meta\":{\"chartId\":154,\"height\":47,\"sliceName\":\"Ciudades m\\u00e1s visitadas en EEUU\",\"uuid\":\"21f50fb9-2a53-4661-b44e-92e686fb7e33\",\"width\":12},\"parents\":[\"ROOT_ID\",\"GRID_ID\",\"ROW-5wzczghwe\"],\"type\":\"CHART\"},\"CHART-F_fgFBb8Er\":{\"children\":[],\"id\":\"CHART-F_fgFBb8Er\",\"meta\":{\"chartId\":152,\"height\":50,\"sliceName\":\"Tipos de vuelo\",\"uuid\":\"01553693-e8bb-4522-ba54-5a892c71e2bd\",\"width\":4},\"parents\":[\"ROOT_ID\",\"GRID_ID\",\"ROW-9J1FMEtmT\"],\"type\":\"CHART\"},\"CHART-QOITrCSrSc\":{\"children\":[],\"id\":\"CHART-QOITrCSrSc\",\"meta\":{\"chartId\":153,\"height\":50,\"sliceName\":\"Paises de salida de los clientes\",\"uuid\":\"48d8407d-ca93-44a7-b7f7-eaa411eb99e0\",\"width\":8},\"parents\":[\"ROOT_ID\",\"GRID_ID\",\"ROW-9J1FMEtmT\"],\"type\":\"CHART\"},\"CHART-Vm053pk_2f\":{\"children\":[],\"id\":\"CHART-Vm053pk_2f\",\"meta\":{\"chartId\":148,\"height\":50,\"sliceName\":\"Genero de los clientes\",\"uuid\":\"dd0e7261-2c88-46a4-86a0-de3459859e27\",\"width\":4},\"parents\":[\"ROOT_ID\",\"GRID_ID\",\"ROW-VEcXLC9kV\"],\"type\":\"CHART\"},\"CHART-Z63Uycp4eB\":{\"children\":[],\"id\":\"CHART-Z63Uycp4eB\",\"meta\":{\"chartId\":151,\"height\":92,\"sliceName\":\"Paises visitados\",\"uuid\":\"7fbaba80-e001-45bc-9ef7-f3eef43197e4\",\"width\":12},\"parents\":[\"ROOT_ID\",\"GRID_ID\",\"ROW-cQX_jddQH\"],\"type\":\"CHART\"},\"CHART-n4YwPHZuW7\":{\"children\":[],\"id\":\"CHART-n4YwPHZuW7\",\"meta\":{\"chartId\":146,\"height\":50,\"sliceName\":\"Estado civil de los clientes\",\"uuid\":\"2c22774d-563a-4846-9949-46c12a6bbf79\",\"width\":4},\"parents\":[\"ROOT_ID\",\"GRID_ID\",\"ROW-PyZYUTVKf\"],\"type\":\"CHART\"},\"CHART-uhPiLE5o15\":{\"children\":[],\"id\":\"CHART-uhPiLE5o15\",\"meta\":{\"chartId\":150,\"height\":50,\"sliceName\":\"Benificio por pa\\u00eds de los clientes\",\"uuid\":\"ef59cee5-c4d8-4591-9950-cde4752d06de\",\"width\":8},\"parents\":[\"ROOT_ID\",\"GRID_ID\",\"ROW-VEcXLC9kV\"],\"type\":\"CHART\"},\"CHART-xVVRkZdhnb\":{\"children\":[],\"id\":\"CHART-xVVRkZdhnb\",\"meta\":{\"chartId\":147,\"height\":50,\"sliceName\":\"N\\u00ba de clientes totales\",\"uuid\":\"9a5842ef-109f-44ae-a03c-eeabcf4d0960\",\"width\":4},\"parents\":[\"ROOT_ID\",\"GRID_ID\",\"ROW-PyZYUTVKf\"],\"type\":\"CHART\"},\"CHART-zUNFiebnxb\":{\"children\":[],\"id\":\"CHART-zUNFiebnxb\",\"meta\":{\"chartId\":149,\"height\":51,\"sliceName\":\"Filtro cliente\",\"uuid\":\"7d8a5dad-dac5-45a9-aff2-b66059aa742d\",\"width\":4},\"parents\":[\"ROOT_ID\",\"GRID_ID\",\"ROW-PyZYUTVKf\"],\"type\":\"CHART\"},\"DASHBOARD_VERSION_KEY\":\"v2\",\"GRID_ID\":{\"children\":[\"ROW-PyZYUTVKf\",\"ROW-VEcXLC9kV\",\"ROW-cQX_jddQH\",\"ROW-9J1FMEtmT\",\"ROW-5wzczghwe\"],\"id\":\"GRID_ID\",\"parents\":[\"ROOT_ID\"],\"type\":\"GRID\"},\"HEADER_ID\":{\"id\":\"HEADER_ID\",\"meta\":{\"text\":\"Cliente\"},\"type\":\"HEADER\"},\"ROOT_ID\":{\"children\":[\"GRID_ID\"],\"id\":\"ROOT_ID\",\"type\":\"ROOT\"},\"ROW-5wzczghwe\":{\"children\":[\"CHART-FEcK4g51Z6\"],\"id\":\"ROW-5wzczghwe\",\"meta\":{\"0\":\"ROOT_ID\",\"background\":\"BACKGROUND_TRANSPARENT\"},\"parents\":[\"ROOT_ID\",\"GRID_ID\"],\"type\":\"ROW\"},\"ROW-9J1FMEtmT\":{\"children\":[\"CHART-F_fgFBb8Er\",\"CHART-QOITrCSrSc\"],\"id\":\"ROW-9J1FMEtmT\",\"meta\":{\"0\":\"ROOT_ID\",\"background\":\"BACKGROUND_TRANSPARENT\"},\"parents\":[\"ROOT_ID\",\"GRID_ID\"],\"type\":\"ROW\"},\"ROW-PyZYUTVKf\":{\"children\":[\"CHART-zUNFiebnxb\",\"CHART-n4YwPHZuW7\",\"CHART-xVVRkZdhnb\"],\"id\":\"ROW-PyZYUTVKf\",\"meta\":{\"0\":\"ROOT_ID\",\"background\":\"BACKGROUND_TRANSPARENT\"},\"parents\":[\"ROOT_ID\",\"GRID_ID\"],\"type\":\"ROW\"},\"ROW-VEcXLC9kV\":{\"children\":[\"CHART-Vm053pk_2f\",\"CHART-uhPiLE5o15\"],\"id\":\"ROW-VEcXLC9kV\",\"meta\":{\"0\":\"ROOT_ID\",\"background\":\"BACKGROUND_TRANSPARENT\"},\"parents\":[\"ROOT_ID\",\"GRID_ID\"],\"type\":\"ROW\"},\"ROW-cQX_jddQH\":{\"children\":[\"CHART-Z63Uycp4eB\"],\"id\":\"ROW-cQX_jddQH\",\"meta\":{\"0\":\"ROOT_ID\",\"background\":\"BACKGROUND_TRANSPARENT\"},\"parents\":[\"ROOT_ID\",\"GRID_ID\"],\"type\":\"ROW\"}}",
                 "slices": [
                     {
                         "__Slice__": {
@@ -14,7 +14,7 @@
                             "datasource_name": "dw_aero.cliente_view",
                             "datasource_type": "table",
                             "id": 146,
-                            "params": "{\"adhoc_filters\": [], \"color_scheme\": \"supersetColors\", \"datasource\": \"56__table\", \"date_format\": \"smart_date\", \"extra_form_data\": {}, \"granularity_sqla\": \"fecha\", \"groupby\": [\"estado_civil\"], \"innerRadius\": 30, \"label_type\": \"key\", \"labels_outside\": true, \"legendOrientation\": \"top\", \"legendType\": \"scroll\", \"metric\": {\"aggregate\": \"COUNT_DISTINCT\", \"column\": {\"column_name\": \"cliente_key\", \"description\": null, \"expression\": null, \"filterable\": true, \"groupby\": true, \"id\": 952, \"is_dttm\": false, \"python_date_format\": null, \"type\": \"INTEGER(11)\", \"verbose_name\": null}, \"expressionType\": \"SIMPLE\", \"hasCustomLabel\": false, \"isNew\": false, \"label\": \"COUNT_DISTINCT(cliente_key)\", \"optionName\": \"metric_0bgohataok1_8roqgy0w31g\", \"sqlExpression\": null}, \"number_format\": \"SMART_NUMBER\", \"outerRadius\": 70, \"row_limit\": 100, \"show_labels\": true, \"show_labels_threshold\": 5, \"slice_id\": 146, \"time_range\": \"No filter\", \"time_range_endpoints\": [\"inclusive\", \"exclusive\"], \"url_params\": {}, \"viz_type\": \"pie\", \"remote_id\": 146, \"datasource_name\": \"cliente_view\", \"schema\": \"dw_aero\", \"database_name\": \"dw_aero\"}",
+                            "params": "{\"adhoc_filters\": [], \"color_scheme\": \"supersetColors\", \"datasource\": \"56__table\", \"date_format\": \"smart_date\", \"extra_form_data\": {}, \"granularity_sqla\": \"fecha\", \"groupby\": [\"estado_civil\"], \"innerRadius\": 30, \"label_type\": \"key\", \"labels_outside\": true, \"legendOrientation\": \"top\", \"legendType\": \"scroll\", \"metric\": {\"aggregate\": \"COUNT_DISTINCT\", \"column\": {\"column_name\": \"cliente_key\", \"description\": null, \"expression\": null, \"filterable\": true, \"groupby\": true, \"id\": 952, \"is_dttm\": false, \"python_date_format\": null, \"type\": \"INTEGER(11)\", \"verbose_name\": null}, \"expressionType\": \"SIMPLE\", \"hasCustomLabel\": false, \"isNew\": false, \"label\": \"COUNT_DISTINCT(cliente_key)\", \"optionName\": \"metric_0bgohataok1_8roqgy0w31g\", \"sqlExpression\": null}, \"number_format\": \"SMART_NUMBER\", \"outerRadius\": 70, \"row_limit\": 100, \"show_labels\": true, \"show_labels_threshold\": 5, \"slice_id\": 146, \"time_range\": \"No filter\", \"time_range_endpoints\": [\"inclusive\", \"exclusive\"], \"url_params\": {}, \"viz_type\": \"pie\", \"remote_id\": 146, \"datasource_name\": \"cliente_view\", \"schema\": \"dw_aero\", \"database_name\": \"dw_aero\", \"import_time\": 1621775617}",
                             "slice_name": "Estado civil de los clientes",
                             "viz_type": "pie"
                         }
@@ -25,7 +25,7 @@
                             "datasource_name": "dw_aero.cliente_view",
                             "datasource_type": "table",
                             "id": 147,
-                            "params": "{\"adhoc_filters\": [], \"datasource\": \"56__table\", \"extra_form_data\": {}, \"granularity_sqla\": \"fecha\", \"header_font_size\": 0.4, \"metric\": {\"aggregate\": \"COUNT_DISTINCT\", \"column\": {\"column_name\": \"cliente_key\", \"description\": null, \"expression\": null, \"filterable\": true, \"groupby\": true, \"id\": 952, \"is_dttm\": false, \"python_date_format\": null, \"type\": \"INTEGER(11)\", \"verbose_name\": null}, \"expressionType\": \"SIMPLE\", \"hasCustomLabel\": false, \"isNew\": false, \"label\": \"COUNT_DISTINCT(cliente_key)\", \"optionName\": \"metric_0k4kv9nvg2wm_kje0h1sgzlr\", \"sqlExpression\": null}, \"slice_id\": 147, \"subheader_font_size\": 0.15, \"time_range\": \"No filter\", \"time_range_endpoints\": [\"inclusive\", \"exclusive\"], \"url_params\": {}, \"viz_type\": \"big_number_total\", \"y_axis_format\": \"SMART_NUMBER\", \"remote_id\": 147, \"datasource_name\": \"cliente_view\", \"schema\": \"dw_aero\", \"database_name\": \"dw_aero\"}",
+                            "params": "{\"adhoc_filters\": [], \"datasource\": \"56__table\", \"extra_form_data\": {}, \"granularity_sqla\": \"fecha\", \"header_font_size\": 0.4, \"metric\": {\"aggregate\": \"COUNT_DISTINCT\", \"column\": {\"column_name\": \"cliente_key\", \"description\": null, \"expression\": null, \"filterable\": true, \"groupby\": true, \"id\": 952, \"is_dttm\": false, \"python_date_format\": null, \"type\": \"INTEGER(11)\", \"verbose_name\": null}, \"expressionType\": \"SIMPLE\", \"hasCustomLabel\": false, \"isNew\": false, \"label\": \"COUNT_DISTINCT(cliente_key)\", \"optionName\": \"metric_0k4kv9nvg2wm_kje0h1sgzlr\", \"sqlExpression\": null}, \"slice_id\": 147, \"subheader_font_size\": 0.15, \"time_range\": \"No filter\", \"time_range_endpoints\": [\"inclusive\", \"exclusive\"], \"url_params\": {}, \"viz_type\": \"big_number_total\", \"y_axis_format\": \"SMART_NUMBER\", \"remote_id\": 147, \"datasource_name\": \"cliente_view\", \"schema\": \"dw_aero\", \"database_name\": \"dw_aero\", \"import_time\": 1621775617}",
                             "slice_name": "N\u00ba de clientes totales",
                             "viz_type": "big_number_total"
                         }
@@ -36,8 +36,8 @@
                             "datasource_name": "dw_aero.cliente_view",
                             "datasource_type": "table",
                             "id": 148,
-                            "params": "{\"adhoc_filters\": [], \"bottom_margin\": \"auto\", \"color_scheme\": \"supersetColors\", \"columns\": [], \"datasource\": \"56__table\", \"extra_form_data\": {}, \"granularity_sqla\": \"fecha\", \"groupby\": [\"genero\"], \"label_colors\": {}, \"metrics\": [{\"aggregate\": \"COUNT_DISTINCT\", \"column\": {\"column_name\": \"cliente_key\", \"description\": null, \"expression\": null, \"filterable\": true, \"groupby\": true, \"id\": 952, \"is_dttm\": false, \"python_date_format\": null, \"type\": \"INTEGER(11)\", \"verbose_name\": null}, \"expressionType\": \"SIMPLE\", \"hasCustomLabel\": false, \"isNew\": false, \"label\": \"COUNT_DISTINCT(cliente_key)\", \"optionName\": \"metric_gigg1c90crw_nobzaw6oroo\", \"sqlExpression\": null}], \"order_desc\": true, \"row_limit\": 10000, \"slice_id\": 148, \"time_range\": \"No filter\", \"time_range_endpoints\": [\"inclusive\", \"exclusive\"], \"url_params\": {}, \"viz_type\": \"dist_bar\", \"x_ticks_layout\": \"auto\", \"y_axis_bounds\": [null, null], \"y_axis_format\": \"SMART_NUMBER\", \"remote_id\": 148, \"datasource_name\": \"cliente_view\", \"schema\": \"dw_aero\", \"database_name\": \"dw_aero\"}",
-                            "slice_name": "Genero de los clientes",
+                            "params": "{\"adhoc_filters\": [], \"bottom_margin\": \"auto\", \"color_scheme\": \"supersetColors\", \"columns\": [], \"datasource\": \"56__table\", \"extra_form_data\": {}, \"granularity_sqla\": \"fecha\", \"groupby\": [\"genero\"], \"label_colors\": {}, \"metrics\": [{\"aggregate\": \"COUNT_DISTINCT\", \"column\": {\"column_name\": \"cliente_key\", \"description\": null, \"expression\": null, \"filterable\": true, \"groupby\": true, \"id\": 952, \"is_dttm\": false, \"python_date_format\": null, \"type\": \"INTEGER(11)\", \"verbose_name\": null}, \"expressionType\": \"SIMPLE\", \"hasCustomLabel\": false, \"isNew\": false, \"label\": \"COUNT_DISTINCT(cliente_key)\", \"optionName\": \"metric_gigg1c90crw_nobzaw6oroo\", \"sqlExpression\": null}], \"order_desc\": true, \"row_limit\": 10000, \"slice_id\": 148, \"time_range\": \"No filter\", \"time_range_endpoints\": [\"inclusive\", \"exclusive\"], \"url_params\": {}, \"viz_type\": \"dist_bar\", \"x_ticks_layout\": \"auto\", \"y_axis_bounds\": [null, null], \"y_axis_format\": \"SMART_NUMBER\", \"remote_id\": 148, \"datasource_name\": \"cliente_view\", \"schema\": \"dw_aero\", \"database_name\": \"dw_aero\", \"import_time\": 1621775617}",
+                            "slice_name": "Gen\u00e9ro de los clientes",
                             "viz_type": "dist_bar"
                         }
                     },
@@ -46,8 +46,8 @@
                             "cache_timeout": null,
                             "datasource_name": "dw_aero.cliente_view",
                             "datasource_type": "table",
-                            "id": 151,
-                            "params": "{\"adhoc_filters\": [], \"datasource\": \"56__table\", \"date_filter\": false, \"extra_form_data\": {}, \"filter_configs\": [{\"asc\": true, \"clearable\": true, \"column\": \"genero\", \"key\": \"BDvqj9gsH\", \"label\": \"Genero\", \"multiple\": true, \"searchAllOptions\": false}, {\"asc\": true, \"clearable\": true, \"column\": \"edad\", \"key\": \"nVpec6fkK\", \"label\": \"Edad\", \"multiple\": true, \"searchAllOptions\": false}, {\"asc\": true, \"clearable\": true, \"column\": \"estado_civil\", \"key\": \"jies1R7Qq\", \"label\": \"Estado civil\", \"multiple\": true, \"searchAllOptions\": false}, {\"asc\": true, \"clearable\": true, \"column\": \"hijos\", \"key\": \"9w4kUjkOC\", \"label\": \"N\\u00ba de hijos\", \"multiple\": true, \"searchAllOptions\": false}], \"granularity_sqla\": \"fecha\", \"slice_id\": 151, \"time_grain_sqla\": \"P1D\", \"time_range\": \"No filter\", \"time_range_endpoints\": [\"inclusive\", \"exclusive\"], \"url_params\": {}, \"viz_type\": \"filter_box\", \"remote_id\": 151, \"datasource_name\": \"cliente_view\", \"schema\": \"dw_aero\", \"database_name\": \"dw_aero\"}",
+                            "id": 149,
+                            "params": "{\"adhoc_filters\": [], \"datasource\": \"56__table\", \"date_filter\": false, \"extra_form_data\": {}, \"filter_configs\": [{\"asc\": true, \"clearable\": true, \"column\": \"genero\", \"key\": \"BDvqj9gsH\", \"label\": \"Genero\", \"multiple\": true, \"searchAllOptions\": false}, {\"asc\": true, \"clearable\": true, \"column\": \"edad\", \"key\": \"nVpec6fkK\", \"label\": \"Edad\", \"multiple\": true, \"searchAllOptions\": false}, {\"asc\": true, \"clearable\": true, \"column\": \"estado_civil\", \"key\": \"jies1R7Qq\", \"label\": \"Estado civil\", \"multiple\": true, \"searchAllOptions\": false}, {\"asc\": true, \"clearable\": true, \"column\": \"hijos\", \"key\": \"9w4kUjkOC\", \"label\": \"N\\u00ba de hijos\", \"multiple\": true, \"searchAllOptions\": false}], \"granularity_sqla\": \"fecha\", \"slice_id\": 151, \"time_grain_sqla\": \"P1D\", \"time_range\": \"No filter\", \"time_range_endpoints\": [\"inclusive\", \"exclusive\"], \"url_params\": {}, \"viz_type\": \"filter_box\", \"remote_id\": 149, \"datasource_name\": \"cliente_view\", \"schema\": \"dw_aero\", \"database_name\": \"dw_aero\", \"import_time\": 1621775617}",
                             "slice_name": "Filtro cliente",
                             "viz_type": "filter_box"
                         }
@@ -57,8 +57,8 @@
                             "cache_timeout": null,
                             "datasource_name": "beneficio_por_paises 05/19/2021 18:12:10",
                             "datasource_type": "table",
-                            "id": 152,
-                            "params": "{\"adhoc_filters\": [], \"bottom_margin\": \"auto\", \"color_scheme\": \"supersetColors\", \"columns\": [], \"datasource\": \"45__table\", \"extra_form_data\": {}, \"groupby\": [\"pais_residencia\"], \"label_colors\": {}, \"metrics\": [{\"aggregate\": \"AVG\", \"column\": {\"column_name\": \"beneficio\", \"description\": null, \"expression\": null, \"filterable\": true, \"groupby\": true, \"id\": 874, \"is_dttm\": false, \"python_date_format\": null, \"type\": \"NEWDECIMAL\", \"verbose_name\": null}, \"expressionType\": \"SIMPLE\", \"hasCustomLabel\": false, \"isNew\": false, \"label\": \"AVG(beneficio)\", \"optionName\": \"metric_dfffmdg8hi_2x6scx3h505\", \"sqlExpression\": null}], \"order_desc\": true, \"row_limit\": 1000, \"time_range\": \"No filter\", \"time_range_endpoints\": [\"inclusive\", \"exclusive\"], \"viz_type\": \"dist_bar\", \"x_ticks_layout\": \"auto\", \"y_axis_bounds\": [null, null], \"y_axis_format\": \"SMART_NUMBER\", \"remote_id\": 152, \"datasource_name\": \"beneficio_por_paises 05/19/2021 18:12:10\", \"schema\": null, \"database_name\": \"dw_aero\"}",
+                            "id": 150,
+                            "params": "{\"adhoc_filters\": [], \"bottom_margin\": \"auto\", \"color_scheme\": \"supersetColors\", \"columns\": [], \"datasource\": \"45__table\", \"extra_form_data\": {}, \"groupby\": [\"pais_residencia\"], \"label_colors\": {}, \"metrics\": [{\"aggregate\": \"AVG\", \"column\": {\"column_name\": \"beneficio\", \"description\": null, \"expression\": null, \"filterable\": true, \"groupby\": true, \"id\": 874, \"is_dttm\": false, \"python_date_format\": null, \"type\": \"NEWDECIMAL\", \"verbose_name\": null}, \"expressionType\": \"SIMPLE\", \"hasCustomLabel\": false, \"isNew\": false, \"label\": \"AVG(beneficio)\", \"optionName\": \"metric_dfffmdg8hi_2x6scx3h505\", \"sqlExpression\": null}], \"order_desc\": true, \"row_limit\": 1000, \"time_range\": \"No filter\", \"time_range_endpoints\": [\"inclusive\", \"exclusive\"], \"viz_type\": \"dist_bar\", \"x_ticks_layout\": \"auto\", \"y_axis_bounds\": [null, null], \"y_axis_format\": \"SMART_NUMBER\", \"remote_id\": 150, \"datasource_name\": \"beneficio_por_paises 05/19/2021 18:12:10\", \"schema\": null, \"database_name\": \"dw_aero\", \"import_time\": 1621775617}",
                             "slice_name": "Benificio por pa\u00eds de los clientes",
                             "viz_type": "dist_bar"
                         }
@@ -68,9 +68,9 @@
                             "cache_timeout": null,
                             "datasource_name": "paises clientes visitados 05/19/2021 18:15:39",
                             "datasource_type": "table",
-                            "id": 153,
-                            "params": "{\"adhoc_filters\": [], \"color_picker\": {\"a\": 1, \"b\": 135, \"g\": 122, \"r\": 0}, \"country_fieldtype\": \"name\", \"datasource\": \"46__table\", \"entity\": \"pais\", \"extra_form_data\": {}, \"linear_color_scheme\": \"superset_seq_1\", \"max_bubble_size\": \"25\", \"metric\": \"count\", \"row_limit\": 1000, \"time_range\": \"No filter\", \"time_range_endpoints\": [\"inclusive\", \"exclusive\"], \"viz_type\": \"world_map\", \"remote_id\": 153, \"datasource_name\": \"paises clientes visitados 05/19/2021 18:15:39\", \"schema\": null, \"database_name\": \"dw_aero\"}",
-                            "slice_name": "Paises visitados",
+                            "id": 151,
+                            "params": "{\"adhoc_filters\": [], \"color_picker\": {\"a\": 1, \"b\": 135, \"g\": 122, \"r\": 0}, \"country_fieldtype\": \"name\", \"datasource\": \"46__table\", \"entity\": \"pais\", \"extra_form_data\": {}, \"linear_color_scheme\": \"superset_seq_1\", \"max_bubble_size\": \"25\", \"metric\": \"count\", \"row_limit\": 1000, \"time_range\": \"No filter\", \"time_range_endpoints\": [\"inclusive\", \"exclusive\"], \"viz_type\": \"world_map\", \"remote_id\": 151, \"datasource_name\": \"paises clientes visitados 05/19/2021 18:15:39\", \"schema\": null, \"database_name\": \"dw_aero\", \"import_time\": 1621775617}",
+                            "slice_name": "Pa\u00edses visitados",
                             "viz_type": "world_map"
                         }
                     },
@@ -79,10 +79,10 @@
                             "cache_timeout": null,
                             "datasource_name": "tipo vuelo cliente 05/20/2021 08:53:41",
                             "datasource_type": "table",
-                            "id": 154,
-                            "params": "{\"adhoc_filters\": [], \"all_columns\": [\"tipo_vuelo\", \"genero\", \"hijos\", \"edad\", \"estado_civil\"], \"color_pn\": true, \"datasource\": \"48__table\", \"extra_form_data\": {}, \"groupby\": [\"tipo_vuelo\"], \"metrics\": [\"count\"], \"order_by_cols\": [], \"order_desc\": true, \"percent_metrics\": [], \"query_mode\": \"aggregate\", \"row_limit\": 1000, \"server_page_length\": 10, \"show_cell_bars\": true, \"show_totals\": true, \"table_timestamp_format\": \"smart_date\", \"time_grain_sqla\": \"P1D\", \"time_range\": \"No filter\", \"time_range_endpoints\": [\"inclusive\", \"exclusive\"], \"viz_type\": \"table\", \"remote_id\": 154, \"datasource_name\": \"tipo vuelo cliente 05/20/2021 08:53:41\", \"schema\": null, \"database_name\": \"dw_aero\"}",
+                            "id": 152,
+                            "params": "{\"adhoc_filters\": [], \"columns\": [\"genero\"], \"datasource\": \"36__table\", \"date_format\": \"smart_date\", \"extra_form_data\": {}, \"groupby\": [\"tipo_vuelo\"], \"metrics\": [\"count\"], \"number_format\": \"SMART_NUMBER\", \"order_desc\": true, \"pandas_aggfunc\": \"sum\", \"pivot_margins\": true, \"row_limit\": 1000, \"slice_id\": 152, \"time_grain_sqla\": \"P1D\", \"time_range\": \"No filter\", \"time_range_endpoints\": [\"inclusive\", \"exclusive\"], \"url_params\": {}, \"viz_type\": \"pivot_table\", \"remote_id\": 152, \"datasource_name\": \"tipo vuelo cliente 05/20/2021 08:53:41\", \"schema\": null, \"database_name\": \"dw_aero\"}",
                             "slice_name": "Tipos de vuelo",
-                            "viz_type": "table"
+                            "viz_type": "pivot_table"
                         }
                     },
                     {
@@ -90,9 +90,9 @@
                             "cache_timeout": null,
                             "datasource_name": "pais salida cliente 05/20/2021 09:21:42",
                             "datasource_type": "table",
-                            "id": 155,
-                            "params": "{\"adhoc_filters\": [], \"annotation_layers\": [], \"bottom_margin\": \"auto\", \"color_scheme\": \"supersetColors\", \"comparison_type\": \"values\", \"datasource\": \"52__table\", \"extra_form_data\": {}, \"granularity_sqla\": \"fecha\", \"groupby\": [\"pais\"], \"label_colors\": {}, \"left_margin\": \"auto\", \"limit\": 10, \"line_interpolation\": \"linear\", \"metrics\": [\"count\"], \"order_desc\": true, \"rich_tooltip\": true, \"rolling_type\": \"None\", \"row_limit\": null, \"show_brush\": \"auto\", \"slice_id\": 155, \"time_grain_sqla\": \"P0.25Y\", \"time_range\": \"No filter\", \"time_range_endpoints\": [\"inclusive\", \"exclusive\"], \"timeseries_limit_metric\": \"count\", \"url_params\": {}, \"viz_type\": \"line\", \"x_axis_format\": \"smart_date\", \"x_ticks_layout\": \"auto\", \"y_axis_bounds\": [null, null], \"y_axis_format\": \"SMART_NUMBER\", \"remote_id\": 155, \"datasource_name\": \"pais salida cliente 05/20/2021 09:21:42\", \"schema\": null, \"database_name\": \"dw_aero\"}",
-                            "slice_name": "Paises de salida de los clientes",
+                            "id": 153,
+                            "params": "{\"adhoc_filters\": [], \"annotation_layers\": [], \"bottom_margin\": \"auto\", \"color_scheme\": \"supersetColors\", \"comparison_type\": \"values\", \"datasource\": \"52__table\", \"extra_form_data\": {}, \"granularity_sqla\": \"fecha\", \"groupby\": [\"pais\"], \"label_colors\": {}, \"left_margin\": \"auto\", \"limit\": 10, \"line_interpolation\": \"linear\", \"metrics\": [\"count\"], \"order_desc\": true, \"rich_tooltip\": true, \"rolling_type\": \"None\", \"row_limit\": null, \"show_brush\": \"auto\", \"slice_id\": 155, \"time_grain_sqla\": \"P0.25Y\", \"time_range\": \"No filter\", \"time_range_endpoints\": [\"inclusive\", \"exclusive\"], \"timeseries_limit_metric\": \"count\", \"url_params\": {}, \"viz_type\": \"line\", \"x_axis_format\": \"smart_date\", \"x_ticks_layout\": \"auto\", \"y_axis_bounds\": [null, null], \"y_axis_format\": \"SMART_NUMBER\", \"remote_id\": 153, \"datasource_name\": \"pais salida cliente 05/20/2021 09:21:42\", \"schema\": null, \"database_name\": \"dw_aero\", \"import_time\": 1621775617}",
+                            "slice_name": "Pa\u00edses de salida de los clientes",
                             "viz_type": "line"
                         }
                     },
@@ -101,8 +101,8 @@
                             "cache_timeout": null,
                             "datasource_name": "dw_aero.cliente_view",
                             "datasource_type": "table",
-                            "id": 166,
-                            "params": "{\"adhoc_filters\": [{\"clause\": \"WHERE\", \"comparator\": \"United States\", \"expressionType\": \"SIMPLE\", \"filterOptionName\": \"filter_ysgja9ukd6_wv02eiz7n28\", \"isExtra\": false, \"isNew\": false, \"operator\": \"==\", \"sqlExpression\": null, \"subject\": \"pais_llegada\"}], \"annotation_layers\": [], \"bottom_margin\": \"auto\", \"color_scheme\": \"supersetColors\", \"comparison_type\": \"values\", \"datasource\": \"56__table\", \"extra_form_data\": {}, \"granularity_sqla\": \"fecha\", \"groupby\": [\"ciudad_legada\"], \"label_colors\": {}, \"left_margin\": \"auto\", \"limit\": 25, \"line_interpolation\": \"linear\", \"metrics\": [\"count\"], \"order_desc\": true, \"rich_tooltip\": true, \"rolling_type\": \"None\", \"row_limit\": null, \"show_brush\": \"auto\", \"time_grain_sqla\": \"P1Y\", \"time_range\": \"No filter\", \"time_range_endpoints\": [\"inclusive\", \"exclusive\"], \"url_params\": {}, \"viz_type\": \"line\", \"x_axis_format\": \"smart_date\", \"x_ticks_layout\": \"auto\", \"y_axis_bounds\": [null, null], \"y_axis_format\": \"SMART_NUMBER\", \"remote_id\": 166, \"datasource_name\": \"cliente_view\", \"schema\": \"dw_aero\", \"database_name\": \"dw_aero\"}",
+                            "id": 154,
+                            "params": "{\"adhoc_filters\": [{\"clause\": \"WHERE\", \"comparator\": \"United States\", \"expressionType\": \"SIMPLE\", \"filterOptionName\": \"filter_ysgja9ukd6_wv02eiz7n28\", \"isExtra\": false, \"isNew\": false, \"operator\": \"==\", \"sqlExpression\": null, \"subject\": \"pais_llegada\"}], \"annotation_layers\": [], \"bottom_margin\": \"auto\", \"color_scheme\": \"supersetColors\", \"comparison_type\": \"values\", \"datasource\": \"56__table\", \"extra_form_data\": {}, \"granularity_sqla\": \"fecha\", \"groupby\": [\"ciudad_legada\"], \"label_colors\": {}, \"left_margin\": \"auto\", \"limit\": 25, \"line_interpolation\": \"linear\", \"metrics\": [\"count\"], \"order_desc\": true, \"rich_tooltip\": true, \"rolling_type\": \"None\", \"row_limit\": null, \"show_brush\": \"auto\", \"time_grain_sqla\": \"P1Y\", \"time_range\": \"No filter\", \"time_range_endpoints\": [\"inclusive\", \"exclusive\"], \"url_params\": {}, \"viz_type\": \"line\", \"x_axis_format\": \"smart_date\", \"x_ticks_layout\": \"auto\", \"y_axis_bounds\": [null, null], \"y_axis_format\": \"SMART_NUMBER\", \"remote_id\": 154, \"datasource_name\": \"cliente_view\", \"schema\": \"dw_aero\", \"database_name\": \"dw_aero\", \"import_time\": 1621775617}",
                             "slice_name": "Ciudades m\u00e1s visitadas en EEUU",
                             "viz_type": "line"
                         }
@@ -121,439 +121,24 @@
                         "__TableColumn__": {
                             "changed_by_fk": 1,
                             "changed_on": {
-                                "__datetime__": "2021-05-19T16:12:25"
-                            },
-                            "column_name": "beneficio",
-                            "created_by_fk": 1,
-                            "created_on": {
-                                "__datetime__": "2021-05-19T16:12:25"
-                            },
-                            "description": null,
-                            "expression": null,
-                            "filterable": true,
-                            "groupby": true,
-                            "id": 874,
-                            "is_active": true,
-                            "is_dttm": false,
-                            "python_date_format": null,
-                            "table_id": 45,
-                            "type": "NEWDECIMAL",
-                            "uuid": "21778005-e93b-4c4b-94d0-ce670b8bca98",
-                            "verbose_name": null
-                        }
-                    },
-                    {
-                        "__TableColumn__": {
-                            "changed_by_fk": 1,
-                            "changed_on": {
-                                "__datetime__": "2021-05-19T16:12:25"
-                            },
-                            "column_name": "pais_residencia",
-                            "created_by_fk": 1,
-                            "created_on": {
-                                "__datetime__": "2021-05-19T16:12:25"
-                            },
-                            "description": null,
-                            "expression": null,
-                            "filterable": true,
-                            "groupby": true,
-                            "id": 875,
-                            "is_active": true,
-                            "is_dttm": false,
-                            "python_date_format": null,
-                            "table_id": 45,
-                            "type": "VAR_STRING",
-                            "uuid": "8094fef6-a83b-44b7-a52f-008709d93fb3",
-                            "verbose_name": null
-                        }
-                    },
-                    {
-                        "__TableColumn__": {
-                            "changed_by_fk": 1,
-                            "changed_on": {
-                                "__datetime__": "2021-05-19T16:12:25"
-                            },
-                            "column_name": "genero",
-                            "created_by_fk": 1,
-                            "created_on": {
-                                "__datetime__": "2021-05-19T16:12:25"
-                            },
-                            "description": null,
-                            "expression": null,
-                            "filterable": true,
-                            "groupby": true,
-                            "id": 876,
-                            "is_active": true,
-                            "is_dttm": false,
-                            "python_date_format": null,
-                            "table_id": 45,
-                            "type": "STRING",
-                            "uuid": "7793567c-bb34-4d08-9b84-42262b59f2a1",
-                            "verbose_name": null
-                        }
-                    },
-                    {
-                        "__TableColumn__": {
-                            "changed_by_fk": 1,
-                            "changed_on": {
-                                "__datetime__": "2021-05-19T16:12:25"
-                            },
-                            "column_name": "hijos",
-                            "created_by_fk": 1,
-                            "created_on": {
-                                "__datetime__": "2021-05-19T16:12:25"
-                            },
-                            "description": null,
-                            "expression": null,
-                            "filterable": true,
-                            "groupby": true,
-                            "id": 877,
-                            "is_active": true,
-                            "is_dttm": false,
-                            "python_date_format": null,
-                            "table_id": 45,
-                            "type": "LONG",
-                            "uuid": "5bc544ca-ca9a-4bd7-8ff0-43e15396bc45",
-                            "verbose_name": null
-                        }
-                    },
-                    {
-                        "__TableColumn__": {
-                            "changed_by_fk": 1,
-                            "changed_on": {
-                                "__datetime__": "2021-05-19T16:12:25"
-                            },
-                            "column_name": "edad",
-                            "created_by_fk": 1,
-                            "created_on": {
-                                "__datetime__": "2021-05-19T16:12:25"
-                            },
-                            "description": null,
-                            "expression": null,
-                            "filterable": true,
-                            "groupby": true,
-                            "id": 878,
-                            "is_active": true,
-                            "is_dttm": false,
-                            "python_date_format": null,
-                            "table_id": 45,
-                            "type": "LONG",
-                            "uuid": "6676e382-d088-44f6-b453-6b8907c0a9d8",
-                            "verbose_name": null
-                        }
-                    },
-                    {
-                        "__TableColumn__": {
-                            "changed_by_fk": 1,
-                            "changed_on": {
-                                "__datetime__": "2021-05-19T16:12:25"
-                            },
-                            "column_name": "estado_civil",
-                            "created_by_fk": 1,
-                            "created_on": {
-                                "__datetime__": "2021-05-19T16:12:25"
-                            },
-                            "description": null,
-                            "expression": null,
-                            "filterable": true,
-                            "groupby": true,
-                            "id": 879,
-                            "is_active": true,
-                            "is_dttm": false,
-                            "python_date_format": null,
-                            "table_id": 45,
-                            "type": "STRING",
-                            "uuid": "e6d30572-1f9c-4e5f-a4b4-a4422c128b0f",
-                            "verbose_name": null
-                        }
-                    }
-                ],
-                "database_id": 2,
-                "default_endpoint": null,
-                "description": null,
-                "extra": null,
-                "fetch_values_predicate": null,
-                "filter_select_enabled": false,
-                "main_dttm_col": null,
-                "metrics": [
-                    {
-                        "__SqlMetric__": {
-                            "changed_by_fk": 1,
-                            "changed_on": {
-                                "__datetime__": "2021-05-19T16:12:25"
-                            },
-                            "created_by_fk": 1,
-                            "created_on": {
-                                "__datetime__": "2021-05-19T16:12:25"
-                            },
-                            "d3format": null,
-                            "description": null,
-                            "expression": "count(*)",
-                            "extra": null,
-                            "id": 53,
-                            "metric_name": "count",
-                            "metric_type": null,
-                            "table_id": 45,
-                            "uuid": "ae4dc02e-9dba-4bc2-a05d-a688f52320ea",
-                            "verbose_name": null,
-                            "warning_text": null
-                        }
-                    }
-                ],
-                "offset": 0,
-                "params": "{\"remote_id\": 45, \"database_name\": \"dw_aero\", \"import_time\": 1621673545}",
-                "schema": null,
-                "sql": "-- Note: Unless you save your query, these tabs will NOT persist if you clear your cookies or change browsers.\n\nSELECT h.beneficio,c.pais_residencia,c.genero,c.hijos,c.edad,c.estado_civil FROM fact_ventas AS H JOIN dim_cliente as c ON c.cliente_key = h.cliente_key group by c.pais_residencia",
-                "table_name": "beneficio_por_paises 05/19/2021 18:12:10",
-                "template_params": null
-            }
-        },
-        {
-            "__SqlaTable__": {
-                "cache_timeout": null,
-                "columns": [
-                    {
-                        "__TableColumn__": {
-                            "changed_by_fk": 1,
-                            "changed_on": {
-                                "__datetime__": "2021-05-20T07:48:19"
-                            },
-                            "column_name": "pais",
-                            "created_by_fk": 1,
-                            "created_on": {
-                                "__datetime__": "2021-05-20T07:48:19"
-                            },
-                            "description": null,
-                            "expression": null,
-                            "filterable": true,
-                            "groupby": true,
-                            "id": 915,
-                            "is_active": true,
-                            "is_dttm": false,
-                            "python_date_format": null,
-                            "table_id": 52,
-                            "type": "VAR_STRING",
-                            "uuid": "8bbdc86d-ddce-482a-abec-2cc14d47d474",
-                            "verbose_name": null
-                        }
-                    },
-                    {
-                        "__TableColumn__": {
-                            "changed_by_fk": 1,
-                            "changed_on": {
-                                "__datetime__": "2021-05-20T07:48:19"
-                            },
-                            "column_name": "genero",
-                            "created_by_fk": 1,
-                            "created_on": {
-                                "__datetime__": "2021-05-20T07:48:19"
-                            },
-                            "description": null,
-                            "expression": null,
-                            "filterable": true,
-                            "groupby": true,
-                            "id": 916,
-                            "is_active": true,
-                            "is_dttm": false,
-                            "python_date_format": null,
-                            "table_id": 52,
-                            "type": "STRING",
-                            "uuid": "bfbcdb2a-ebdf-4be9-bf1e-c6265ffe95bb",
-                            "verbose_name": null
-                        }
-                    },
-                    {
-                        "__TableColumn__": {
-                            "changed_by_fk": 1,
-                            "changed_on": {
-                                "__datetime__": "2021-05-20T07:48:19"
-                            },
-                            "column_name": "hijos",
-                            "created_by_fk": 1,
-                            "created_on": {
-                                "__datetime__": "2021-05-20T07:48:19"
-                            },
-                            "description": null,
-                            "expression": null,
-                            "filterable": true,
-                            "groupby": true,
-                            "id": 917,
-                            "is_active": true,
-                            "is_dttm": false,
-                            "python_date_format": null,
-                            "table_id": 52,
-                            "type": "LONG",
-                            "uuid": "f4ba0b91-781a-4489-8b42-d68b674fb301",
-                            "verbose_name": null
-                        }
-                    },
-                    {
-                        "__TableColumn__": {
-                            "changed_by_fk": 1,
-                            "changed_on": {
-                                "__datetime__": "2021-05-20T07:48:19"
-                            },
-                            "column_name": "edad",
-                            "created_by_fk": 1,
-                            "created_on": {
-                                "__datetime__": "2021-05-20T07:48:19"
-                            },
-                            "description": null,
-                            "expression": null,
-                            "filterable": true,
-                            "groupby": true,
-                            "id": 918,
-                            "is_active": true,
-                            "is_dttm": false,
-                            "python_date_format": null,
-                            "table_id": 52,
-                            "type": "LONG",
-                            "uuid": "35f5a866-3895-4abc-aa67-cded5328c5fa",
-                            "verbose_name": null
-                        }
-                    },
-                    {
-                        "__TableColumn__": {
-                            "changed_by_fk": 1,
-                            "changed_on": {
-                                "__datetime__": "2021-05-20T07:48:19"
-                            },
-                            "column_name": "estado_civil",
-                            "created_by_fk": 1,
-                            "created_on": {
-                                "__datetime__": "2021-05-20T07:48:19"
-                            },
-                            "description": null,
-                            "expression": null,
-                            "filterable": true,
-                            "groupby": true,
-                            "id": 919,
-                            "is_active": true,
-                            "is_dttm": false,
-                            "python_date_format": null,
-                            "table_id": 52,
-                            "type": "STRING",
-                            "uuid": "a610891e-f604-4729-9d4a-b7956886fdfb",
-                            "verbose_name": null
-                        }
-                    },
-                    {
-                        "__TableColumn__": {
-                            "changed_by_fk": 1,
-                            "changed_on": {
-                                "__datetime__": "2021-05-20T07:48:19"
-                            },
-                            "column_name": "cliente_key",
-                            "created_by_fk": 1,
-                            "created_on": {
-                                "__datetime__": "2021-05-20T07:48:19"
-                            },
-                            "description": null,
-                            "expression": null,
-                            "filterable": true,
-                            "groupby": true,
-                            "id": 920,
-                            "is_active": true,
-                            "is_dttm": false,
-                            "python_date_format": null,
-                            "table_id": 52,
-                            "type": "LONG",
-                            "uuid": "70c1a27a-9755-44fb-b365-1224ab9703ea",
-                            "verbose_name": null
-                        }
-                    },
-                    {
-                        "__TableColumn__": {
-                            "changed_by_fk": 1,
-                            "changed_on": {
-                                "__datetime__": "2021-05-20T07:48:19"
-                            },
-                            "column_name": "fecha",
-                            "created_by_fk": 1,
-                            "created_on": {
-                                "__datetime__": "2021-05-20T07:48:19"
-                            },
-                            "description": null,
-                            "expression": null,
-                            "filterable": true,
-                            "groupby": true,
-                            "id": 921,
-                            "is_active": true,
-                            "is_dttm": true,
-                            "python_date_format": null,
-                            "table_id": 52,
-                            "type": "DATE",
-                            "uuid": "0c1a4bfc-ced6-4e22-beae-47f1f1f3b830",
-                            "verbose_name": null
-                        }
-                    }
-                ],
-                "database_id": 2,
-                "default_endpoint": null,
-                "description": null,
-                "extra": null,
-                "fetch_values_predicate": null,
-                "filter_select_enabled": false,
-                "main_dttm_col": null,
-                "metrics": [
-                    {
-                        "__SqlMetric__": {
-                            "changed_by_fk": 1,
-                            "changed_on": {
-                                "__datetime__": "2021-05-20T07:48:19"
-                            },
-                            "created_by_fk": 1,
-                            "created_on": {
-                                "__datetime__": "2021-05-20T07:48:19"
-                            },
-                            "d3format": null,
-                            "description": null,
-                            "expression": "count(*)",
-                            "extra": null,
-                            "id": 60,
-                            "metric_name": "count",
-                            "metric_type": null,
-                            "table_id": 52,
-                            "uuid": "2089efb5-de88-481c-a81b-8740e0e93944",
-                            "verbose_name": null,
-                            "warning_text": null
-                        }
-                    }
-                ],
-                "offset": 0,
-                "params": "{\"remote_id\": 52, \"database_name\": \"dw_aero\", \"import_time\": 1621673545}",
-                "schema": null,
-                "sql": "-- Note: Unless you save your query, these tabs will NOT persist if you clear your cookies or change browsers.\n\nSELECT l.pais as pais,c.genero,c.hijos,c.edad,c.estado_civil,c.cliente_key,f.fecha\nFROM dim_lugar as l JOIN fact_ventas as h on h.lugar_salida_key=l.lugar_key \nJOIN dim_cliente AS c on c.cliente_key=h.cliente_key  \nJOIN dim_fecha as f on h.fecha_salida_key=f.fecha_key",
-                "table_name": "pais salida cliente 05/20/2021 09:21:42",
-                "template_params": null
-            }
-        },
-        {
-            "__SqlaTable__": {
-                "cache_timeout": null,
-                "columns": [
-                    {
-                        "__TableColumn__": {
-                            "changed_by_fk": 1,
-                            "changed_on": {
-                                "__datetime__": "2021-05-20T06:54:18"
+                                "__datetime__": "2021-05-22T19:51:04"
                             },
                             "column_name": "tipo_vuelo",
                             "created_by_fk": 1,
                             "created_on": {
-                                "__datetime__": "2021-05-20T06:54:18"
+                                "__datetime__": "2021-05-22T19:51:04"
                             },
                             "description": null,
                             "expression": null,
                             "filterable": true,
                             "groupby": true,
-                            "id": 890,
+                            "id": 855,
                             "is_active": true,
                             "is_dttm": false,
                             "python_date_format": null,
-                            "table_id": 48,
+                            "table_id": 36,
                             "type": "STRING",
-                            "uuid": "eb55b369-d515-4e37-904f-c01e992521fd",
+                            "uuid": "601abe3f-d69e-4f0a-a796-c25b42bfe06e",
                             "verbose_name": null
                         }
                     },
@@ -561,24 +146,24 @@
                         "__TableColumn__": {
                             "changed_by_fk": 1,
                             "changed_on": {
-                                "__datetime__": "2021-05-20T06:54:18"
+                                "__datetime__": "2021-05-22T19:51:04"
                             },
                             "column_name": "genero",
                             "created_by_fk": 1,
                             "created_on": {
-                                "__datetime__": "2021-05-20T06:54:18"
+                                "__datetime__": "2021-05-22T19:51:04"
                             },
                             "description": null,
                             "expression": null,
                             "filterable": true,
                             "groupby": true,
-                            "id": 891,
+                            "id": 856,
                             "is_active": true,
                             "is_dttm": false,
                             "python_date_format": null,
-                            "table_id": 48,
+                            "table_id": 36,
                             "type": "STRING",
-                            "uuid": "f7bebb9d-0569-4efe-ad64-272df92ac664",
+                            "uuid": "df29b4a1-10f2-4380-abb2-b6cf40ed1dca",
                             "verbose_name": null
                         }
                     },
@@ -586,24 +171,24 @@
                         "__TableColumn__": {
                             "changed_by_fk": 1,
                             "changed_on": {
-                                "__datetime__": "2021-05-20T06:54:18"
+                                "__datetime__": "2021-05-22T19:51:04"
                             },
                             "column_name": "hijos",
                             "created_by_fk": 1,
                             "created_on": {
-                                "__datetime__": "2021-05-20T06:54:18"
+                                "__datetime__": "2021-05-22T19:51:04"
                             },
                             "description": null,
                             "expression": null,
                             "filterable": true,
                             "groupby": true,
-                            "id": 892,
+                            "id": 857,
                             "is_active": true,
                             "is_dttm": false,
                             "python_date_format": null,
-                            "table_id": 48,
+                            "table_id": 36,
                             "type": "LONG",
-                            "uuid": "f7016f62-b99f-4ecf-a128-af3175f2ebe1",
+                            "uuid": "0a57c605-d21a-4120-b869-039224027b53",
                             "verbose_name": null
                         }
                     },
@@ -611,24 +196,24 @@
                         "__TableColumn__": {
                             "changed_by_fk": 1,
                             "changed_on": {
-                                "__datetime__": "2021-05-20T06:54:18"
+                                "__datetime__": "2021-05-22T19:51:04"
                             },
                             "column_name": "edad",
                             "created_by_fk": 1,
                             "created_on": {
-                                "__datetime__": "2021-05-20T06:54:18"
+                                "__datetime__": "2021-05-22T19:51:04"
                             },
                             "description": null,
                             "expression": null,
                             "filterable": true,
                             "groupby": true,
-                            "id": 893,
+                            "id": 858,
                             "is_active": true,
                             "is_dttm": false,
                             "python_date_format": null,
-                            "table_id": 48,
+                            "table_id": 36,
                             "type": "LONG",
-                            "uuid": "7b6ce33f-34e7-4f2b-83d9-561c5df0dd62",
+                            "uuid": "f90bc968-fb97-4709-b7b1-122547371029",
                             "verbose_name": null
                         }
                     },
@@ -636,24 +221,24 @@
                         "__TableColumn__": {
                             "changed_by_fk": 1,
                             "changed_on": {
-                                "__datetime__": "2021-05-20T06:54:18"
+                                "__datetime__": "2021-05-22T19:51:04"
                             },
                             "column_name": "estado_civil",
                             "created_by_fk": 1,
                             "created_on": {
-                                "__datetime__": "2021-05-20T06:54:18"
+                                "__datetime__": "2021-05-22T19:51:04"
                             },
                             "description": null,
                             "expression": null,
                             "filterable": true,
                             "groupby": true,
-                            "id": 894,
+                            "id": 859,
                             "is_active": true,
                             "is_dttm": false,
                             "python_date_format": null,
-                            "table_id": 48,
+                            "table_id": 36,
                             "type": "STRING",
-                            "uuid": "c0390e52-cb0c-4f84-aebe-a64d716ecf40",
+                            "uuid": "77a614e2-773d-434a-b52f-fa594574ca50",
                             "verbose_name": null
                         }
                     }
@@ -670,28 +255,28 @@
                         "__SqlMetric__": {
                             "changed_by_fk": 1,
                             "changed_on": {
-                                "__datetime__": "2021-05-20T06:54:18"
+                                "__datetime__": "2021-05-22T19:51:04"
                             },
                             "created_by_fk": 1,
                             "created_on": {
-                                "__datetime__": "2021-05-20T06:54:18"
+                                "__datetime__": "2021-05-22T19:51:04"
                             },
                             "d3format": null,
                             "description": null,
                             "expression": "count(*)",
                             "extra": null,
-                            "id": 56,
+                            "id": 44,
                             "metric_name": "count",
                             "metric_type": null,
-                            "table_id": 48,
-                            "uuid": "b8d59369-6e5a-40e2-8434-53b2c2cf1a84",
+                            "table_id": 36,
+                            "uuid": "ea160b77-6601-45e4-8d91-b719efe96b15",
                             "verbose_name": null,
                             "warning_text": null
                         }
                     }
                 ],
                 "offset": 0,
-                "params": "{\"remote_id\": 48, \"database_name\": \"dw_aero\", \"import_time\": 1621673545}",
+                "params": "{\"remote_id\": 36, \"database_name\": \"dw_aero\", \"import_time\": 1621775617}",
                 "schema": null,
                 "sql": "-- Note: Unless you save your query, these tabs will NOT persist if you clear your cookies or change browsers.\n\nSELECT V.tipo_vuelo,c.genero,c.hijos,c.edad,c.estado_civil from dim_vuelo as v JOIN fact_ventas as h on h.vuelo_key = v.vuelo_key JOIN dim_cliente AS c on c.cliente_key=h.cliente_key",
                 "table_name": "tipo vuelo cliente 05/20/2021 08:53:41",
@@ -706,149 +291,24 @@
                         "__TableColumn__": {
                             "changed_by_fk": 1,
                             "changed_on": {
-                                "__datetime__": "2021-05-22T09:20:39"
-                            },
-                            "column_name": "cliente_key",
-                            "created_by_fk": 1,
-                            "created_on": {
-                                "__datetime__": "2021-05-22T09:05:48"
-                            },
-                            "description": null,
-                            "expression": null,
-                            "filterable": true,
-                            "groupby": true,
-                            "id": 952,
-                            "is_active": null,
-                            "is_dttm": false,
-                            "python_date_format": null,
-                            "table_id": 56,
-                            "type": "INTEGER(11)",
-                            "uuid": "e48e5183-1012-4b69-8bc7-5722d76cb8cc",
-                            "verbose_name": null
-                        }
-                    },
-                    {
-                        "__TableColumn__": {
-                            "changed_by_fk": 1,
-                            "changed_on": {
-                                "__datetime__": "2021-05-22T09:20:39"
-                            },
-                            "column_name": "genero",
-                            "created_by_fk": 1,
-                            "created_on": {
-                                "__datetime__": "2021-05-22T09:05:48"
-                            },
-                            "description": null,
-                            "expression": null,
-                            "filterable": true,
-                            "groupby": true,
-                            "id": 953,
-                            "is_active": null,
-                            "is_dttm": false,
-                            "python_date_format": null,
-                            "table_id": 56,
-                            "type": "ENUM('HOMBRE','MUJER','OTRO')",
-                            "uuid": "30c3c616-6050-4a36-ae6a-e592bb1a50cc",
-                            "verbose_name": null
-                        }
-                    },
-                    {
-                        "__TableColumn__": {
-                            "changed_by_fk": 1,
-                            "changed_on": {
-                                "__datetime__": "2021-05-22T09:20:39"
-                            },
-                            "column_name": "edad",
-                            "created_by_fk": 1,
-                            "created_on": {
-                                "__datetime__": "2021-05-22T09:05:48"
-                            },
-                            "description": null,
-                            "expression": null,
-                            "filterable": true,
-                            "groupby": true,
-                            "id": 954,
-                            "is_active": null,
-                            "is_dttm": false,
-                            "python_date_format": null,
-                            "table_id": 56,
-                            "type": "INTEGER(11)",
-                            "uuid": "169f23cb-b4e2-4556-85a8-a961c20beeae",
-                            "verbose_name": null
-                        }
-                    },
-                    {
-                        "__TableColumn__": {
-                            "changed_by_fk": 1,
-                            "changed_on": {
-                                "__datetime__": "2021-05-22T09:20:39"
-                            },
-                            "column_name": "estado_civil",
-                            "created_by_fk": 1,
-                            "created_on": {
-                                "__datetime__": "2021-05-22T09:05:48"
-                            },
-                            "description": null,
-                            "expression": null,
-                            "filterable": true,
-                            "groupby": true,
-                            "id": 955,
-                            "is_active": null,
-                            "is_dttm": false,
-                            "python_date_format": null,
-                            "table_id": 56,
-                            "type": "ENUM('CASADO','SOLTERO','UNION DE HECHO','SEPARADO','VIUDO','DIVORCIADO')",
-                            "uuid": "a4e086ea-7891-424c-8cb1-0bbae3ebec5e",
-                            "verbose_name": null
-                        }
-                    },
-                    {
-                        "__TableColumn__": {
-                            "changed_by_fk": 1,
-                            "changed_on": {
-                                "__datetime__": "2021-05-22T09:20:39"
-                            },
-                            "column_name": "hijos",
-                            "created_by_fk": 1,
-                            "created_on": {
-                                "__datetime__": "2021-05-22T09:05:48"
-                            },
-                            "description": null,
-                            "expression": null,
-                            "filterable": true,
-                            "groupby": true,
-                            "id": 956,
-                            "is_active": null,
-                            "is_dttm": false,
-                            "python_date_format": null,
-                            "table_id": 56,
-                            "type": "INTEGER(11)",
-                            "uuid": "8cbe3073-aeec-4712-b540-b3f7e6176792",
-                            "verbose_name": null
-                        }
-                    },
-                    {
-                        "__TableColumn__": {
-                            "changed_by_fk": 1,
-                            "changed_on": {
-                                "__datetime__": "2021-05-22T09:20:39"
+                                "__datetime__": "2021-05-22T19:51:04"
                             },
                             "column_name": "beneficio",
                             "created_by_fk": 1,
                             "created_on": {
-                                "__datetime__": "2021-05-22T09:05:48"
+                                "__datetime__": "2021-05-22T19:51:04"
                             },
                             "description": null,
                             "expression": null,
                             "filterable": true,
                             "groupby": true,
-                            "id": 957,
-                            "is_active": null,
+                            "id": 865,
+                            "is_active": true,
                             "is_dttm": false,
                             "python_date_format": null,
-                            "table_id": 56,
-                            "type": "DECIMAL(10, 2)",
-                            "uuid": "007b5561-8ddb-4344-98da-6e46ae66dd6e",
+                            "table_id": 38,
+                            "type": "NEWDECIMAL",
+                            "uuid": "309c6550-e1ce-452f-a2dd-13fde69bb3c3",
                             "verbose_name": null
                         }
                     },
@@ -856,24 +316,24 @@
                         "__TableColumn__": {
                             "changed_by_fk": 1,
                             "changed_on": {
-                                "__datetime__": "2021-05-22T09:20:39"
+                                "__datetime__": "2021-05-22T19:51:04"
                             },
                             "column_name": "pais_residencia",
                             "created_by_fk": 1,
                             "created_on": {
-                                "__datetime__": "2021-05-22T09:05:48"
+                                "__datetime__": "2021-05-22T19:51:04"
                             },
                             "description": null,
                             "expression": null,
                             "filterable": true,
                             "groupby": true,
-                            "id": 958,
-                            "is_active": null,
+                            "id": 866,
+                            "is_active": true,
                             "is_dttm": false,
                             "python_date_format": null,
-                            "table_id": 56,
-                            "type": "VARCHAR(30)",
-                            "uuid": "9fbd5746-20bb-4d92-af69-00a2ade8a98a",
+                            "table_id": 38,
+                            "type": "VAR_STRING",
+                            "uuid": "af36709a-dacf-4fa5-99ea-7f7ab5220e2a",
                             "verbose_name": null
                         }
                     },
@@ -881,24 +341,514 @@
                         "__TableColumn__": {
                             "changed_by_fk": 1,
                             "changed_on": {
-                                "__datetime__": "2021-05-22T09:20:39"
+                                "__datetime__": "2021-05-22T19:51:04"
+                            },
+                            "column_name": "genero",
+                            "created_by_fk": 1,
+                            "created_on": {
+                                "__datetime__": "2021-05-22T19:51:04"
+                            },
+                            "description": null,
+                            "expression": null,
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 867,
+                            "is_active": true,
+                            "is_dttm": false,
+                            "python_date_format": null,
+                            "table_id": 38,
+                            "type": "STRING",
+                            "uuid": "9a2920aa-8052-4a98-9770-e8bebe3de7c2",
+                            "verbose_name": null
+                        }
+                    },
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": 1,
+                            "changed_on": {
+                                "__datetime__": "2021-05-22T19:51:04"
+                            },
+                            "column_name": "hijos",
+                            "created_by_fk": 1,
+                            "created_on": {
+                                "__datetime__": "2021-05-22T19:51:04"
+                            },
+                            "description": null,
+                            "expression": null,
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 868,
+                            "is_active": true,
+                            "is_dttm": false,
+                            "python_date_format": null,
+                            "table_id": 38,
+                            "type": "LONG",
+                            "uuid": "c0525e1e-2f4b-4c12-8163-1767413e5da4",
+                            "verbose_name": null
+                        }
+                    },
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": 1,
+                            "changed_on": {
+                                "__datetime__": "2021-05-22T19:51:04"
+                            },
+                            "column_name": "edad",
+                            "created_by_fk": 1,
+                            "created_on": {
+                                "__datetime__": "2021-05-22T19:51:04"
+                            },
+                            "description": null,
+                            "expression": null,
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 869,
+                            "is_active": true,
+                            "is_dttm": false,
+                            "python_date_format": null,
+                            "table_id": 38,
+                            "type": "LONG",
+                            "uuid": "97131561-a8ac-4712-9929-2a2fd1f1640e",
+                            "verbose_name": null
+                        }
+                    },
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": 1,
+                            "changed_on": {
+                                "__datetime__": "2021-05-22T19:51:04"
+                            },
+                            "column_name": "estado_civil",
+                            "created_by_fk": 1,
+                            "created_on": {
+                                "__datetime__": "2021-05-22T19:51:04"
+                            },
+                            "description": null,
+                            "expression": null,
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 870,
+                            "is_active": true,
+                            "is_dttm": false,
+                            "python_date_format": null,
+                            "table_id": 38,
+                            "type": "STRING",
+                            "uuid": "515f1744-9058-4fc3-a13e-30f3ad3d2fb3",
+                            "verbose_name": null
+                        }
+                    }
+                ],
+                "database_id": 2,
+                "default_endpoint": null,
+                "description": null,
+                "extra": null,
+                "fetch_values_predicate": null,
+                "filter_select_enabled": false,
+                "main_dttm_col": null,
+                "metrics": [
+                    {
+                        "__SqlMetric__": {
+                            "changed_by_fk": 1,
+                            "changed_on": {
+                                "__datetime__": "2021-05-22T19:51:04"
+                            },
+                            "created_by_fk": 1,
+                            "created_on": {
+                                "__datetime__": "2021-05-22T19:51:04"
+                            },
+                            "d3format": null,
+                            "description": null,
+                            "expression": "count(*)",
+                            "extra": null,
+                            "id": 46,
+                            "metric_name": "count",
+                            "metric_type": null,
+                            "table_id": 38,
+                            "uuid": "e5d3ac8c-b76f-4785-b52e-cd6e207bbf9d",
+                            "verbose_name": null,
+                            "warning_text": null
+                        }
+                    }
+                ],
+                "offset": 0,
+                "params": "{\"remote_id\": 38, \"database_name\": \"dw_aero\", \"import_time\": 1621775617}",
+                "schema": null,
+                "sql": "-- Note: Unless you save your query, these tabs will NOT persist if you clear your cookies or change browsers.\n\nSELECT h.beneficio,c.pais_residencia,c.genero,c.hijos,c.edad,c.estado_civil FROM fact_ventas AS H JOIN dim_cliente as c ON c.cliente_key = h.cliente_key group by c.pais_residencia",
+                "table_name": "beneficio_por_paises 05/19/2021 18:12:10",
+                "template_params": null
+            }
+        },
+        {
+            "__SqlaTable__": {
+                "cache_timeout": null,
+                "columns": [
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": 1,
+                            "changed_on": {
+                                "__datetime__": "2021-05-22T19:51:04"
+                            },
+                            "column_name": "pais",
+                            "created_by_fk": 1,
+                            "created_on": {
+                                "__datetime__": "2021-05-22T19:51:04"
+                            },
+                            "description": null,
+                            "expression": null,
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 860,
+                            "is_active": true,
+                            "is_dttm": false,
+                            "python_date_format": null,
+                            "table_id": 37,
+                            "type": "VAR_STRING",
+                            "uuid": "c37b7c4e-4ce6-414f-b40e-a73e730ab1e5",
+                            "verbose_name": null
+                        }
+                    },
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": 1,
+                            "changed_on": {
+                                "__datetime__": "2021-05-22T19:51:04"
+                            },
+                            "column_name": "genero",
+                            "created_by_fk": 1,
+                            "created_on": {
+                                "__datetime__": "2021-05-22T19:51:04"
+                            },
+                            "description": null,
+                            "expression": null,
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 861,
+                            "is_active": true,
+                            "is_dttm": false,
+                            "python_date_format": null,
+                            "table_id": 37,
+                            "type": "STRING",
+                            "uuid": "d6a340af-4d88-4946-b7d4-2e5cfe8378c0",
+                            "verbose_name": null
+                        }
+                    },
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": 1,
+                            "changed_on": {
+                                "__datetime__": "2021-05-22T19:51:04"
+                            },
+                            "column_name": "hijos",
+                            "created_by_fk": 1,
+                            "created_on": {
+                                "__datetime__": "2021-05-22T19:51:04"
+                            },
+                            "description": null,
+                            "expression": null,
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 862,
+                            "is_active": true,
+                            "is_dttm": false,
+                            "python_date_format": null,
+                            "table_id": 37,
+                            "type": "LONG",
+                            "uuid": "aab35ecf-d7af-4782-afbc-69d54e395de3",
+                            "verbose_name": null
+                        }
+                    },
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": 1,
+                            "changed_on": {
+                                "__datetime__": "2021-05-22T19:51:04"
+                            },
+                            "column_name": "edad",
+                            "created_by_fk": 1,
+                            "created_on": {
+                                "__datetime__": "2021-05-22T19:51:04"
+                            },
+                            "description": null,
+                            "expression": null,
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 863,
+                            "is_active": true,
+                            "is_dttm": false,
+                            "python_date_format": null,
+                            "table_id": 37,
+                            "type": "LONG",
+                            "uuid": "9df4122a-ec24-46d0-b7a5-365dad0cf908",
+                            "verbose_name": null
+                        }
+                    },
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": 1,
+                            "changed_on": {
+                                "__datetime__": "2021-05-22T19:51:04"
+                            },
+                            "column_name": "estado_civil",
+                            "created_by_fk": 1,
+                            "created_on": {
+                                "__datetime__": "2021-05-22T19:51:04"
+                            },
+                            "description": null,
+                            "expression": null,
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 864,
+                            "is_active": true,
+                            "is_dttm": false,
+                            "python_date_format": null,
+                            "table_id": 37,
+                            "type": "STRING",
+                            "uuid": "5740d9be-8c56-4c2f-9fbf-00f52687eb5d",
+                            "verbose_name": null
+                        }
+                    }
+                ],
+                "database_id": 2,
+                "default_endpoint": null,
+                "description": null,
+                "extra": null,
+                "fetch_values_predicate": null,
+                "filter_select_enabled": false,
+                "main_dttm_col": null,
+                "metrics": [
+                    {
+                        "__SqlMetric__": {
+                            "changed_by_fk": 1,
+                            "changed_on": {
+                                "__datetime__": "2021-05-22T19:51:04"
+                            },
+                            "created_by_fk": 1,
+                            "created_on": {
+                                "__datetime__": "2021-05-22T19:51:04"
+                            },
+                            "d3format": null,
+                            "description": null,
+                            "expression": "count(*)",
+                            "extra": null,
+                            "id": 45,
+                            "metric_name": "count",
+                            "metric_type": null,
+                            "table_id": 37,
+                            "uuid": "d7bdacf6-0d46-45e3-b339-0ffd5b7ef2f8",
+                            "verbose_name": null,
+                            "warning_text": null
+                        }
+                    }
+                ],
+                "offset": 0,
+                "params": "{\"remote_id\": 37, \"database_name\": \"dw_aero\", \"import_time\": 1621775617}",
+                "schema": null,
+                "sql": "-- Note: Unless you save your query, these tabs will NOT persist if you clear your cookies or change browsers.\n\nSELECT l.pais as pais,c.genero,c.hijos,c.edad,c.estado_civil FROM dim_lugar as l JOIN fact_ventas as h on h.lugar_llegada_key=l.lugar_key JOIN dim_cliente AS c on c.cliente_key=h.cliente_key    /*METER PK CLIENTE??*/",
+                "table_name": "paises clientes visitados 05/19/2021 18:15:39",
+                "template_params": null
+            }
+        },
+        {
+            "__SqlaTable__": {
+                "cache_timeout": null,
+                "columns": [
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": 1,
+                            "changed_on": {
+                                "__datetime__": "2021-05-22T20:02:29"
+                            },
+                            "column_name": "cliente_key",
+                            "created_by_fk": 1,
+                            "created_on": {
+                                "__datetime__": "2021-05-22T19:51:04"
+                            },
+                            "description": null,
+                            "expression": null,
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 871,
+                            "is_active": null,
+                            "is_dttm": false,
+                            "python_date_format": null,
+                            "table_id": 39,
+                            "type": "INTEGER(11)",
+                            "uuid": "134fd191-6b9a-469f-b59f-312655805370",
+                            "verbose_name": null
+                        }
+                    },
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": 1,
+                            "changed_on": {
+                                "__datetime__": "2021-05-22T20:02:29"
+                            },
+                            "column_name": "genero",
+                            "created_by_fk": 1,
+                            "created_on": {
+                                "__datetime__": "2021-05-22T19:51:04"
+                            },
+                            "description": null,
+                            "expression": null,
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 872,
+                            "is_active": null,
+                            "is_dttm": false,
+                            "python_date_format": null,
+                            "table_id": 39,
+                            "type": "ENUM('HOMBRE','MUJER','OTRO')",
+                            "uuid": "baeff6cb-8a6a-4b72-8599-57aee624ce23",
+                            "verbose_name": null
+                        }
+                    },
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": 1,
+                            "changed_on": {
+                                "__datetime__": "2021-05-22T20:02:29"
+                            },
+                            "column_name": "edad",
+                            "created_by_fk": 1,
+                            "created_on": {
+                                "__datetime__": "2021-05-22T19:51:04"
+                            },
+                            "description": null,
+                            "expression": null,
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 873,
+                            "is_active": null,
+                            "is_dttm": false,
+                            "python_date_format": null,
+                            "table_id": 39,
+                            "type": "INTEGER(11)",
+                            "uuid": "b32bf217-b6f6-430f-a95b-8b0c23e961f4",
+                            "verbose_name": null
+                        }
+                    },
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": 1,
+                            "changed_on": {
+                                "__datetime__": "2021-05-22T20:02:29"
+                            },
+                            "column_name": "estado_civil",
+                            "created_by_fk": 1,
+                            "created_on": {
+                                "__datetime__": "2021-05-22T19:51:04"
+                            },
+                            "description": null,
+                            "expression": null,
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 874,
+                            "is_active": null,
+                            "is_dttm": false,
+                            "python_date_format": null,
+                            "table_id": 39,
+                            "type": "ENUM('CASADO','SOLTERO','UNION DE HECHO','SEPARADO','VIUDO','DIVORCIADO')",
+                            "uuid": "cb931070-e06b-47d8-b430-f2ea3bb3ebaf",
+                            "verbose_name": null
+                        }
+                    },
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": 1,
+                            "changed_on": {
+                                "__datetime__": "2021-05-22T20:02:29"
+                            },
+                            "column_name": "hijos",
+                            "created_by_fk": 1,
+                            "created_on": {
+                                "__datetime__": "2021-05-22T19:51:04"
+                            },
+                            "description": null,
+                            "expression": null,
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 875,
+                            "is_active": null,
+                            "is_dttm": false,
+                            "python_date_format": null,
+                            "table_id": 39,
+                            "type": "INTEGER(11)",
+                            "uuid": "cf4a3f92-e061-42e6-bc96-851f0e1054bd",
+                            "verbose_name": null
+                        }
+                    },
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": 1,
+                            "changed_on": {
+                                "__datetime__": "2021-05-22T20:02:29"
+                            },
+                            "column_name": "beneficio",
+                            "created_by_fk": 1,
+                            "created_on": {
+                                "__datetime__": "2021-05-22T19:51:04"
+                            },
+                            "description": null,
+                            "expression": null,
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 876,
+                            "is_active": null,
+                            "is_dttm": false,
+                            "python_date_format": null,
+                            "table_id": 39,
+                            "type": "DECIMAL(10, 2)",
+                            "uuid": "8b9fb9b9-bb66-4d47-9a91-42bf49e4d3de",
+                            "verbose_name": null
+                        }
+                    },
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": 1,
+                            "changed_on": {
+                                "__datetime__": "2021-05-22T20:02:29"
+                            },
+                            "column_name": "pais_residencia",
+                            "created_by_fk": 1,
+                            "created_on": {
+                                "__datetime__": "2021-05-22T19:51:04"
+                            },
+                            "description": null,
+                            "expression": null,
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 877,
+                            "is_active": null,
+                            "is_dttm": false,
+                            "python_date_format": null,
+                            "table_id": 39,
+                            "type": "VARCHAR(30)",
+                            "uuid": "74ede0cd-a1e5-4d82-9b1c-80e2690606ee",
+                            "verbose_name": null
+                        }
+                    },
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": 1,
+                            "changed_on": {
+                                "__datetime__": "2021-05-22T20:02:29"
                             },
                             "column_name": "ciudad_legada",
                             "created_by_fk": 1,
                             "created_on": {
-                                "__datetime__": "2021-05-22T09:05:48"
+                                "__datetime__": "2021-05-22T19:51:04"
                             },
                             "description": null,
                             "expression": null,
                             "filterable": true,
                             "groupby": true,
-                            "id": 959,
+                            "id": 878,
                             "is_active": null,
                             "is_dttm": false,
                             "python_date_format": null,
-                            "table_id": 56,
+                            "table_id": 39,
                             "type": "VARCHAR(50)",
-                            "uuid": "abae95ee-2909-4321-912f-e0590c267065",
+                            "uuid": "6d3f5e88-dbd3-45fa-bd88-e39859722dc3",
                             "verbose_name": null
                         }
                     },
@@ -906,24 +856,24 @@
                         "__TableColumn__": {
                             "changed_by_fk": 1,
                             "changed_on": {
-                                "__datetime__": "2021-05-22T09:20:39"
+                                "__datetime__": "2021-05-22T20:02:29"
                             },
                             "column_name": "pais_llegada",
                             "created_by_fk": 1,
                             "created_on": {
-                                "__datetime__": "2021-05-22T09:05:48"
+                                "__datetime__": "2021-05-22T19:51:04"
                             },
                             "description": null,
                             "expression": null,
                             "filterable": true,
                             "groupby": true,
-                            "id": 960,
+                            "id": 879,
                             "is_active": null,
                             "is_dttm": false,
                             "python_date_format": null,
-                            "table_id": 56,
+                            "table_id": 39,
                             "type": "VARCHAR(50)",
-                            "uuid": "5afd2232-449e-4bd0-a8bc-05302fe09d06",
+                            "uuid": "c159010b-a75d-4eb4-ae34-54f3391b4fe0",
                             "verbose_name": null
                         }
                     },
@@ -931,24 +881,24 @@
                         "__TableColumn__": {
                             "changed_by_fk": 1,
                             "changed_on": {
-                                "__datetime__": "2021-05-22T09:20:39"
+                                "__datetime__": "2021-05-22T20:02:29"
                             },
                             "column_name": "pais_salida",
                             "created_by_fk": 1,
                             "created_on": {
-                                "__datetime__": "2021-05-22T09:05:48"
+                                "__datetime__": "2021-05-22T19:51:04"
                             },
                             "description": null,
                             "expression": null,
                             "filterable": true,
                             "groupby": true,
-                            "id": 961,
+                            "id": 880,
                             "is_active": null,
                             "is_dttm": false,
                             "python_date_format": null,
-                            "table_id": 56,
+                            "table_id": 39,
                             "type": "VARCHAR(50)",
-                            "uuid": "d4e9ad88-428f-41c4-a5e7-0e509971234b",
+                            "uuid": "e0d3d0db-6798-4d6d-95c6-79867f0b15a5",
                             "verbose_name": null
                         }
                     },
@@ -956,24 +906,24 @@
                         "__TableColumn__": {
                             "changed_by_fk": 1,
                             "changed_on": {
-                                "__datetime__": "2021-05-22T09:20:39"
+                                "__datetime__": "2021-05-22T20:02:29"
                             },
                             "column_name": "tipo_vuelo",
                             "created_by_fk": 1,
                             "created_on": {
-                                "__datetime__": "2021-05-22T09:05:48"
+                                "__datetime__": "2021-05-22T19:51:04"
                             },
                             "description": null,
                             "expression": null,
                             "filterable": true,
                             "groupby": true,
-                            "id": 962,
+                            "id": 881,
                             "is_active": null,
                             "is_dttm": false,
                             "python_date_format": null,
-                            "table_id": 56,
+                            "table_id": 39,
                             "type": "ENUM('NACIONAL','INTERNACIONAL')",
-                            "uuid": "4513542f-40f7-4e99-8895-127e90d224a5",
+                            "uuid": "fb5fae45-8f77-4ec4-81e0-d071804e76fb",
                             "verbose_name": null
                         }
                     },
@@ -981,24 +931,24 @@
                         "__TableColumn__": {
                             "changed_by_fk": 1,
                             "changed_on": {
-                                "__datetime__": "2021-05-22T09:20:39"
+                                "__datetime__": "2021-05-22T20:02:29"
                             },
                             "column_name": "fecha",
                             "created_by_fk": 1,
                             "created_on": {
-                                "__datetime__": "2021-05-22T09:05:48"
+                                "__datetime__": "2021-05-22T19:51:04"
                             },
                             "description": null,
                             "expression": null,
                             "filterable": true,
                             "groupby": true,
-                            "id": 963,
+                            "id": 882,
                             "is_active": null,
                             "is_dttm": true,
                             "python_date_format": null,
-                            "table_id": 56,
+                            "table_id": 39,
                             "type": "DATE",
-                            "uuid": "504c1a14-3c39-44e1-9e38-50b5017cda8a",
+                            "uuid": "62677c8f-e4b4-476b-b90d-d7140b22db89",
                             "verbose_name": null
                         }
                     }
@@ -1015,28 +965,28 @@
                         "__SqlMetric__": {
                             "changed_by_fk": 1,
                             "changed_on": {
-                                "__datetime__": "2021-05-22T09:20:39"
+                                "__datetime__": "2021-05-22T19:51:04"
                             },
                             "created_by_fk": 1,
                             "created_on": {
-                                "__datetime__": "2021-05-22T09:05:48"
+                                "__datetime__": "2021-05-22T19:51:04"
                             },
                             "d3format": null,
                             "description": null,
                             "expression": "COUNT(*)",
                             "extra": "{\"warning_markdown\":null}",
-                            "id": 64,
+                            "id": 47,
                             "metric_name": "count",
                             "metric_type": null,
-                            "table_id": 56,
-                            "uuid": "8135727b-03a5-4d52-a24d-4d285979b1f3",
+                            "table_id": 39,
+                            "uuid": "44d1872e-1c5e-4da9-b378-065d7df5fe64",
                             "verbose_name": "COUNT(*)",
                             "warning_text": null
                         }
                     }
                 ],
                 "offset": 0,
-                "params": "{\"remote_id\": 56, \"database_name\": \"dw_aero\"}",
+                "params": "{\"remote_id\": 39, \"database_name\": \"dw_aero\", \"import_time\": 1621775617}",
                 "schema": "dw_aero",
                 "sql": "",
                 "table_name": "cliente_view",
@@ -1051,87 +1001,12 @@
                         "__TableColumn__": {
                             "changed_by_fk": 1,
                             "changed_on": {
-                                "__datetime__": "2021-05-19T16:16:22"
+                                "__datetime__": "2021-05-22T19:51:04"
                             },
                             "column_name": "pais",
                             "created_by_fk": 1,
                             "created_on": {
-                                "__datetime__": "2021-05-19T16:16:22"
-                            },
-                            "description": null,
-                            "expression": null,
-                            "filterable": true,
-                            "groupby": true,
-                            "id": 880,
-                            "is_active": true,
-                            "is_dttm": false,
-                            "python_date_format": null,
-                            "table_id": 46,
-                            "type": "VAR_STRING",
-                            "uuid": "8eb35417-5a21-491a-b7a7-2236bd6bede8",
-                            "verbose_name": null
-                        }
-                    },
-                    {
-                        "__TableColumn__": {
-                            "changed_by_fk": 1,
-                            "changed_on": {
-                                "__datetime__": "2021-05-19T16:16:22"
-                            },
-                            "column_name": "genero",
-                            "created_by_fk": 1,
-                            "created_on": {
-                                "__datetime__": "2021-05-19T16:16:22"
-                            },
-                            "description": null,
-                            "expression": null,
-                            "filterable": true,
-                            "groupby": true,
-                            "id": 881,
-                            "is_active": true,
-                            "is_dttm": false,
-                            "python_date_format": null,
-                            "table_id": 46,
-                            "type": "STRING",
-                            "uuid": "66f657eb-9cc3-4f5a-90db-6461cded79af",
-                            "verbose_name": null
-                        }
-                    },
-                    {
-                        "__TableColumn__": {
-                            "changed_by_fk": 1,
-                            "changed_on": {
-                                "__datetime__": "2021-05-19T16:16:22"
-                            },
-                            "column_name": "hijos",
-                            "created_by_fk": 1,
-                            "created_on": {
-                                "__datetime__": "2021-05-19T16:16:22"
-                            },
-                            "description": null,
-                            "expression": null,
-                            "filterable": true,
-                            "groupby": true,
-                            "id": 882,
-                            "is_active": true,
-                            "is_dttm": false,
-                            "python_date_format": null,
-                            "table_id": 46,
-                            "type": "LONG",
-                            "uuid": "777985cd-4762-49f2-8639-7954390b799c",
-                            "verbose_name": null
-                        }
-                    },
-                    {
-                        "__TableColumn__": {
-                            "changed_by_fk": 1,
-                            "changed_on": {
-                                "__datetime__": "2021-05-19T16:16:22"
-                            },
-                            "column_name": "edad",
-                            "created_by_fk": 1,
-                            "created_on": {
-                                "__datetime__": "2021-05-19T16:16:22"
+                                "__datetime__": "2021-05-22T19:51:04"
                             },
                             "description": null,
                             "expression": null,
@@ -1141,9 +1016,9 @@
                             "is_active": true,
                             "is_dttm": false,
                             "python_date_format": null,
-                            "table_id": 46,
-                            "type": "LONG",
-                            "uuid": "f91ad340-a98e-43d1-8095-505455c54f5a",
+                            "table_id": 40,
+                            "type": "VAR_STRING",
+                            "uuid": "7cb48578-51e6-4e51-ad1e-79743e2bc8cf",
                             "verbose_name": null
                         }
                     },
@@ -1151,12 +1026,12 @@
                         "__TableColumn__": {
                             "changed_by_fk": 1,
                             "changed_on": {
-                                "__datetime__": "2021-05-19T16:16:22"
+                                "__datetime__": "2021-05-22T19:51:04"
                             },
-                            "column_name": "estado_civil",
+                            "column_name": "genero",
                             "created_by_fk": 1,
                             "created_on": {
-                                "__datetime__": "2021-05-19T16:16:22"
+                                "__datetime__": "2021-05-22T19:51:04"
                             },
                             "description": null,
                             "expression": null,
@@ -1166,9 +1041,134 @@
                             "is_active": true,
                             "is_dttm": false,
                             "python_date_format": null,
-                            "table_id": 46,
+                            "table_id": 40,
                             "type": "STRING",
-                            "uuid": "df47e18f-994e-47d6-a1a6-689983e8f397",
+                            "uuid": "edb99320-0ee1-4cf8-83c0-2ddf67abb782",
+                            "verbose_name": null
+                        }
+                    },
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": 1,
+                            "changed_on": {
+                                "__datetime__": "2021-05-22T19:51:04"
+                            },
+                            "column_name": "hijos",
+                            "created_by_fk": 1,
+                            "created_on": {
+                                "__datetime__": "2021-05-22T19:51:04"
+                            },
+                            "description": null,
+                            "expression": null,
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 885,
+                            "is_active": true,
+                            "is_dttm": false,
+                            "python_date_format": null,
+                            "table_id": 40,
+                            "type": "LONG",
+                            "uuid": "06a714fb-dd29-4b9d-8e5f-4010ab6e7c98",
+                            "verbose_name": null
+                        }
+                    },
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": 1,
+                            "changed_on": {
+                                "__datetime__": "2021-05-22T19:51:04"
+                            },
+                            "column_name": "edad",
+                            "created_by_fk": 1,
+                            "created_on": {
+                                "__datetime__": "2021-05-22T19:51:04"
+                            },
+                            "description": null,
+                            "expression": null,
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 886,
+                            "is_active": true,
+                            "is_dttm": false,
+                            "python_date_format": null,
+                            "table_id": 40,
+                            "type": "LONG",
+                            "uuid": "e6628eaa-dc66-4564-ba55-0af9248b4a91",
+                            "verbose_name": null
+                        }
+                    },
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": 1,
+                            "changed_on": {
+                                "__datetime__": "2021-05-22T19:51:04"
+                            },
+                            "column_name": "estado_civil",
+                            "created_by_fk": 1,
+                            "created_on": {
+                                "__datetime__": "2021-05-22T19:51:04"
+                            },
+                            "description": null,
+                            "expression": null,
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 887,
+                            "is_active": true,
+                            "is_dttm": false,
+                            "python_date_format": null,
+                            "table_id": 40,
+                            "type": "STRING",
+                            "uuid": "879f20c6-b17b-45f3-90e6-13ad0c477d60",
+                            "verbose_name": null
+                        }
+                    },
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": 1,
+                            "changed_on": {
+                                "__datetime__": "2021-05-22T19:51:04"
+                            },
+                            "column_name": "cliente_key",
+                            "created_by_fk": 1,
+                            "created_on": {
+                                "__datetime__": "2021-05-22T19:51:04"
+                            },
+                            "description": null,
+                            "expression": null,
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 888,
+                            "is_active": true,
+                            "is_dttm": false,
+                            "python_date_format": null,
+                            "table_id": 40,
+                            "type": "LONG",
+                            "uuid": "c389aef8-82cc-4b87-b2bf-5258adf45e94",
+                            "verbose_name": null
+                        }
+                    },
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": 1,
+                            "changed_on": {
+                                "__datetime__": "2021-05-22T19:51:04"
+                            },
+                            "column_name": "fecha",
+                            "created_by_fk": 1,
+                            "created_on": {
+                                "__datetime__": "2021-05-22T19:51:04"
+                            },
+                            "description": null,
+                            "expression": null,
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 889,
+                            "is_active": true,
+                            "is_dttm": true,
+                            "python_date_format": null,
+                            "table_id": 40,
+                            "type": "DATE",
+                            "uuid": "bcb05d37-9d37-4a91-97af-1644498ac419",
                             "verbose_name": null
                         }
                     }
@@ -1185,31 +1185,31 @@
                         "__SqlMetric__": {
                             "changed_by_fk": 1,
                             "changed_on": {
-                                "__datetime__": "2021-05-19T16:16:22"
+                                "__datetime__": "2021-05-22T19:51:04"
                             },
                             "created_by_fk": 1,
                             "created_on": {
-                                "__datetime__": "2021-05-19T16:16:22"
+                                "__datetime__": "2021-05-22T19:51:04"
                             },
                             "d3format": null,
                             "description": null,
                             "expression": "count(*)",
                             "extra": null,
-                            "id": 54,
+                            "id": 48,
                             "metric_name": "count",
                             "metric_type": null,
-                            "table_id": 46,
-                            "uuid": "eaa7127e-3b5a-44cc-bdeb-fa4b83aa37e0",
+                            "table_id": 40,
+                            "uuid": "a7569401-e636-426f-89fc-84d6c03e5e19",
                             "verbose_name": null,
                             "warning_text": null
                         }
                     }
                 ],
                 "offset": 0,
-                "params": "{\"remote_id\": 46, \"database_name\": \"dw_aero\", \"import_time\": 1621673545}",
+                "params": "{\"remote_id\": 40, \"database_name\": \"dw_aero\", \"import_time\": 1621775617}",
                 "schema": null,
-                "sql": "-- Note: Unless you save your query, these tabs will NOT persist if you clear your cookies or change browsers.\n\nSELECT l.pais as pais,c.genero,c.hijos,c.edad,c.estado_civil FROM dim_lugar as l JOIN fact_ventas as h on h.lugar_llegada_key=l.lugar_key JOIN dim_cliente AS c on c.cliente_key=h.cliente_key    /*METER PK CLIENTE??*/",
-                "table_name": "paises clientes visitados 05/19/2021 18:15:39",
+                "sql": "-- Note: Unless you save your query, these tabs will NOT persist if you clear your cookies or change browsers.\n\nSELECT l.pais as pais,c.genero,c.hijos,c.edad,c.estado_civil,c.cliente_key,f.fecha\nFROM dim_lugar as l JOIN fact_ventas as h on h.lugar_salida_key=l.lugar_key \nJOIN dim_cliente AS c on c.cliente_key=h.cliente_key  \nJOIN dim_fecha as f on h.fecha_salida_key=f.fecha_key",
+                "table_name": "pais salida cliente 05/20/2021 09:21:42",
                 "template_params": null
             }
         }
