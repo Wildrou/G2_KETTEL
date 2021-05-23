@@ -141,7 +141,7 @@ JOIN dim_lugar as s on h.lugar_salida_key = s.lugar_key
 JOIN dim_vuelo as v on h.vuelo_key = v.vuelo_key
 JOIN dim_fecha as f on h.fecha_salida_key = f.fecha_key;
 
-CREATE OR REPLACE VIEW VUELOS AS
+CREATE OR REPLACE VIEW vuelos_view AS
     SELECT f.vuelo_key, a.nombre , dim_fecha.es_festivo , dim_vuelo.duracion_vuelo, dim_vuelo.tipo_vuelo ,
     	   dim_vuelo.capacidad , dim_vuelo.tipo_avion , dim_vuelo.aerolinea , f.beneficio, 
     	   f.antelacion_compra , dim_fecha.fecha    
