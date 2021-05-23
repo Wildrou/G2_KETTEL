@@ -25,8 +25,10 @@
   main_dttm_col: fecha
   metrics:
   - expression: COUNT(*)
+    extra: '{"warning_markdown":null}'
     metric_name: count
-    metric_type: count
     verbose_name: COUNT(*)
+  params: '{"remote_id": 13, "database_name": "dw_aero", "import_time": 1621775995}'
   schema: dw_aero
-  table_name: vuelos
+  sql: ''
+  table_name: vuelos_view
