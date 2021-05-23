@@ -149,3 +149,57 @@ CREATE OR REPLACE VIEW vuelos_view AS
     WHERE f.vuelo_key=dim_vuelo.vuelo_key AND 
     	  f.agencia_key=a.agencia_key AND
 	  f.fecha_salida_key AND f.fecha_compra_key = dim_fecha.fecha_key;
+      
+/* Vista con query sobre la anticipación de compra por rango de edad y tipo de vuelo*/
+
+CREATE OR REPLACE VIEW anticipacion_vuelo_view (edad,pais_residencia,antelacion_compra,tipo_vuelo, fecha)
+AS
+SELECT c.edad,c.pais_residencia,h.antelacion_compra,v.tipo_vuelo,f.fecha
+FROM dim_cliente as c JOIN fact_ventas as h on h.cliente_key = c.cliente_key
+JOIN dim_vuelo as v on h.vuelo_key = v.vuelo_key
+JOIN dim_fecha as f on h.fecha_salida_key = f.fecha_key;
+
+CREATE OR REPLACE VIEW importe_vuelo_view (importe,precio_agencia,nombre, fecha)
+AS
+SELECT h.importe,h.precio_agencia,a.nombre,f.fecha
+FROM dim_cliente as c JOIN fact_ventas as h on h.cliente_key = c.cliente_key
+JOIN dim_agencia as a on h.agencia_key = a.agencia_key
+JOIN dim_fecha as f on h.fecha_salida_key = f.fecha_key;
+
+CREATE OR REPLACE VIEW hora_vuelo_view (hora,minutos,mediodia,pais_residencia,tipo_vuelo, fecha)
+AS
+SELECT h.hora,h.minutos,h.mediodia,c.pais_residencia,v.tipo_vuelo,f.fecha
+FROM fact_ventas as fv JOIN dim_hora as h on h.hora_key = fv.hora_salida_key
+JOIN dim_cliente as c on fv.cliente_key = c.cliente_key
+JOIN dim_vuelo as v on fv.vuelo_key = v.vuelo_key
+JOIN dim_fecha as f on fv.fecha_salida_key = f.fecha_key;
+
+CREATE OR REPLACE VIEW pais_beneficio_view (beneficio,pais, fecha)
+AS
+SELECT fv.beneficio,l.pais,f.fecha
+FROM fact_ventas as fv JOIN dim_lugar as l on fv.lugar_llegada_key = l.lugar_key
+JOIN dim_fecha as f on fv.fecha_salida_key = f.fecha_key;
+
+CREATE OR REPLACE VIEW beneficio_agencia_view (beneficio,nombre, fecha)
+AS
+SELECT fv.beneficio,a.nombre,f.fecha
+FROM fact_ventas as fv JOIN dim_agencia as a on fv.agencia_key = a.agencia_key
+JOIN dim_fecha as f on fv.fecha_salida_key = f.fecha_key;
+
+CREATE OR REPLACE VIEW beneficio_por_edad_view (edad,pais_residencia,beneficio_edad)
+AS
+SELECT c.edad,c.pais_residencia,SUM(fv.beneficio) as beneficio_edad
+FROM fact_ventas as fv JOIN dim_cliente as c on fv.cliente_key = c.cliente_key
+GROUP BY c.edad,pais_residencia;
+
+CREATE OR REPLACE VIEW query_pivot_view (beneficio,pais_residencia,estado_civil,hijos,estacion)
+AS
+SELECT fv.beneficio,c.pais_residencia,c.estado_civil,c.hijos,f.estacion
+FROM fact_ventas as fv JOIN dim_cliente as c on fv.cliente_key = c.cliente_key
+JOIN dim_fecha as f on fv.fecha_salida_key = f.fecha_key;
+
+CREATE OR REPLACE VIEW filtro_view (pais_residencia,nombre)
+AS
+SELECT c.pais_residencia,a.nombre
+FROM dim_cliente as c JOIN fact_ventas as h on h.cliente_key = c.cliente_key
+JOIN dim_agencia as a on h.agencia_key = a.agencia_key;
