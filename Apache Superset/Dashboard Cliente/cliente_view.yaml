@@ -1,0 +1,35 @@
+- columns:
+  - column_name: estado_civil
+    type: ENUM('CASADO','SOLTERO','UNION DE HECHO','SEPARADO','VIUDO','DIVORCIADO')
+  - column_name: fecha
+    is_dttm: true
+    type: DATE
+  - column_name: beneficio
+    type: DECIMAL(10, 2)
+  - column_name: genero
+    type: ENUM('HOMBRE','MUJER','OTRO')
+  - column_name: tipo_vuelo
+    type: ENUM('NACIONAL','INTERNACIONAL')
+  - column_name: pais_residencia
+    type: VARCHAR(30)
+  - column_name: ciudad_legada
+    type: VARCHAR(50)
+  - column_name: pais_llegada
+    type: VARCHAR(50)
+  - column_name: pais_salida
+    type: VARCHAR(50)
+  - column_name: cliente_key
+    type: INTEGER(11)
+  - column_name: edad
+    type: INTEGER(11)
+  - column_name: hijos
+    type: INTEGER(11)
+  main_dttm_col: fecha
+  metrics:
+  - expression: COUNT(*)
+    extra: '{"warning_markdown":null}'
+    metric_name: count
+    verbose_name: COUNT(*)
+  schema: dw_aero
+  sql: ''
+  table_name: cliente_view
