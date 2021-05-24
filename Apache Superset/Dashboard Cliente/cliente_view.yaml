@@ -1,4 +1,6 @@
 - columns:
+  - column_name: hijos
+    type: ENUM('+10','6-9','4-5','2-3','HIJO UNICO','SIN HIJOS')
   - column_name: estado_civil
     type: ENUM('CASADO','SOLTERO','UNION DE HECHO','SEPARADO','VIUDO','DIVORCIADO')
   - column_name: fecha
@@ -6,6 +8,8 @@
     type: DATE
   - column_name: beneficio
     type: DECIMAL(10, 2)
+  - column_name: edad
+    type: ENUM('+80','60-80','50-60','35-50','25-35','18-25','MENOR')
   - column_name: genero
     type: ENUM('HOMBRE','MUJER','OTRO')
   - column_name: tipo_vuelo
@@ -20,16 +24,11 @@
     type: VARCHAR(50)
   - column_name: cliente_key
     type: INTEGER(11)
-  - column_name: edad
-    type: INTEGER(11)
-  - column_name: hijos
-    type: INTEGER(11)
   main_dttm_col: fecha
   metrics:
   - expression: COUNT(*)
-    extra: '{"warning_markdown":null}'
     metric_name: count
+    metric_type: count
     verbose_name: COUNT(*)
   schema: dw_aero
-  sql: ''
   table_name: cliente_view
