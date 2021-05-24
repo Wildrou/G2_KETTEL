@@ -1,0 +1,1241 @@
+{
+    "dashboards": [
+        {
+            "__Dashboard__": {
+                "css": "",
+                "dashboard_title": "Cuadro Medidas",
+                "description": null,
+                "json_metadata": "{\"timed_refresh_immune_slices\": [], \"expanded_slices\": {}, \"refresh_frequency\": 0, \"default_filters\": \"{}\", \"color_scheme\": null, \"filter_scopes\": {\"2\": {\"nombre\": {\"scope\": [\"ROOT_ID\"], \"immune\": []}}}, \"remote_id\": 1}",
+                "position_json": "{\"CHART-97OORSTxPw\":{\"children\":[],\"id\":\"CHART-97OORSTxPw\",\"meta\":{\"chartId\":1,\"height\":50,\"sliceName\":\"Antelaci\\u00f3n de compra\",\"uuid\":\"ac1f5f4f-8bae-4f96-a5db-6ebd53768b21\",\"width\":4},\"parents\":[\"ROOT_ID\",\"GRID_ID\",\"ROW-aJkEVIoAu\"],\"type\":\"CHART\"},\"CHART-9ZIKL66yhr\":{\"children\":[],\"id\":\"CHART-9ZIKL66yhr\",\"meta\":{\"chartId\":7,\"height\":50,\"sliceName\":\"Beneficios obtenidos por rangos de edad.\",\"uuid\":\"0ea60654-1d4e-4b79-9e2e-983ab78de4f3\",\"width\":4},\"parents\":[\"ROOT_ID\",\"GRID_ID\",\"ROW-aJkEVIoAu\"],\"type\":\"CHART\"},\"CHART-LbriWg9ehe\":{\"children\":[],\"id\":\"CHART-LbriWg9ehe\",\"meta\":{\"chartId\":5,\"height\":110,\"sliceName\":\"Paises destino que generan m\\u00e1s beneficio y n\\u00famero de vuelos\",\"uuid\":\"21b33a54-0289-425a-a936-d4e2ade380c2\",\"width\":12},\"parents\":[\"ROOT_ID\",\"GRID_ID\",\"ROW--T268Gz5d\"],\"type\":\"CHART\"},\"CHART-ReWfRmbFrx\":{\"children\":[],\"id\":\"CHART-ReWfRmbFrx\",\"meta\":{\"chartId\":4,\"height\":50,\"sliceName\":\"Billetes comprados seg\\u00fan horario y tipo de vuelo\",\"uuid\":\"216a955f-e6f2-4da7-a3e3-ed24d8a0c655\",\"width\":4},\"parents\":[\"ROOT_ID\",\"GRID_ID\",\"ROW-aJkEVIoAu\"],\"type\":\"CHART\"},\"CHART-aPEh1c3QCc\":{\"children\":[],\"id\":\"CHART-aPEh1c3QCc\",\"meta\":{\"chartId\":6,\"height\":50,\"sliceName\":\"Beneficios anuales por agencia.\",\"uuid\":\"9a70aaaa-fffd-4c13-b658-015bb7b86c8c\",\"width\":4},\"parents\":[\"ROOT_ID\",\"GRID_ID\",\"ROW-nbXn9f6nt\"],\"type\":\"CHART\"},\"CHART-r2eNiAlaZx\":{\"children\":[],\"id\":\"CHART-r2eNiAlaZx\",\"meta\":{\"chartId\":2,\"height\":50,\"sliceName\":\"Filtro por Agencia\",\"uuid\":\"bc7184c0-51c6-4b04-a10a-439d9c798cc7\",\"width\":4},\"parents\":[\"ROOT_ID\",\"GRID_ID\",\"ROW-nbXn9f6nt\"],\"type\":\"CHART\"},\"CHART-sk_3-OFE52\":{\"children\":[],\"id\":\"CHART-sk_3-OFE52\",\"meta\":{\"chartId\":8,\"height\":64,\"sliceName\":\"Billetes comprados por estaci\\u00f3n\",\"uuid\":\"5d048286-e278-47c3-85e0-cb49deb705f1\",\"width\":12},\"parents\":[\"ROOT_ID\",\"GRID_ID\",\"ROW-4RjbErUAB\"],\"type\":\"CHART\"},\"CHART-xHGQ80-a_n\":{\"children\":[],\"id\":\"CHART-xHGQ80-a_n\",\"meta\":{\"chartId\":3,\"height\":50,\"sliceName\":\"Importe vs Precio Agencia\",\"uuid\":\"3d65a532-49a7-4855-8cb1-56ec9db59fb3\",\"width\":4},\"parents\":[\"ROOT_ID\",\"GRID_ID\",\"ROW-nbXn9f6nt\"],\"type\":\"CHART\"},\"DASHBOARD_VERSION_KEY\":\"v2\",\"DIVIDER-iO8VFlHazC\":{\"children\":[],\"id\":\"DIVIDER-iO8VFlHazC\",\"meta\":{},\"parents\":[\"ROOT_ID\",\"GRID_ID\"],\"type\":\"DIVIDER\"},\"GRID_ID\":{\"children\":[\"ROW-nbXn9f6nt\",\"DIVIDER-iO8VFlHazC\",\"ROW-aJkEVIoAu\",\"ROW--T268Gz5d\",\"ROW-4RjbErUAB\"],\"id\":\"GRID_ID\",\"parents\":[\"ROOT_ID\"],\"type\":\"GRID\"},\"HEADER_ID\":{\"id\":\"HEADER_ID\",\"meta\":{\"text\":\"Cuadro Medidas\"},\"type\":\"HEADER\"},\"ROOT_ID\":{\"children\":[\"GRID_ID\"],\"id\":\"ROOT_ID\",\"type\":\"ROOT\"},\"ROW--T268Gz5d\":{\"children\":[\"CHART-LbriWg9ehe\"],\"id\":\"ROW--T268Gz5d\",\"meta\":{\"0\":\"ROOT_ID\",\"background\":\"BACKGROUND_TRANSPARENT\"},\"parents\":[\"ROOT_ID\",\"GRID_ID\"],\"type\":\"ROW\"},\"ROW-4RjbErUAB\":{\"children\":[\"CHART-sk_3-OFE52\"],\"id\":\"ROW-4RjbErUAB\",\"meta\":{\"0\":\"ROOT_ID\",\"background\":\"BACKGROUND_TRANSPARENT\"},\"parents\":[\"ROOT_ID\",\"GRID_ID\"],\"type\":\"ROW\"},\"ROW-aJkEVIoAu\":{\"children\":[\"CHART-97OORSTxPw\",\"CHART-ReWfRmbFrx\",\"CHART-9ZIKL66yhr\"],\"id\":\"ROW-aJkEVIoAu\",\"meta\":{\"background\":\"BACKGROUND_TRANSPARENT\"},\"parents\":[\"ROOT_ID\",\"GRID_ID\"],\"type\":\"ROW\"},\"ROW-nbXn9f6nt\":{\"children\":[\"CHART-r2eNiAlaZx\",\"CHART-xHGQ80-a_n\",\"CHART-aPEh1c3QCc\"],\"id\":\"ROW-nbXn9f6nt\",\"meta\":{\"0\":\"ROOT_ID\",\"background\":\"BACKGROUND_TRANSPARENT\"},\"parents\":[\"ROOT_ID\",\"GRID_ID\"],\"type\":\"ROW\"}}",
+                "slices": [
+                    {
+                        "__Slice__": {
+                            "cache_timeout": null,
+                            "datasource_name": "dw_aero.anticipacion_vuelo_view",
+                            "datasource_type": "table",
+                            "id": 1,
+                            "params": "{\"adhoc_filters\": [], \"bar_stacked\": true, \"bottom_margin\": \"auto\", \"color_scheme\": \"presetColors\", \"columns\": [], \"datasource\": \"19__table\", \"extra_form_data\": {}, \"granularity_sqla\": \"fecha\", \"groupby\": [\"edad\", \"tipo_vuelo\"], \"label_colors\": {}, \"metrics\": [{\"aggregate\": \"AVG\", \"column\": {\"column_name\": \"antelacion_compra\", \"description\": null, \"expression\": null, \"filterable\": true, \"groupby\": true, \"id\": 140, \"is_dttm\": false, \"python_date_format\": null, \"type\": \"INTEGER(11)\", \"verbose_name\": null}, \"expressionType\": \"SIMPLE\", \"hasCustomLabel\": true, \"isNew\": false, \"label\": \"Antelaci\\u00f3n media\", \"optionName\": \"metric_ig692msmvvm_t3gxxno764\", \"sqlExpression\": null}], \"order_bars\": true, \"order_desc\": true, \"row_limit\": 10000, \"show_bar_value\": true, \"show_controls\": false, \"show_legend\": true, \"slice_id\": 1, \"time_range\": \"No filter\", \"time_range_endpoints\": [\"inclusive\", \"exclusive\"], \"url_params\": {}, \"viz_type\": \"dist_bar\", \"x_ticks_layout\": \"auto\", \"y_axis_bounds\": [null, null], \"y_axis_format\": null, \"remote_id\": 1, \"datasource_name\": \"anticipacion_vuelo_view\", \"schema\": \"dw_aero\", \"database_name\": \"aero\"}",
+                            "slice_name": "Antelaci\u00f3n de compra",
+                            "viz_type": "dist_bar"
+                        }
+                    },
+                    {
+                        "__Slice__": {
+                            "cache_timeout": null,
+                            "datasource_name": "dw_aero.filtro_view",
+                            "datasource_type": "table",
+                            "id": 2,
+                            "params": "{\"adhoc_filters\": [], \"datasource\": \"25__table\", \"date_filter\": false, \"extra_form_data\": {}, \"filter_configs\": [{\"asc\": true, \"clearable\": true, \"column\": \"nombre\", \"key\": \"U3KSEZ0Di\", \"label\": \"Agencia\", \"multiple\": true, \"searchAllOptions\": false}, {\"asc\": true, \"clearable\": true, \"column\": \"pais_residencia\", \"key\": \"J9M-K16yb\", \"label\": \"Pais de Residencia Cliente\", \"multiple\": true, \"searchAllOptions\": false}], \"instant_filtering\": true, \"slice_id\": 2, \"time_grain_sqla\": \"P1Y\", \"time_range\": \"No filter\", \"time_range_endpoints\": [\"inclusive\", \"exclusive\"], \"url_params\": {}, \"viz_type\": \"filter_box\", \"remote_id\": 2, \"datasource_name\": \"filtro_view\", \"schema\": \"dw_aero\", \"database_name\": \"dw_aero\"}",
+                            "slice_name": "Filtro",
+                            "viz_type": "filter_box"
+                        }
+                    },
+                    {
+                        "__Slice__": {
+                            "cache_timeout": null,
+                            "datasource_name": "dw_aero.importe_vuelo_view",
+                            "datasource_type": "table",
+                            "id": 3,
+                            "params": "{\"adhoc_filters\": [], \"annotation_layers\": [], \"color_scheme\": \"d3Category10\", \"datasource\": \"24__table\", \"extra_form_data\": {}, \"granularity_sqla\": \"fecha\", \"label_colors\": {}, \"metric\": {\"aggregate\": \"SUM\", \"column\": {\"column_name\": \"importe\", \"description\": null, \"expression\": null, \"filterable\": true, \"groupby\": true, \"id\": 164, \"is_dttm\": false, \"python_date_format\": null, \"type\": \"DECIMAL(10, 2)\", \"verbose_name\": null}, \"expressionType\": \"SIMPLE\", \"hasCustomLabel\": true, \"isNew\": false, \"label\": \"total seg\\u00fan importe est\\u00e1ndar\", \"optionName\": \"metric_3s5qepukh9j_5gndfiwx2al\", \"sqlExpression\": null}, \"metric_2\": {\"aggregate\": \"SUM\", \"column\": {\"column_name\": \"precio_agencia\", \"description\": null, \"expression\": null, \"filterable\": true, \"groupby\": true, \"id\": 165, \"is_dttm\": false, \"python_date_format\": null, \"type\": \"DECIMAL(10, 2)\", \"verbose_name\": null}, \"expressionType\": \"SIMPLE\", \"hasCustomLabel\": true, \"isNew\": false, \"label\": \"total seg\\u00fan precio de agencia\", \"optionName\": \"metric_qp8dlmoztj_lmez715of4\", \"sqlExpression\": null}, \"show_legend\": true, \"slice_id\": 3, \"time_grain_sqla\": \"P1Y\", \"time_range\": \"2015-01-01T00:00:00 : 2022-12-31T00:00:00\", \"time_range_endpoints\": [\"inclusive\", \"exclusive\"], \"url_params\": {}, \"viz_type\": \"dual_line\", \"x_axis_format\": \"%Y-%m-%d\", \"y_axis_2_bounds\": [null, null], \"y_axis_2_format\": \"$,.2f\", \"y_axis_2_showminmax\": false, \"y_axis_bounds\": [null, null], \"y_axis_format\": \"$,.2f\", \"y_axis_showminmax\": false, \"remote_id\": 3, \"datasource_name\": \"importe_vuelo_view\", \"schema\": \"dw_aero\", \"database_name\": \"dw_aero\"}",
+                            "slice_name": "Importe vs Precio Agencia",
+                            "viz_type": "dual_line"
+                        }
+                    },
+                    {
+                        "__Slice__": {
+                            "cache_timeout": null,
+                            "datasource_name": "dw_aero.hora_vuelo_view",
+                            "datasource_type": "table",
+                            "id": 4,
+                            "params": "{\"adhoc_filters\": [], \"align_pn\": false, \"all_columns\": [], \"color_pn\": true, \"datasource\": \"21__table\", \"extra_form_data\": {}, \"granularity_sqla\": \"fecha\", \"groupby\": [\"mediodia\", \"tipo_vuelo\"], \"include_search\": false, \"metrics\": [{\"aggregate\": \"COUNT\", \"column\": {\"column_name\": \"pais_residencia\", \"description\": null, \"expression\": null, \"filterable\": true, \"groupby\": true, \"id\": 153, \"is_dttm\": false, \"python_date_format\": null, \"type\": \"VARCHAR(30)\", \"verbose_name\": null}, \"expressionType\": \"SIMPLE\", \"hasCustomLabel\": true, \"isNew\": false, \"label\": \"N\\u00famero Vuelos\", \"optionName\": \"metric_fpsozwec0iv_l00x5pwbbjh\", \"sqlExpression\": null}], \"order_by_cols\": [], \"order_desc\": true, \"percent_metrics\": [], \"query_mode\": \"aggregate\", \"row_limit\": 10000, \"server_page_length\": 10, \"show_cell_bars\": true, \"show_totals\": true, \"slice_id\": 4, \"table_timestamp_format\": \"smart_date\", \"time_grain_sqla\": \"P1Y\", \"time_range\": \"2015-01-01T00:00:00 : 2022-12-31T00:00:00\", \"time_range_endpoints\": [\"inclusive\", \"exclusive\"], \"url_params\": {}, \"viz_type\": \"table\", \"remote_id\": 4, \"datasource_name\": \"hora_vuelo_view\", \"schema\": \"dw_aero\", \"database_name\": \"dw_aero\"}",
+                            "slice_name": "Billetes comprados seg\u00fan horario salida y tipo de vuelo",
+                            "viz_type": "table"
+                        }
+                    },
+                    {
+                        "__Slice__": {
+                            "cache_timeout": null,
+                            "datasource_name": "dw_aero.pais_beneficio_view",
+                            "datasource_type": "table",
+                            "id": 5,
+                            "params": "{\"adhoc_filters\": [], \"color_picker\": {\"a\": 1, \"b\": 22, \"g\": 5, \"r\": 235}, \"country_fieldtype\": \"name\", \"datasource\": \"14__table\", \"entity\": \"pais\", \"extra_form_data\": {}, \"granularity_sqla\": \"fecha\", \"linear_color_scheme\": \"schemeGreens\", \"max_bubble_size\": \"25\", \"metric\": {\"aggregate\": \"SUM\", \"column\": {\"column_name\": \"beneficio\", \"description\": null, \"expression\": null, \"filterable\": true, \"groupby\": true, \"id\": 116, \"is_dttm\": false, \"python_date_format\": null, \"type\": \"DECIMAL(10, 2)\", \"verbose_name\": null}, \"expressionType\": \"SIMPLE\", \"hasCustomLabel\": false, \"isNew\": false, \"label\": \"SUM(beneficio)\", \"optionName\": \"metric_5kj9ln6bw05_ik2gzzisqof\", \"sqlExpression\": null}, \"row_limit\": 10000, \"secondary_metric\": {\"aggregate\": \"COUNT\", \"column\": {\"column_name\": \"beneficio\", \"description\": null, \"expression\": null, \"filterable\": true, \"groupby\": true, \"id\": 116, \"is_dttm\": false, \"python_date_format\": null, \"type\": \"DECIMAL(10, 2)\", \"verbose_name\": null}, \"expressionType\": \"SIMPLE\", \"hasCustomLabel\": false, \"isNew\": false, \"label\": \"COUNT(beneficio)\", \"optionName\": \"metric_jla75k0new_13ivj8528sij\", \"sqlExpression\": null}, \"show_bubbles\": true, \"slice_id\": 5, \"time_range\": \"2015-01-01T00:00:00 : 2022-01-01T00:00:00\", \"time_range_endpoints\": [\"inclusive\", \"exclusive\"], \"url_params\": {}, \"viz_type\": \"world_map\", \"remote_id\": 5, \"datasource_name\": \"pais_beneficio_view\", \"schema\": \"dw_aero\", \"database_name\": \"dw_aero\"}",
+                            "slice_name": "Paises destino que generan m\u00e1s beneficio y n\u00famero de vuelos",
+                            "viz_type": "world_map"
+                        }
+                    },
+                    {
+                        "__Slice__": {
+                            "cache_timeout": null,
+                            "datasource_name": "dw_aero.beneficio_agencia_view",
+                            "datasource_type": "table",
+                            "id": 6,
+                            "params": "{\"adhoc_filters\": [], \"color_picker\": {\"a\": 1, \"b\": 135, \"g\": 122, \"r\": 0}, \"compare_lag\": 1, \"compare_suffix\": \"respecto al periodo anterior.\", \"datasource\": \"16__table\", \"extra_form_data\": {}, \"granularity_sqla\": \"fecha\", \"header_font_size\": 0.4, \"metric\": {\"aggregate\": \"SUM\", \"column\": {\"column_name\": \"beneficio\", \"description\": null, \"expression\": null, \"filterable\": true, \"groupby\": true, \"id\": 129, \"is_dttm\": false, \"python_date_format\": null, \"type\": \"DECIMAL(10, 2)\", \"verbose_name\": null}, \"expressionType\": \"SIMPLE\", \"hasCustomLabel\": false, \"isNew\": false, \"label\": \"SUM(beneficio)\", \"optionName\": \"metric_0xn8nms0l1t_cf1azxy1bkp\", \"sqlExpression\": null}, \"rolling_type\": \"None\", \"show_trend_line\": true, \"slice_id\": 6, \"start_y_axis_at_zero\": true, \"subheader_font_size\": 0.15, \"time_grain_sqla\": \"P1Y\", \"time_range\": \"2015-01-01T00:00:00 : 2022-12-31T00:00:00\", \"time_range_endpoints\": [\"inclusive\", \"exclusive\"], \"time_range_fixed\": false, \"url_params\": {}, \"viz_type\": \"big_number\", \"y_axis_format\": \"$,.2f\", \"remote_id\": 6, \"datasource_name\": \"beneficio_agencia_view\", \"schema\": \"dw_aero\", \"database_name\": \"dw_aero\"}",
+                            "slice_name": "Beneficios anuales por agencia.",
+                            "viz_type": "big_number"
+                        }
+                    },
+                    {
+                        "__Slice__": {
+                            "cache_timeout": null,
+                            "datasource_name": "dw_aero.beneficio_por_edad_view",
+                            "datasource_type": "table",
+                            "id": 7,
+                            "params": "{\"adhoc_filters\": [], \"color_scheme\": \"googleCategory10c\", \"datasource\": \"22__table\", \"date_format\": \"smart_date\", \"extra_form_data\": {}, \"groupby\": [\"edad\"], \"innerRadius\": 30, \"label_type\": \"key\", \"labels_outside\": true, \"legendOrientation\": \"top\", \"legendType\": \"scroll\", \"metric\": {\"aggregate\": \"SUM\", \"column\": {\"column_name\": \"beneficio_edad\", \"description\": null, \"expression\": null, \"filterable\": true, \"groupby\": true, \"id\": 158, \"is_dttm\": false, \"python_date_format\": null, \"type\": \"DECIMAL(32, 2)\", \"verbose_name\": null}, \"expressionType\": \"SIMPLE\", \"hasCustomLabel\": false, \"isNew\": false, \"label\": \"SUM(beneficio_edad)\", \"optionName\": \"metric_fiu8a3n56c5_5x7r5ikvfi\", \"sqlExpression\": null}, \"number_format\": \"SMART_NUMBER\", \"outerRadius\": 70, \"row_limit\": 100, \"show_labels\": true, \"show_labels_threshold\": 5, \"slice_id\": 7, \"sort_by_metric\": false, \"time_range\": \"No filter\", \"time_range_endpoints\": [\"inclusive\", \"exclusive\"], \"url_params\": {}, \"viz_type\": \"pie\", \"remote_id\": 7, \"datasource_name\": \"beneficio_por_edad_view\", \"schema\": \"dw_aero\", \"database_name\": \"dw_aero\"}",
+                            "slice_name": "Beneficios obtenidos por rangos de edad.",
+                            "viz_type": "pie"
+                        }
+                    },
+                    {
+                        "__Slice__": {
+                            "cache_timeout": null,
+                            "datasource_name": "dw_aero.query_pivot_view",
+                            "datasource_type": "table",
+                            "id": 8,
+                            "params": "{\"adhoc_filters\": [], \"columns\": [\"estacion\", \"estado_civil\"], \"datasource\": \"23__table\", \"date_format\": \"smart_date\", \"extra_form_data\": {}, \"groupby\": [\"hijos\"], \"metrics\": [{\"aggregate\": \"COUNT\", \"column\": {\"column_name\": \"beneficio\", \"description\": null, \"expression\": null, \"filterable\": true, \"groupby\": true, \"id\": 159, \"is_dttm\": false, \"python_date_format\": null, \"type\": \"DECIMAL(10, 2)\", \"verbose_name\": null}, \"expressionType\": \"SIMPLE\", \"hasCustomLabel\": true, \"isNew\": false, \"label\": \"N\\u00famero billetes\", \"optionName\": \"metric_b2ydpbvulas_gr0ekhvk1u\", \"sqlExpression\": null}], \"number_format\": \"SMART_NUMBER\", \"order_desc\": true, \"pandas_aggfunc\": \"sum\", \"pivot_margins\": true, \"row_limit\": 10000, \"slice_id\": 8, \"time_grain_sqla\": \"P1D\", \"time_range\": \"No filter\", \"time_range_endpoints\": [\"inclusive\", \"exclusive\"], \"url_params\": {}, \"viz_type\": \"pivot_table\", \"remote_id\": 8, \"datasource_name\": \"query_pivot_view\", \"schema\": \"dw_aero\", \"database_name\": \"dw_aero\"}",
+                            "slice_name": "Billetes comprados por estaci\u00f3n",
+                            "viz_type": "pivot_table"
+                        }
+                    }
+                ],
+                "slug": null
+            }
+        }
+    ],
+    "datasources": [
+        {
+            "__SqlaTable__": {
+                "cache_timeout": null,
+                "columns": [
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": 1,
+                            "changed_on": {
+                                "__datetime__": "2021-05-23T19:34:43"
+                            },
+                            "column_name": "hora",
+                            "created_by_fk": 1,
+                            "created_on": {
+                                "__datetime__": "2021-05-23T19:34:43"
+                            },
+                            "description": null,
+                            "expression": null,
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 150,
+                            "is_active": true,
+                            "is_dttm": false,
+                            "python_date_format": null,
+                            "table_id": 21,
+                            "type": "INTEGER(11)",
+                            "uuid": "5e356f06-f76e-469a-9461-aa39ff6e6f47",
+                            "verbose_name": null
+                        }
+                    },
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": 1,
+                            "changed_on": {
+                                "__datetime__": "2021-05-23T19:34:43"
+                            },
+                            "column_name": "minutos",
+                            "created_by_fk": 1,
+                            "created_on": {
+                                "__datetime__": "2021-05-23T19:34:43"
+                            },
+                            "description": null,
+                            "expression": null,
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 151,
+                            "is_active": true,
+                            "is_dttm": false,
+                            "python_date_format": null,
+                            "table_id": 21,
+                            "type": "INTEGER(11)",
+                            "uuid": "c3520061-6696-41b1-885b-0e4a42c57552",
+                            "verbose_name": null
+                        }
+                    },
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": 1,
+                            "changed_on": {
+                                "__datetime__": "2021-05-23T19:34:43"
+                            },
+                            "column_name": "mediodia",
+                            "created_by_fk": 1,
+                            "created_on": {
+                                "__datetime__": "2021-05-23T19:34:43"
+                            },
+                            "description": null,
+                            "expression": null,
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 152,
+                            "is_active": true,
+                            "is_dttm": false,
+                            "python_date_format": null,
+                            "table_id": 21,
+                            "type": "ENUM('AM','PM')",
+                            "uuid": "8475312e-7496-4eaf-9b53-124129fafb54",
+                            "verbose_name": null
+                        }
+                    },
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": 1,
+                            "changed_on": {
+                                "__datetime__": "2021-05-23T19:34:43"
+                            },
+                            "column_name": "pais_residencia",
+                            "created_by_fk": 1,
+                            "created_on": {
+                                "__datetime__": "2021-05-23T19:34:43"
+                            },
+                            "description": null,
+                            "expression": null,
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 153,
+                            "is_active": true,
+                            "is_dttm": false,
+                            "python_date_format": null,
+                            "table_id": 21,
+                            "type": "VARCHAR(30)",
+                            "uuid": "dd7f1d24-b3c7-451b-8a26-14d0b8fc6c1a",
+                            "verbose_name": null
+                        }
+                    },
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": 1,
+                            "changed_on": {
+                                "__datetime__": "2021-05-23T19:34:43"
+                            },
+                            "column_name": "tipo_vuelo",
+                            "created_by_fk": 1,
+                            "created_on": {
+                                "__datetime__": "2021-05-23T19:34:43"
+                            },
+                            "description": null,
+                            "expression": null,
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 154,
+                            "is_active": true,
+                            "is_dttm": false,
+                            "python_date_format": null,
+                            "table_id": 21,
+                            "type": "ENUM('NACIONAL','INTERNACIONAL')",
+                            "uuid": "19161948-d7f0-4145-b4ae-9d8a45946abd",
+                            "verbose_name": null
+                        }
+                    },
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": 1,
+                            "changed_on": {
+                                "__datetime__": "2021-05-23T19:34:43"
+                            },
+                            "column_name": "fecha",
+                            "created_by_fk": 1,
+                            "created_on": {
+                                "__datetime__": "2021-05-23T19:34:43"
+                            },
+                            "description": null,
+                            "expression": null,
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 155,
+                            "is_active": true,
+                            "is_dttm": true,
+                            "python_date_format": null,
+                            "table_id": 21,
+                            "type": "DATE",
+                            "uuid": "17cffac8-0850-4431-9ae1-cbdb965469a9",
+                            "verbose_name": null
+                        }
+                    }
+                ],
+                "database_id": 2,
+                "default_endpoint": null,
+                "description": null,
+                "extra": null,
+                "fetch_values_predicate": null,
+                "filter_select_enabled": false,
+                "main_dttm_col": "fecha",
+                "metrics": [
+                    {
+                        "__SqlMetric__": {
+                            "changed_by_fk": 1,
+                            "changed_on": {
+                                "__datetime__": "2021-05-23T19:34:43"
+                            },
+                            "created_by_fk": 1,
+                            "created_on": {
+                                "__datetime__": "2021-05-23T19:34:43"
+                            },
+                            "d3format": null,
+                            "description": null,
+                            "expression": "COUNT(*)",
+                            "extra": null,
+                            "id": 21,
+                            "metric_name": "count",
+                            "metric_type": "count",
+                            "table_id": 21,
+                            "uuid": "8530f4cc-f63d-4b78-85ea-8bfef648b402",
+                            "verbose_name": "COUNT(*)",
+                            "warning_text": null
+                        }
+                    }
+                ],
+                "offset": 0,
+                "params": "{\"remote_id\": 21, \"database_name\": \"dw_aero\"}",
+                "schema": "dw_aero",
+                "sql": null,
+                "table_name": "hora_vuelo_view",
+                "template_params": null
+            }
+        },
+        {
+            "__SqlaTable__": {
+                "cache_timeout": null,
+                "columns": [
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": 1,
+                            "changed_on": {
+                                "__datetime__": "2021-05-23T19:41:30"
+                            },
+                            "column_name": "edad",
+                            "created_by_fk": 1,
+                            "created_on": {
+                                "__datetime__": "2021-05-23T19:41:30"
+                            },
+                            "description": null,
+                            "expression": null,
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 156,
+                            "is_active": true,
+                            "is_dttm": false,
+                            "python_date_format": null,
+                            "table_id": 22,
+                            "type": "ENUM('+80','60-80','50-60','35-50','25-35','18-25','MENOR')",
+                            "uuid": "8cd7e163-eb97-4037-b458-48f4c5e2f646",
+                            "verbose_name": null
+                        }
+                    },
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": 1,
+                            "changed_on": {
+                                "__datetime__": "2021-05-23T19:41:30"
+                            },
+                            "column_name": "pais_residencia",
+                            "created_by_fk": 1,
+                            "created_on": {
+                                "__datetime__": "2021-05-23T19:41:30"
+                            },
+                            "description": null,
+                            "expression": null,
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 157,
+                            "is_active": true,
+                            "is_dttm": false,
+                            "python_date_format": null,
+                            "table_id": 22,
+                            "type": "VARCHAR(30)",
+                            "uuid": "f2a6eeee-c479-4949-a932-5ee0cd4d2c33",
+                            "verbose_name": null
+                        }
+                    },
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": 1,
+                            "changed_on": {
+                                "__datetime__": "2021-05-23T19:41:30"
+                            },
+                            "column_name": "beneficio_edad",
+                            "created_by_fk": 1,
+                            "created_on": {
+                                "__datetime__": "2021-05-23T19:41:30"
+                            },
+                            "description": null,
+                            "expression": null,
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 158,
+                            "is_active": true,
+                            "is_dttm": false,
+                            "python_date_format": null,
+                            "table_id": 22,
+                            "type": "DECIMAL(32, 2)",
+                            "uuid": "b0e5f47a-ce99-4c9b-bc74-6fad1efe406a",
+                            "verbose_name": null
+                        }
+                    }
+                ],
+                "database_id": 2,
+                "default_endpoint": null,
+                "description": null,
+                "extra": null,
+                "fetch_values_predicate": null,
+                "filter_select_enabled": false,
+                "main_dttm_col": null,
+                "metrics": [
+                    {
+                        "__SqlMetric__": {
+                            "changed_by_fk": 1,
+                            "changed_on": {
+                                "__datetime__": "2021-05-23T19:41:30"
+                            },
+                            "created_by_fk": 1,
+                            "created_on": {
+                                "__datetime__": "2021-05-23T19:41:30"
+                            },
+                            "d3format": null,
+                            "description": null,
+                            "expression": "COUNT(*)",
+                            "extra": null,
+                            "id": 22,
+                            "metric_name": "count",
+                            "metric_type": "count",
+                            "table_id": 22,
+                            "uuid": "b1aa8618-6f5a-43c1-b631-9341f205f91a",
+                            "verbose_name": "COUNT(*)",
+                            "warning_text": null
+                        }
+                    }
+                ],
+                "offset": 0,
+                "params": "{\"remote_id\": 22, \"database_name\": \"dw_aero\"}",
+                "schema": "dw_aero",
+                "sql": null,
+                "table_name": "beneficio_por_edad_view",
+                "template_params": null
+            }
+        },
+        {
+            "__SqlaTable__": {
+                "cache_timeout": null,
+                "columns": [
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": 1,
+                            "changed_on": {
+                                "__datetime__": "2021-05-23T20:23:13"
+                            },
+                            "column_name": "importe",
+                            "created_by_fk": 1,
+                            "created_on": {
+                                "__datetime__": "2021-05-23T20:23:13"
+                            },
+                            "description": null,
+                            "expression": null,
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 164,
+                            "is_active": true,
+                            "is_dttm": false,
+                            "python_date_format": null,
+                            "table_id": 24,
+                            "type": "DECIMAL(10, 2)",
+                            "uuid": "653610a7-4766-4d73-9c3a-da5b279dcf9b",
+                            "verbose_name": null
+                        }
+                    },
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": 1,
+                            "changed_on": {
+                                "__datetime__": "2021-05-23T20:23:13"
+                            },
+                            "column_name": "precio_agencia",
+                            "created_by_fk": 1,
+                            "created_on": {
+                                "__datetime__": "2021-05-23T20:23:13"
+                            },
+                            "description": null,
+                            "expression": null,
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 165,
+                            "is_active": true,
+                            "is_dttm": false,
+                            "python_date_format": null,
+                            "table_id": 24,
+                            "type": "DECIMAL(10, 2)",
+                            "uuid": "62d44005-9898-4986-9b7d-8d0c4ad84095",
+                            "verbose_name": null
+                        }
+                    },
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": 1,
+                            "changed_on": {
+                                "__datetime__": "2021-05-23T20:23:13"
+                            },
+                            "column_name": "nombre",
+                            "created_by_fk": 1,
+                            "created_on": {
+                                "__datetime__": "2021-05-23T20:23:13"
+                            },
+                            "description": null,
+                            "expression": null,
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 166,
+                            "is_active": true,
+                            "is_dttm": false,
+                            "python_date_format": null,
+                            "table_id": 24,
+                            "type": "VARCHAR(500)",
+                            "uuid": "e9b3b5f2-123b-48f0-871a-187f11191a2e",
+                            "verbose_name": null
+                        }
+                    },
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": 1,
+                            "changed_on": {
+                                "__datetime__": "2021-05-23T20:23:13"
+                            },
+                            "column_name": "fecha",
+                            "created_by_fk": 1,
+                            "created_on": {
+                                "__datetime__": "2021-05-23T20:23:13"
+                            },
+                            "description": null,
+                            "expression": null,
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 167,
+                            "is_active": true,
+                            "is_dttm": true,
+                            "python_date_format": null,
+                            "table_id": 24,
+                            "type": "DATE",
+                            "uuid": "cba123d5-d15d-4d2a-8c6c-bed24f4d2675",
+                            "verbose_name": null
+                        }
+                    }
+                ],
+                "database_id": 2,
+                "default_endpoint": null,
+                "description": null,
+                "extra": null,
+                "fetch_values_predicate": null,
+                "filter_select_enabled": false,
+                "main_dttm_col": "fecha",
+                "metrics": [
+                    {
+                        "__SqlMetric__": {
+                            "changed_by_fk": 1,
+                            "changed_on": {
+                                "__datetime__": "2021-05-23T20:23:13"
+                            },
+                            "created_by_fk": 1,
+                            "created_on": {
+                                "__datetime__": "2021-05-23T20:23:13"
+                            },
+                            "d3format": null,
+                            "description": null,
+                            "expression": "COUNT(*)",
+                            "extra": null,
+                            "id": 24,
+                            "metric_name": "count",
+                            "metric_type": "count",
+                            "table_id": 24,
+                            "uuid": "eabb6c4e-a42f-4861-ae20-8a6fcd38d3bf",
+                            "verbose_name": "COUNT(*)",
+                            "warning_text": null
+                        }
+                    }
+                ],
+                "offset": 0,
+                "params": "{\"remote_id\": 24, \"database_name\": \"dw_aero\"}",
+                "schema": "dw_aero",
+                "sql": null,
+                "table_name": "importe_vuelo_view",
+                "template_params": null
+            }
+        },
+        {
+            "__SqlaTable__": {
+                "cache_timeout": null,
+                "columns": [
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": 1,
+                            "changed_on": {
+                                "__datetime__": "2021-05-23T19:19:23"
+                            },
+                            "column_name": "edad",
+                            "created_by_fk": 1,
+                            "created_on": {
+                                "__datetime__": "2021-05-23T19:19:23"
+                            },
+                            "description": null,
+                            "expression": null,
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 138,
+                            "is_active": true,
+                            "is_dttm": false,
+                            "python_date_format": null,
+                            "table_id": 19,
+                            "type": "ENUM('+80','60-80','50-60','35-50','25-35','18-25','MENOR')",
+                            "uuid": "4f704417-aa46-4a09-b0d0-71a57da64321",
+                            "verbose_name": null
+                        }
+                    },
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": 1,
+                            "changed_on": {
+                                "__datetime__": "2021-05-23T19:19:23"
+                            },
+                            "column_name": "pais_residencia",
+                            "created_by_fk": 1,
+                            "created_on": {
+                                "__datetime__": "2021-05-23T19:19:23"
+                            },
+                            "description": null,
+                            "expression": null,
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 139,
+                            "is_active": true,
+                            "is_dttm": false,
+                            "python_date_format": null,
+                            "table_id": 19,
+                            "type": "VARCHAR(30)",
+                            "uuid": "69c3e8f1-94af-4a83-a3af-a7f6bd498f6c",
+                            "verbose_name": null
+                        }
+                    },
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": 1,
+                            "changed_on": {
+                                "__datetime__": "2021-05-23T19:19:23"
+                            },
+                            "column_name": "antelacion_compra",
+                            "created_by_fk": 1,
+                            "created_on": {
+                                "__datetime__": "2021-05-23T19:19:23"
+                            },
+                            "description": null,
+                            "expression": null,
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 140,
+                            "is_active": true,
+                            "is_dttm": false,
+                            "python_date_format": null,
+                            "table_id": 19,
+                            "type": "INTEGER(11)",
+                            "uuid": "76314d7e-a7d6-4d64-a681-a48204951a1c",
+                            "verbose_name": null
+                        }
+                    },
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": 1,
+                            "changed_on": {
+                                "__datetime__": "2021-05-23T19:19:23"
+                            },
+                            "column_name": "tipo_vuelo",
+                            "created_by_fk": 1,
+                            "created_on": {
+                                "__datetime__": "2021-05-23T19:19:23"
+                            },
+                            "description": null,
+                            "expression": null,
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 141,
+                            "is_active": true,
+                            "is_dttm": false,
+                            "python_date_format": null,
+                            "table_id": 19,
+                            "type": "ENUM('NACIONAL','INTERNACIONAL')",
+                            "uuid": "4374bc51-9da7-41f2-9b1d-3b1fbcfd0300",
+                            "verbose_name": null
+                        }
+                    },
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": 1,
+                            "changed_on": {
+                                "__datetime__": "2021-05-23T19:19:23"
+                            },
+                            "column_name": "fecha",
+                            "created_by_fk": 1,
+                            "created_on": {
+                                "__datetime__": "2021-05-23T19:19:23"
+                            },
+                            "description": null,
+                            "expression": null,
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 142,
+                            "is_active": true,
+                            "is_dttm": true,
+                            "python_date_format": null,
+                            "table_id": 19,
+                            "type": "DATE",
+                            "uuid": "9e7c3fb5-9900-428f-93a0-a90655253f74",
+                            "verbose_name": null
+                        }
+                    }
+                ],
+                "database_id": 1,
+                "default_endpoint": null,
+                "description": null,
+                "extra": null,
+                "fetch_values_predicate": null,
+                "filter_select_enabled": false,
+                "main_dttm_col": "fecha",
+                "metrics": [
+                    {
+                        "__SqlMetric__": {
+                            "changed_by_fk": 1,
+                            "changed_on": {
+                                "__datetime__": "2021-05-23T19:19:23"
+                            },
+                            "created_by_fk": 1,
+                            "created_on": {
+                                "__datetime__": "2021-05-23T19:19:23"
+                            },
+                            "d3format": null,
+                            "description": null,
+                            "expression": "COUNT(*)",
+                            "extra": null,
+                            "id": 19,
+                            "metric_name": "count",
+                            "metric_type": "count",
+                            "table_id": 19,
+                            "uuid": "1c92a488-28a1-45bd-9c09-c67fbb2d07f9",
+                            "verbose_name": "COUNT(*)",
+                            "warning_text": null
+                        }
+                    }
+                ],
+                "offset": 0,
+                "params": "{\"remote_id\": 19, \"database_name\": \"aero\"}",
+                "schema": "dw_aero",
+                "sql": null,
+                "table_name": "anticipacion_vuelo_view",
+                "template_params": null
+            }
+        },
+        {
+            "__SqlaTable__": {
+                "cache_timeout": null,
+                "columns": [
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": 1,
+                            "changed_on": {
+                                "__datetime__": "2021-05-23T15:30:20"
+                            },
+                            "column_name": "beneficio",
+                            "created_by_fk": 1,
+                            "created_on": {
+                                "__datetime__": "2021-05-23T15:30:20"
+                            },
+                            "description": null,
+                            "expression": null,
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 116,
+                            "is_active": true,
+                            "is_dttm": false,
+                            "python_date_format": null,
+                            "table_id": 14,
+                            "type": "DECIMAL(10, 2)",
+                            "uuid": "85cbedfa-95c5-4e6c-b1a5-3208065511f0",
+                            "verbose_name": null
+                        }
+                    },
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": 1,
+                            "changed_on": {
+                                "__datetime__": "2021-05-23T15:30:20"
+                            },
+                            "column_name": "pais",
+                            "created_by_fk": 1,
+                            "created_on": {
+                                "__datetime__": "2021-05-23T15:30:20"
+                            },
+                            "description": null,
+                            "expression": null,
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 117,
+                            "is_active": true,
+                            "is_dttm": false,
+                            "python_date_format": null,
+                            "table_id": 14,
+                            "type": "VARCHAR(50)",
+                            "uuid": "31c4dc23-a15a-4a19-bd0b-5618c9193b47",
+                            "verbose_name": null
+                        }
+                    },
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": 1,
+                            "changed_on": {
+                                "__datetime__": "2021-05-23T15:30:20"
+                            },
+                            "column_name": "fecha",
+                            "created_by_fk": 1,
+                            "created_on": {
+                                "__datetime__": "2021-05-23T15:30:20"
+                            },
+                            "description": null,
+                            "expression": null,
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 118,
+                            "is_active": true,
+                            "is_dttm": true,
+                            "python_date_format": null,
+                            "table_id": 14,
+                            "type": "DATE",
+                            "uuid": "2faf4b5c-5881-413b-aab5-3f3c30748cbe",
+                            "verbose_name": null
+                        }
+                    }
+                ],
+                "database_id": 2,
+                "default_endpoint": null,
+                "description": null,
+                "extra": null,
+                "fetch_values_predicate": null,
+                "filter_select_enabled": false,
+                "main_dttm_col": "fecha",
+                "metrics": [
+                    {
+                        "__SqlMetric__": {
+                            "changed_by_fk": 1,
+                            "changed_on": {
+                                "__datetime__": "2021-05-23T15:30:20"
+                            },
+                            "created_by_fk": 1,
+                            "created_on": {
+                                "__datetime__": "2021-05-23T15:30:20"
+                            },
+                            "d3format": null,
+                            "description": null,
+                            "expression": "COUNT(*)",
+                            "extra": null,
+                            "id": 14,
+                            "metric_name": "count",
+                            "metric_type": "count",
+                            "table_id": 14,
+                            "uuid": "aa478b7e-d468-4775-b396-ecb2351d2ac0",
+                            "verbose_name": "COUNT(*)",
+                            "warning_text": null
+                        }
+                    }
+                ],
+                "offset": 0,
+                "params": "{\"remote_id\": 14, \"database_name\": \"dw_aero\"}",
+                "schema": "dw_aero",
+                "sql": null,
+                "table_name": "pais_beneficio_view",
+                "template_params": null
+            }
+        },
+        {
+            "__SqlaTable__": {
+                "cache_timeout": null,
+                "columns": [
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": 1,
+                            "changed_on": {
+                                "__datetime__": "2021-05-23T17:08:51"
+                            },
+                            "column_name": "beneficio",
+                            "created_by_fk": 1,
+                            "created_on": {
+                                "__datetime__": "2021-05-23T17:08:51"
+                            },
+                            "description": null,
+                            "expression": null,
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 129,
+                            "is_active": true,
+                            "is_dttm": false,
+                            "python_date_format": null,
+                            "table_id": 16,
+                            "type": "DECIMAL(10, 2)",
+                            "uuid": "7eb25741-02cb-49db-8786-7b05cffc25dc",
+                            "verbose_name": null
+                        }
+                    },
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": 1,
+                            "changed_on": {
+                                "__datetime__": "2021-05-23T17:08:51"
+                            },
+                            "column_name": "nombre",
+                            "created_by_fk": 1,
+                            "created_on": {
+                                "__datetime__": "2021-05-23T17:08:51"
+                            },
+                            "description": null,
+                            "expression": null,
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 130,
+                            "is_active": true,
+                            "is_dttm": false,
+                            "python_date_format": null,
+                            "table_id": 16,
+                            "type": "VARCHAR(500)",
+                            "uuid": "b478a6b1-352e-4f0d-84d6-bf11e02cf0a6",
+                            "verbose_name": null
+                        }
+                    },
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": 1,
+                            "changed_on": {
+                                "__datetime__": "2021-05-23T17:08:51"
+                            },
+                            "column_name": "fecha",
+                            "created_by_fk": 1,
+                            "created_on": {
+                                "__datetime__": "2021-05-23T17:08:51"
+                            },
+                            "description": null,
+                            "expression": null,
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 131,
+                            "is_active": true,
+                            "is_dttm": true,
+                            "python_date_format": null,
+                            "table_id": 16,
+                            "type": "DATE",
+                            "uuid": "13d967e2-a4cc-49cd-b477-6ee524dd6525",
+                            "verbose_name": null
+                        }
+                    }
+                ],
+                "database_id": 2,
+                "default_endpoint": null,
+                "description": null,
+                "extra": null,
+                "fetch_values_predicate": null,
+                "filter_select_enabled": false,
+                "main_dttm_col": "fecha",
+                "metrics": [
+                    {
+                        "__SqlMetric__": {
+                            "changed_by_fk": 1,
+                            "changed_on": {
+                                "__datetime__": "2021-05-23T17:08:51"
+                            },
+                            "created_by_fk": 1,
+                            "created_on": {
+                                "__datetime__": "2021-05-23T17:08:51"
+                            },
+                            "d3format": null,
+                            "description": null,
+                            "expression": "COUNT(*)",
+                            "extra": null,
+                            "id": 16,
+                            "metric_name": "count",
+                            "metric_type": "count",
+                            "table_id": 16,
+                            "uuid": "6d2d48a2-e015-4359-b732-768e18c98964",
+                            "verbose_name": "COUNT(*)",
+                            "warning_text": null
+                        }
+                    }
+                ],
+                "offset": 0,
+                "params": "{\"remote_id\": 16, \"database_name\": \"dw_aero\"}",
+                "schema": "dw_aero",
+                "sql": null,
+                "table_name": "beneficio_agencia_view",
+                "template_params": null
+            }
+        },
+        {
+            "__SqlaTable__": {
+                "cache_timeout": null,
+                "columns": [
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": 1,
+                            "changed_on": {
+                                "__datetime__": "2021-05-23T20:27:21"
+                            },
+                            "column_name": "pais_residencia",
+                            "created_by_fk": 1,
+                            "created_on": {
+                                "__datetime__": "2021-05-23T20:27:21"
+                            },
+                            "description": null,
+                            "expression": null,
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 168,
+                            "is_active": true,
+                            "is_dttm": false,
+                            "python_date_format": null,
+                            "table_id": 25,
+                            "type": "VARCHAR(30)",
+                            "uuid": "347c7f43-bfd9-446a-a9c8-cfe7ce886999",
+                            "verbose_name": null
+                        }
+                    },
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": 1,
+                            "changed_on": {
+                                "__datetime__": "2021-05-23T20:27:21"
+                            },
+                            "column_name": "nombre",
+                            "created_by_fk": 1,
+                            "created_on": {
+                                "__datetime__": "2021-05-23T20:27:21"
+                            },
+                            "description": null,
+                            "expression": null,
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 169,
+                            "is_active": true,
+                            "is_dttm": false,
+                            "python_date_format": null,
+                            "table_id": 25,
+                            "type": "VARCHAR(500)",
+                            "uuid": "eecfe308-38c0-4ba7-9b06-727b600ece7b",
+                            "verbose_name": null
+                        }
+                    }
+                ],
+                "database_id": 2,
+                "default_endpoint": null,
+                "description": null,
+                "extra": null,
+                "fetch_values_predicate": null,
+                "filter_select_enabled": false,
+                "main_dttm_col": null,
+                "metrics": [
+                    {
+                        "__SqlMetric__": {
+                            "changed_by_fk": 1,
+                            "changed_on": {
+                                "__datetime__": "2021-05-23T20:27:21"
+                            },
+                            "created_by_fk": 1,
+                            "created_on": {
+                                "__datetime__": "2021-05-23T20:27:21"
+                            },
+                            "d3format": null,
+                            "description": null,
+                            "expression": "COUNT(*)",
+                            "extra": null,
+                            "id": 25,
+                            "metric_name": "count",
+                            "metric_type": "count",
+                            "table_id": 25,
+                            "uuid": "942cb59e-d461-4f3b-92ac-1656481ab075",
+                            "verbose_name": "COUNT(*)",
+                            "warning_text": null
+                        }
+                    }
+                ],
+                "offset": 0,
+                "params": "{\"remote_id\": 25, \"database_name\": \"dw_aero\"}",
+                "schema": "dw_aero",
+                "sql": null,
+                "table_name": "filtro_view",
+                "template_params": null
+            }
+        },
+        {
+            "__SqlaTable__": {
+                "cache_timeout": null,
+                "columns": [
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": 1,
+                            "changed_on": {
+                                "__datetime__": "2021-05-23T19:51:20"
+                            },
+                            "column_name": "beneficio",
+                            "created_by_fk": 1,
+                            "created_on": {
+                                "__datetime__": "2021-05-23T19:51:20"
+                            },
+                            "description": null,
+                            "expression": null,
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 159,
+                            "is_active": true,
+                            "is_dttm": false,
+                            "python_date_format": null,
+                            "table_id": 23,
+                            "type": "DECIMAL(10, 2)",
+                            "uuid": "1c4704d5-1954-452d-a6a9-1a49f3e34182",
+                            "verbose_name": null
+                        }
+                    },
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": 1,
+                            "changed_on": {
+                                "__datetime__": "2021-05-23T19:51:20"
+                            },
+                            "column_name": "pais_residencia",
+                            "created_by_fk": 1,
+                            "created_on": {
+                                "__datetime__": "2021-05-23T19:51:20"
+                            },
+                            "description": null,
+                            "expression": null,
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 160,
+                            "is_active": true,
+                            "is_dttm": false,
+                            "python_date_format": null,
+                            "table_id": 23,
+                            "type": "VARCHAR(30)",
+                            "uuid": "2473ce71-b5d7-4e79-8afb-34098584a962",
+                            "verbose_name": null
+                        }
+                    },
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": 1,
+                            "changed_on": {
+                                "__datetime__": "2021-05-23T19:51:20"
+                            },
+                            "column_name": "estado_civil",
+                            "created_by_fk": 1,
+                            "created_on": {
+                                "__datetime__": "2021-05-23T19:51:20"
+                            },
+                            "description": null,
+                            "expression": null,
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 161,
+                            "is_active": true,
+                            "is_dttm": false,
+                            "python_date_format": null,
+                            "table_id": 23,
+                            "type": "ENUM('CASADO','SOLTERO','UNION DE HECHO','SEPARADO','VIUDO','DIVORCIADO')",
+                            "uuid": "ecb33ea7-a4b8-4f3b-8b11-3600c64cbed8",
+                            "verbose_name": null
+                        }
+                    },
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": 1,
+                            "changed_on": {
+                                "__datetime__": "2021-05-23T19:51:20"
+                            },
+                            "column_name": "hijos",
+                            "created_by_fk": 1,
+                            "created_on": {
+                                "__datetime__": "2021-05-23T19:51:20"
+                            },
+                            "description": null,
+                            "expression": null,
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 162,
+                            "is_active": true,
+                            "is_dttm": false,
+                            "python_date_format": null,
+                            "table_id": 23,
+                            "type": "ENUM('+10','6-9','4-5','2-3','HIJO UNICO','SIN HIJOS')",
+                            "uuid": "c79a9ed6-4623-4daa-9582-e4d57c377dca",
+                            "verbose_name": null
+                        }
+                    },
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": 1,
+                            "changed_on": {
+                                "__datetime__": "2021-05-23T19:51:20"
+                            },
+                            "column_name": "estacion",
+                            "created_by_fk": 1,
+                            "created_on": {
+                                "__datetime__": "2021-05-23T19:51:20"
+                            },
+                            "description": null,
+                            "expression": null,
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 163,
+                            "is_active": true,
+                            "is_dttm": false,
+                            "python_date_format": null,
+                            "table_id": 23,
+                            "type": "ENUM('VERANO','OTO\u00d1O','INVIERNO','PRIMAVERA')",
+                            "uuid": "621f34ab-ed6f-4ab5-8dce-7691c1df0285",
+                            "verbose_name": null
+                        }
+                    }
+                ],
+                "database_id": 2,
+                "default_endpoint": null,
+                "description": null,
+                "extra": null,
+                "fetch_values_predicate": null,
+                "filter_select_enabled": false,
+                "main_dttm_col": null,
+                "metrics": [
+                    {
+                        "__SqlMetric__": {
+                            "changed_by_fk": 1,
+                            "changed_on": {
+                                "__datetime__": "2021-05-23T19:51:20"
+                            },
+                            "created_by_fk": 1,
+                            "created_on": {
+                                "__datetime__": "2021-05-23T19:51:20"
+                            },
+                            "d3format": null,
+                            "description": null,
+                            "expression": "COUNT(*)",
+                            "extra": null,
+                            "id": 23,
+                            "metric_name": "count",
+                            "metric_type": "count",
+                            "table_id": 23,
+                            "uuid": "c4bfa458-e5c3-4f93-80ab-76492c22afa1",
+                            "verbose_name": "COUNT(*)",
+                            "warning_text": null
+                        }
+                    }
+                ],
+                "offset": 0,
+                "params": "{\"remote_id\": 23, \"database_name\": \"dw_aero\"}",
+                "schema": "dw_aero",
+                "sql": null,
+                "table_name": "query_pivot_view",
+                "template_params": null
+            }
+        }
+    ]
+}

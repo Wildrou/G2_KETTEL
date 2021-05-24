@@ -1,0 +1,14 @@
+- columns:
+  - column_name: beneficio_edad
+    type: DECIMAL(32, 2)
+  - column_name: edad
+    type: ENUM('+80','60-80','50-60','35-50','25-35','18-25','MENOR')
+  - column_name: pais_residencia
+    type: VARCHAR(30)
+  metrics:
+  - expression: COUNT(*)
+    metric_name: count
+    metric_type: count
+    verbose_name: COUNT(*)
+  schema: dw_aero
+  table_name: beneficio_por_edad_view

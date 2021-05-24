@@ -1,0 +1,18 @@
+- columns:
+  - column_name: fecha
+    is_dttm: true
+    type: DATE
+  - column_name: precio_agencia
+    type: DECIMAL(10, 2)
+  - column_name: importe
+    type: DECIMAL(10, 2)
+  - column_name: nombre
+    type: VARCHAR(500)
+  main_dttm_col: fecha
+  metrics:
+  - expression: COUNT(*)
+    metric_name: count
+    metric_type: count
+    verbose_name: COUNT(*)
+  schema: dw_aero
+  table_name: importe_vuelo_view

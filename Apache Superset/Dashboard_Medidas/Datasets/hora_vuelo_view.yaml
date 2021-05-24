@@ -1,0 +1,22 @@
+- columns:
+  - column_name: fecha
+    is_dttm: true
+    type: DATE
+  - column_name: tipo_vuelo
+    type: ENUM('NACIONAL','INTERNACIONAL')
+  - column_name: mediodia
+    type: ENUM('AM','PM')
+  - column_name: pais_residencia
+    type: VARCHAR(30)
+  - column_name: hora
+    type: INTEGER(11)
+  - column_name: minutos
+    type: INTEGER(11)
+  main_dttm_col: fecha
+  metrics:
+  - expression: COUNT(*)
+    metric_name: count
+    metric_type: count
+    verbose_name: COUNT(*)
+  schema: dw_aero
+  table_name: hora_vuelo_view

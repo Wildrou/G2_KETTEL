@@ -1,0 +1,18 @@
+- columns:
+  - column_name: hijos
+    type: ENUM('+10','6-9','4-5','2-3','HIJO UNICO','SIN HIJOS')
+  - column_name: estado_civil
+    type: ENUM('CASADO','SOLTERO','UNION DE HECHO','SEPARADO','VIUDO','DIVORCIADO')
+  - column_name: beneficio
+    type: DECIMAL(10, 2)
+  - column_name: estacion
+    type: "ENUM('VERANO','OTO\xD1O','INVIERNO','PRIMAVERA')"
+  - column_name: pais_residencia
+    type: VARCHAR(30)
+  metrics:
+  - expression: COUNT(*)
+    metric_name: count
+    metric_type: count
+    verbose_name: COUNT(*)
+  schema: dw_aero
+  table_name: query_pivot_view
