@@ -1,0 +1,23 @@
+- columns:
+  - column_name: pais
+    type: VAR_STRING
+  - column_name: estado_civil
+    type: STRING
+  - column_name: genero
+    type: STRING
+  - column_name: edad
+    type: LONG
+  - column_name: hijos
+    type: LONG
+  metrics:
+  - expression: count(*)
+    metric_name: count
+  params: '{"remote_id": 37, "database_name": "dw_aero", "import_time": 1621797316}'
+  sql: '-- Note: Unless you save your query, these tabs will NOT persist if you clear
+    your cookies or change browsers.
+
+
+    SELECT l.pais as pais,c.genero,c.hijos,c.edad,c.estado_civil FROM dim_lugar as
+    l JOIN fact_ventas as h on h.lugar_llegada_key=l.lugar_key JOIN dim_cliente AS
+    c on c.cliente_key=h.cliente_key    /*METER PK CLIENTE??*/'
+  table_name: paises clientes visitados 05/19/2021 18:15:39
