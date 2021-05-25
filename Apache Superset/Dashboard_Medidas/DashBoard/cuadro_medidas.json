@@ -14,7 +14,7 @@
                             "datasource_name": "dw_aero.anticipacion_vuelo_view",
                             "datasource_type": "table",
                             "id": 1,
-                            "params": "{\"adhoc_filters\": [], \"bar_stacked\": true, \"bottom_margin\": \"auto\", \"color_scheme\": \"presetColors\", \"columns\": [], \"datasource\": \"19__table\", \"extra_form_data\": {}, \"granularity_sqla\": \"fecha\", \"groupby\": [\"edad\", \"tipo_vuelo\"], \"label_colors\": {}, \"metrics\": [{\"aggregate\": \"AVG\", \"column\": {\"column_name\": \"antelacion_compra\", \"description\": null, \"expression\": null, \"filterable\": true, \"groupby\": true, \"id\": 140, \"is_dttm\": false, \"python_date_format\": null, \"type\": \"INTEGER(11)\", \"verbose_name\": null}, \"expressionType\": \"SIMPLE\", \"hasCustomLabel\": true, \"isNew\": false, \"label\": \"Antelaci\\u00f3n media\", \"optionName\": \"metric_ig692msmvvm_t3gxxno764\", \"sqlExpression\": null}], \"order_bars\": true, \"order_desc\": true, \"row_limit\": 10000, \"show_bar_value\": true, \"show_controls\": false, \"show_legend\": true, \"slice_id\": 1, \"time_range\": \"No filter\", \"time_range_endpoints\": [\"inclusive\", \"exclusive\"], \"url_params\": {}, \"viz_type\": \"dist_bar\", \"x_ticks_layout\": \"auto\", \"y_axis_bounds\": [null, null], \"y_axis_format\": null, \"remote_id\": 1, \"datasource_name\": \"anticipacion_vuelo_view\", \"schema\": \"dw_aero\", \"database_name\": \"aero\"}",
+                            "params": "{\"adhoc_filters\": [], \"bar_stacked\": true, \"bottom_margin\": \"auto\", \"color_scheme\": \"presetColors\", \"columns\": [], \"datasource\": \"32__table\", \"extra_form_data\": {}, \"granularity_sqla\": \"fecha\", \"groupby\": [\"edad\", \"tipo_vuelo\"], \"label_colors\": {}, \"metrics\": [{\"aggregate\": \"AVG\", \"column\": {\"column_name\": \"antelacion_compra\", \"description\": null, \"expression\": null, \"filterable\": true, \"groupby\": true, \"id\": 218, \"is_dttm\": false, \"python_date_format\": null, \"type\": \"INTEGER(11)\", \"verbose_name\": null}, \"expressionType\": \"SIMPLE\", \"hasCustomLabel\": true, \"isNew\": false, \"label\": \"Antelaci\\u00f3n media\", \"optionName\": \"metric_7te4liyd2fy_y0y9yj24clb\", \"sqlExpression\": null}], \"order_bars\": true, \"order_desc\": true, \"row_limit\": 10000, \"show_bar_value\": true, \"show_controls\": false, \"show_legend\": true, \"slice_id\": 1, \"time_range\": \"No filter\", \"time_range_endpoints\": [\"inclusive\", \"exclusive\"], \"url_params\": {}, \"viz_type\": \"dist_bar\", \"x_ticks_layout\": \"auto\", \"y_axis_bounds\": [null, null], \"y_axis_format\": null, \"remote_id\": 1, \"datasource_name\": \"anticipacion_vuelo_view\", \"schema\": \"dw_aero\", \"database_name\": \"dw_aero\"}",
                             "slice_name": "Antelaci\u00f3n de compra",
                             "viz_type": "dist_bar"
                         }
@@ -305,6 +305,176 @@
                         "__TableColumn__": {
                             "changed_by_fk": 1,
                             "changed_on": {
+                                "__datetime__": "2021-05-25T12:02:30"
+                            },
+                            "column_name": "edad",
+                            "created_by_fk": 1,
+                            "created_on": {
+                                "__datetime__": "2021-05-25T12:02:30"
+                            },
+                            "description": null,
+                            "expression": null,
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 216,
+                            "is_active": true,
+                            "is_dttm": false,
+                            "python_date_format": null,
+                            "table_id": 32,
+                            "type": "ENUM('+80','60-80','50-60','35-50','25-35','18-25','MENOR')",
+                            "uuid": "33b75fec-b2b1-4404-ad54-1c8fba73ed0b",
+                            "verbose_name": null
+                        }
+                    },
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": 1,
+                            "changed_on": {
+                                "__datetime__": "2021-05-25T12:02:30"
+                            },
+                            "column_name": "pais_residencia",
+                            "created_by_fk": 1,
+                            "created_on": {
+                                "__datetime__": "2021-05-25T12:02:30"
+                            },
+                            "description": null,
+                            "expression": null,
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 217,
+                            "is_active": true,
+                            "is_dttm": false,
+                            "python_date_format": null,
+                            "table_id": 32,
+                            "type": "VARCHAR(30)",
+                            "uuid": "190e6240-1418-4bcc-bce1-dcf76e11301c",
+                            "verbose_name": null
+                        }
+                    },
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": 1,
+                            "changed_on": {
+                                "__datetime__": "2021-05-25T12:02:30"
+                            },
+                            "column_name": "antelacion_compra",
+                            "created_by_fk": 1,
+                            "created_on": {
+                                "__datetime__": "2021-05-25T12:02:30"
+                            },
+                            "description": null,
+                            "expression": null,
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 218,
+                            "is_active": true,
+                            "is_dttm": false,
+                            "python_date_format": null,
+                            "table_id": 32,
+                            "type": "INTEGER(11)",
+                            "uuid": "c75504bf-dfdf-485f-a7dc-b83e7e85851c",
+                            "verbose_name": null
+                        }
+                    },
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": 1,
+                            "changed_on": {
+                                "__datetime__": "2021-05-25T12:02:30"
+                            },
+                            "column_name": "tipo_vuelo",
+                            "created_by_fk": 1,
+                            "created_on": {
+                                "__datetime__": "2021-05-25T12:02:30"
+                            },
+                            "description": null,
+                            "expression": null,
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 219,
+                            "is_active": true,
+                            "is_dttm": false,
+                            "python_date_format": null,
+                            "table_id": 32,
+                            "type": "ENUM('NACIONAL','INTERNACIONAL')",
+                            "uuid": "545e9483-aa23-49d4-bd7a-eca21dba2182",
+                            "verbose_name": null
+                        }
+                    },
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": 1,
+                            "changed_on": {
+                                "__datetime__": "2021-05-25T12:02:30"
+                            },
+                            "column_name": "fecha",
+                            "created_by_fk": 1,
+                            "created_on": {
+                                "__datetime__": "2021-05-25T12:02:30"
+                            },
+                            "description": null,
+                            "expression": null,
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 220,
+                            "is_active": true,
+                            "is_dttm": true,
+                            "python_date_format": null,
+                            "table_id": 32,
+                            "type": "DATE",
+                            "uuid": "e2e6ab5b-f4ec-4fac-99bf-537fd0e82cc7",
+                            "verbose_name": null
+                        }
+                    }
+                ],
+                "database_id": 2,
+                "default_endpoint": null,
+                "description": null,
+                "extra": null,
+                "fetch_values_predicate": null,
+                "filter_select_enabled": false,
+                "main_dttm_col": "fecha",
+                "metrics": [
+                    {
+                        "__SqlMetric__": {
+                            "changed_by_fk": 1,
+                            "changed_on": {
+                                "__datetime__": "2021-05-25T12:02:30"
+                            },
+                            "created_by_fk": 1,
+                            "created_on": {
+                                "__datetime__": "2021-05-25T12:02:30"
+                            },
+                            "d3format": null,
+                            "description": null,
+                            "expression": "COUNT(*)",
+                            "extra": null,
+                            "id": 32,
+                            "metric_name": "count",
+                            "metric_type": "count",
+                            "table_id": 32,
+                            "uuid": "0380fd08-627b-43ab-ba4f-e6139408da5e",
+                            "verbose_name": "COUNT(*)",
+                            "warning_text": null
+                        }
+                    }
+                ],
+                "offset": 0,
+                "params": "{\"remote_id\": 32, \"database_name\": \"dw_aero\"}",
+                "schema": "dw_aero",
+                "sql": null,
+                "table_name": "anticipacion_vuelo_view",
+                "template_params": null
+            }
+        },
+        {
+            "__SqlaTable__": {
+                "cache_timeout": null,
+                "columns": [
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": 1,
+                            "changed_on": {
                                 "__datetime__": "2021-05-23T19:41:30"
                             },
                             "column_name": "edad",
@@ -570,49 +740,24 @@
                         "__TableColumn__": {
                             "changed_by_fk": 1,
                             "changed_on": {
-                                "__datetime__": "2021-05-23T19:19:23"
-                            },
-                            "column_name": "edad",
-                            "created_by_fk": 1,
-                            "created_on": {
-                                "__datetime__": "2021-05-23T19:19:23"
-                            },
-                            "description": null,
-                            "expression": null,
-                            "filterable": true,
-                            "groupby": true,
-                            "id": 138,
-                            "is_active": true,
-                            "is_dttm": false,
-                            "python_date_format": null,
-                            "table_id": 19,
-                            "type": "ENUM('+80','60-80','50-60','35-50','25-35','18-25','MENOR')",
-                            "uuid": "4f704417-aa46-4a09-b0d0-71a57da64321",
-                            "verbose_name": null
-                        }
-                    },
-                    {
-                        "__TableColumn__": {
-                            "changed_by_fk": 1,
-                            "changed_on": {
-                                "__datetime__": "2021-05-23T19:19:23"
+                                "__datetime__": "2021-05-23T20:27:21"
                             },
                             "column_name": "pais_residencia",
                             "created_by_fk": 1,
                             "created_on": {
-                                "__datetime__": "2021-05-23T19:19:23"
+                                "__datetime__": "2021-05-23T20:27:21"
                             },
                             "description": null,
                             "expression": null,
                             "filterable": true,
                             "groupby": true,
-                            "id": 139,
+                            "id": 168,
                             "is_active": true,
                             "is_dttm": false,
                             "python_date_format": null,
-                            "table_id": 19,
+                            "table_id": 25,
                             "type": "VARCHAR(30)",
-                            "uuid": "69c3e8f1-94af-4a83-a3af-a7f6bd498f6c",
+                            "uuid": "347c7f43-bfd9-446a-a9c8-cfe7ce886999",
                             "verbose_name": null
                         }
                     },
@@ -620,115 +765,65 @@
                         "__TableColumn__": {
                             "changed_by_fk": 1,
                             "changed_on": {
-                                "__datetime__": "2021-05-23T19:19:23"
+                                "__datetime__": "2021-05-23T20:27:21"
                             },
-                            "column_name": "antelacion_compra",
+                            "column_name": "nombre",
                             "created_by_fk": 1,
                             "created_on": {
-                                "__datetime__": "2021-05-23T19:19:23"
+                                "__datetime__": "2021-05-23T20:27:21"
                             },
                             "description": null,
                             "expression": null,
                             "filterable": true,
                             "groupby": true,
-                            "id": 140,
+                            "id": 169,
                             "is_active": true,
                             "is_dttm": false,
                             "python_date_format": null,
-                            "table_id": 19,
-                            "type": "INTEGER(11)",
-                            "uuid": "76314d7e-a7d6-4d64-a681-a48204951a1c",
-                            "verbose_name": null
-                        }
-                    },
-                    {
-                        "__TableColumn__": {
-                            "changed_by_fk": 1,
-                            "changed_on": {
-                                "__datetime__": "2021-05-23T19:19:23"
-                            },
-                            "column_name": "tipo_vuelo",
-                            "created_by_fk": 1,
-                            "created_on": {
-                                "__datetime__": "2021-05-23T19:19:23"
-                            },
-                            "description": null,
-                            "expression": null,
-                            "filterable": true,
-                            "groupby": true,
-                            "id": 141,
-                            "is_active": true,
-                            "is_dttm": false,
-                            "python_date_format": null,
-                            "table_id": 19,
-                            "type": "ENUM('NACIONAL','INTERNACIONAL')",
-                            "uuid": "4374bc51-9da7-41f2-9b1d-3b1fbcfd0300",
-                            "verbose_name": null
-                        }
-                    },
-                    {
-                        "__TableColumn__": {
-                            "changed_by_fk": 1,
-                            "changed_on": {
-                                "__datetime__": "2021-05-23T19:19:23"
-                            },
-                            "column_name": "fecha",
-                            "created_by_fk": 1,
-                            "created_on": {
-                                "__datetime__": "2021-05-23T19:19:23"
-                            },
-                            "description": null,
-                            "expression": null,
-                            "filterable": true,
-                            "groupby": true,
-                            "id": 142,
-                            "is_active": true,
-                            "is_dttm": true,
-                            "python_date_format": null,
-                            "table_id": 19,
-                            "type": "DATE",
-                            "uuid": "9e7c3fb5-9900-428f-93a0-a90655253f74",
+                            "table_id": 25,
+                            "type": "VARCHAR(500)",
+                            "uuid": "eecfe308-38c0-4ba7-9b06-727b600ece7b",
                             "verbose_name": null
                         }
                     }
                 ],
-                "database_id": 1,
+                "database_id": 2,
                 "default_endpoint": null,
                 "description": null,
                 "extra": null,
                 "fetch_values_predicate": null,
                 "filter_select_enabled": false,
-                "main_dttm_col": "fecha",
+                "main_dttm_col": null,
                 "metrics": [
                     {
                         "__SqlMetric__": {
                             "changed_by_fk": 1,
                             "changed_on": {
-                                "__datetime__": "2021-05-23T19:19:23"
+                                "__datetime__": "2021-05-23T20:27:21"
                             },
                             "created_by_fk": 1,
                             "created_on": {
-                                "__datetime__": "2021-05-23T19:19:23"
+                                "__datetime__": "2021-05-23T20:27:21"
                             },
                             "d3format": null,
                             "description": null,
                             "expression": "COUNT(*)",
                             "extra": null,
-                            "id": 19,
+                            "id": 25,
                             "metric_name": "count",
                             "metric_type": "count",
-                            "table_id": 19,
-                            "uuid": "1c92a488-28a1-45bd-9c09-c67fbb2d07f9",
+                            "table_id": 25,
+                            "uuid": "942cb59e-d461-4f3b-92ac-1656481ab075",
                             "verbose_name": "COUNT(*)",
                             "warning_text": null
                         }
                     }
                 ],
                 "offset": 0,
-                "params": "{\"remote_id\": 19, \"database_name\": \"aero\"}",
+                "params": "{\"remote_id\": 25, \"database_name\": \"dw_aero\"}",
                 "schema": "dw_aero",
                 "sql": null,
-                "table_name": "anticipacion_vuelo_view",
+                "table_name": "filtro_view",
                 "template_params": null
             }
         },
@@ -969,101 +1064,6 @@
                 "schema": "dw_aero",
                 "sql": null,
                 "table_name": "beneficio_agencia_view",
-                "template_params": null
-            }
-        },
-        {
-            "__SqlaTable__": {
-                "cache_timeout": null,
-                "columns": [
-                    {
-                        "__TableColumn__": {
-                            "changed_by_fk": 1,
-                            "changed_on": {
-                                "__datetime__": "2021-05-23T20:27:21"
-                            },
-                            "column_name": "pais_residencia",
-                            "created_by_fk": 1,
-                            "created_on": {
-                                "__datetime__": "2021-05-23T20:27:21"
-                            },
-                            "description": null,
-                            "expression": null,
-                            "filterable": true,
-                            "groupby": true,
-                            "id": 168,
-                            "is_active": true,
-                            "is_dttm": false,
-                            "python_date_format": null,
-                            "table_id": 25,
-                            "type": "VARCHAR(30)",
-                            "uuid": "347c7f43-bfd9-446a-a9c8-cfe7ce886999",
-                            "verbose_name": null
-                        }
-                    },
-                    {
-                        "__TableColumn__": {
-                            "changed_by_fk": 1,
-                            "changed_on": {
-                                "__datetime__": "2021-05-23T20:27:21"
-                            },
-                            "column_name": "nombre",
-                            "created_by_fk": 1,
-                            "created_on": {
-                                "__datetime__": "2021-05-23T20:27:21"
-                            },
-                            "description": null,
-                            "expression": null,
-                            "filterable": true,
-                            "groupby": true,
-                            "id": 169,
-                            "is_active": true,
-                            "is_dttm": false,
-                            "python_date_format": null,
-                            "table_id": 25,
-                            "type": "VARCHAR(500)",
-                            "uuid": "eecfe308-38c0-4ba7-9b06-727b600ece7b",
-                            "verbose_name": null
-                        }
-                    }
-                ],
-                "database_id": 2,
-                "default_endpoint": null,
-                "description": null,
-                "extra": null,
-                "fetch_values_predicate": null,
-                "filter_select_enabled": false,
-                "main_dttm_col": null,
-                "metrics": [
-                    {
-                        "__SqlMetric__": {
-                            "changed_by_fk": 1,
-                            "changed_on": {
-                                "__datetime__": "2021-05-23T20:27:21"
-                            },
-                            "created_by_fk": 1,
-                            "created_on": {
-                                "__datetime__": "2021-05-23T20:27:21"
-                            },
-                            "d3format": null,
-                            "description": null,
-                            "expression": "COUNT(*)",
-                            "extra": null,
-                            "id": 25,
-                            "metric_name": "count",
-                            "metric_type": "count",
-                            "table_id": 25,
-                            "uuid": "942cb59e-d461-4f3b-92ac-1656481ab075",
-                            "verbose_name": "COUNT(*)",
-                            "warning_text": null
-                        }
-                    }
-                ],
-                "offset": 0,
-                "params": "{\"remote_id\": 25, \"database_name\": \"dw_aero\"}",
-                "schema": "dw_aero",
-                "sql": null,
-                "table_name": "filtro_view",
                 "template_params": null
             }
         },

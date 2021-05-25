@@ -16,5 +16,6 @@
     metric_name: count
     metric_type: count
     verbose_name: COUNT(*)
+  params: '{"remote_id": 32, "database_name": "dw_aero", "import_time": 1621944283}'
   schema: dw_aero
   table_name: anticipacion_vuelo_view
