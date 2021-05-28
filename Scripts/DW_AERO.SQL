@@ -203,3 +203,18 @@ AS
 SELECT c.pais_residencia,a.nombre
 FROM dim_cliente as c JOIN fact_ventas as h on h.cliente_key = c.cliente_key
 JOIN dim_agencia as a on h.agencia_key = a.agencia_key;
+
+-- Vista 1
+CREATE VIEW Vista_1 AS SELECT dim_vuelo.duracion_vuelo, fact_ventas.cliente_key, fact_ventas.lugar_llegada_key, fact_ventas.fecha_salida_key, fact_ventas.agencia_key FROM dim_vuelo INNER JOIN fact_ventas ON dim_vuelo.vuelo_key = fact_ventas.vuelo_key ORDER BY dim_vuelo.duracion_vuelo;
+
+-- Vista 2
+CREATE VIEW Vista_2 AS SELECT Vista_1.duracion_vuelo, dim_cliente.estado_civil, dim_cliente.genero, dim_cliente.pais_origen , Vista_1.lugar_llegada_key, Vista_1.fecha_salida_key, Vista_1.agencia_key FROM dim_cliente INNER JOIN Vista_1 ON dim_cliente.cliente_key = Vista_1.cliente_key ORDER BY Vista_1.duracion_vuelo;
+
+-- Vista 3
+CREATE VIEW Vista_3 AS SELECT Vista_2.duracion_vuelo, Vista_2.estado_civil, Vista_2.genero, Vista_2.pais_origen , dim_lugar.pais, dim_lugar.poblacion, dim_lugar.ubicacion_geografica,dim_lugar.interes_turistico, dim_lugar.temperatura, dim_lugar.precipitaciones, Vista_2.fecha_salida_key, Vista_2.agencia_key FROM dim_lugar INNER JOIN Vista_2 ON dim_lugar.lugar_key = Vista_2.lugar_llegada_key ORDER BY Vista_2.duracion_vuelo;
+
+-- Vista 4
+CREATE VIEW Vista_4 AS SELECT Vista_3.duracion_vuelo, Vista_3.estado_civil, Vista_3.genero, Vista_3.pais_origen , Vista_3.pais, Vista_3.poblacion, Vista_3.ubicacion_geografica,Vista_3.interes_turistico, Vista_3.temperatura, Vista_3.precipitaciones, dim_fecha.fecha, dim_fecha.dia_semana, Vista_3.agencia_key FROM dim_fecha INNER JOIN Vista_3 ON dim_fecha.fecha_key = Vista_3.fecha_salida_key ORDER BY Vista_3.duracion_vuelo;
+
+-- Vista 5
+CREATE VIEW Vista_5 AS SELECT Vista_4.duracion_vuelo, Vista_4.estado_civil, Vista_4.genero, Vista_4.pais_origen , Vista_4.pais, Vista_4.poblacion, Vista_4.ubicacion_geografica,Vista_4.interes_turistico, Vista_4.temperatura, Vista_4.precipitaciones, Vista_4.fecha, Vista_4.dia_semana, dim_agencia.nombre FROM dim_agencia INNER JOIN Vista_4 ON dim_agencia.agencia_key = Vista_4.agencia_key ORDER BY Vista_4.duracion_vuelo;
