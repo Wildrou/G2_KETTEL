@@ -1,0 +1,38 @@
+- columns:
+  - column_name: poblacion
+    type: ENUM('GRAN POBLACION','MUY ELEVADA','ELEVADA','MODERADA','ESCASA','POCO
+      POBLADO','DESHABITADO')
+  - column_name: estado_civil
+    type: ENUM('CASADO','SOLTERO','UNION DE HECHO','SEPARADO','VIUDO','DIVORCIADO')
+  - column_name: fecha
+    is_dttm: true
+    type: DATE
+  - column_name: temperatura
+    type: ENUM('MUY ELEVADA','ELEVADA','MODERADA','SUAVE','FRIA','GELIDA')
+  - column_name: precipitaciones
+    type: ENUM('MUY ELEVADAS','ELEVADAS','MODERADAS','ESCASAS','DESERTICAS')
+  - column_name: ubicacion_geografica
+    type: "ENUM('COSTERA','INTERIOR','MONTA\xD1OSA','URBANA','BOSCOSA')"
+  - column_name: interes_turistico
+    type: ENUM('ALTO','MODERADO','BAJO')
+  - column_name: genero
+    type: ENUM('HOMBRE','MUJER','OTRO')
+  - column_name: nombre
+    type: VARCHAR(500)
+  - column_name: duracion_vuelo
+    type: VARCHAR(30)
+  - column_name: pais_origen
+    type: VARCHAR(30)
+  - column_name: pais
+    type: VARCHAR(50)
+  - column_name: dia_semana
+    type: VARCHAR(15)
+  main_dttm_col: fecha
+  metrics:
+  - expression: COUNT(*)
+    metric_name: count
+    metric_type: count
+    verbose_name: COUNT(*)
+  params: '{"remote_id": 5, "database_name": "dw_aero", "import_time": 1622208409}'
+  schema: dw_aero
+  table_name: Vista_5
